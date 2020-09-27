@@ -3,7 +3,7 @@ import Home from "../views/Home.vue";
 import Register from '@/components/Register'
 import TimelineAdd from "@/components/TimelineAdd";
 import Timeline from "@/components/Timeline";
-
+import Gallery from "@/components/Gallery";
 const routes = [
   {
     path: "/",
@@ -25,6 +25,13 @@ const routes = [
     name:"Timeline",
     component:Timeline
   }
+  ,
+  {
+    path:"/gallery",
+    name:"Gallery",
+    component:Gallery
+  }
+
 ];
 
 const router = createRouter({
