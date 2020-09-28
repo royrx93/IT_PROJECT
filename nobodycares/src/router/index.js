@@ -4,6 +4,7 @@ import Register from '@/components/Register'
 import TimelineAdd from "@/components/TimelineAdd";
 import Timeline from "@/components/Timeline";
 import Gallery from "@/components/Gallery";
+import Article from "@/components/Article";
 const routes = [
   {
     path: "/",
@@ -30,6 +31,11 @@ const routes = [
     path:"/gallery",
     name:"Gallery",
     component:Gallery
+  },
+  {
+    path: "/article",
+    name:"Article",
+    component: Article
   }
 
 ];
