@@ -5,6 +5,7 @@ import TimelineAdd from "@/components/TimelineAdd";
 import Timeline from "@/components/Timeline";
 import Gallery from "@/components/Gallery";
 import Article from "@/components/Article";
+import BackstageGallery from "@/components/BackstageGallery";
 const routes = [
   {
     path: "/",
@@ -25,8 +26,7 @@ const routes = [
     path:"/timeline",
     name:"Timeline",
     component:Timeline
-  }
-  ,
+  },
   {
     path:"/gallery",
     name:"Gallery",
@@ -34,9 +34,16 @@ const routes = [
   },
   {
     path: "/article",
-    name:"Article",
+    name: "Article",
     component: Article
+  },
+
+  {
+    path:"/backstageGallery",
+    name:"BackstageGallery",
+    component:BackstageGallery
   }
+
 
 ];
 

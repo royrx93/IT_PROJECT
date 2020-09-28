@@ -7,7 +7,9 @@
     <router-link to="/timeline">Timeline</router-link>|
     <router-link to="/gallery">Gallery</router-link>|
     <router-link to="/backstage">Backstage</router-link>|
-    <router-link to="/article">articles</router-link>
+    <router-link to="/article">articles</router-link>|
+    <router-link to="/backstageGallery">BackstageGallery</router-link>|
+
   </div>
   <router-view />
 </template>
