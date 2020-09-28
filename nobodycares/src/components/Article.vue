@@ -5,6 +5,10 @@
     <br>
     {{article.description}}
   </div>
+<br>
+  <div>
+    <button @click="NewArticle">New</button>
+  </div>
 
 
 </template>
@@ -17,9 +21,17 @@ export default {
       articles: null
     }
   },
-  async mounted(){
+  async mounted() {
     this.articles = (await ArticleService.index()).data
+  },
+
+  methods: {
+    NewArticle() {
+      this.$router.push('../article/create')
+    }
   }
+
+
 
 }
 </script>
