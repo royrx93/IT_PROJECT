@@ -1,4 +1,5 @@
 <template>
+  <div class="register" :style ="note"></div>
     <div>
         <H1>Register</H1>
         <input
@@ -30,7 +31,13 @@
             return{
                 username:'',
                 password:'',
-                email_address:''
+                email_address:'',
+                note: {
+                    backgroundImage: "url(" + require("../assets/background.jpeg") + ")",
+                    backgroundRepeat: "no-repeat",
+                    backgroundSize: "100%",
+                    backgroundAttachment: "fixed",
+                   },
             }
         },
         methods:{
@@ -47,5 +54,27 @@
 </script>
 
 <style scoped>
-
+  .register{
+  width:100%;
+  height:100%;
+  z-index:-1;
+  position: absolute;
+  }
+  H1{
+  color: #F0F0F0;
+  padding: 60px;
+  font-size:3em;
+  }
+  input{
+  margin: 8px;
+  height:60px;
+  width: 600px;
+  font-size: 1.2em;
+  }
+  button{
+  margin: 60px;
+  height: 60px;
+  width: 300px;
+  font-size: 1.2em;
+  }
 </style>
