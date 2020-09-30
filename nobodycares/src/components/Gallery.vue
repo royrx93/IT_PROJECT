@@ -31,19 +31,19 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-    .waterfall-width-column {
-        column-count: 3;
+  .waterfall-width-column {
+  column-count: 3;
   column-gap: 10px;
   .image-box {
-    img {
-        display: block;
-        width: 100%;
-        height: 70%;
-    }
-        }
-    }
+  img {
+  display: block;
+  width: 100%;
+  height: 70%;
+  }
+  }
+  }
   .gallery{
-  width:100%;
+  width:99.15%;
   height:100%;
   z-index:-1;
   position: absolute;

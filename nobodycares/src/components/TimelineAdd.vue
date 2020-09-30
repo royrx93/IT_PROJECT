@@ -54,7 +54,7 @@
 
 <style scoped>
   .timelineadd{
-  width:100%;
+  width:99.15%;
   height:100%;
   z-index:-1;
   position: absolute;
