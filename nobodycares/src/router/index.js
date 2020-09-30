@@ -7,6 +7,9 @@ import Gallery from "@/components/Gallery";
 import Article from "@/components/Article";
 import BackstageGallery from "@/components/BackstageGallery";
 import ArticleCreateService from "@/services/ArticleCreateService";
+import ContactMe from '@/components/ContactMe';
+//import ContactService from '@/services/ContactService';
+
 const routes = [
   {
     path: "/",
@@ -50,6 +53,11 @@ const routes = [
     name: "ArticleCreate",
     component: ArticleCreateService
 
+  },
+  {
+    path:"/contactMe",
+    name: "ContactMe",
+    component: ContactMe
   }
 
 ];

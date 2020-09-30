@@ -9,6 +9,7 @@
     <router-link to="/backstage">Backstage</router-link>|
     <router-link to="/article">articles</router-link>|
     <router-link to="/backstageGallery">BackstageGallery</router-link>|
+    <router-link to="/contactMe">ContactMe</router-link>|
 
   </div>
   <router-view />
