@@ -6,7 +6,7 @@ import Timeline from "@/components/Timeline";
 import Gallery from "@/components/Gallery";
 import Article from "@/components/Article";
 import BackstageGallery from "@/components/BackstageGallery";
-import ArticleCreateService from "@/services/ArticleCreateService";
+import ArticleCreate from "@/components/ArticleCreate";
 const routes = [
   {
     path: "/",
@@ -48,7 +48,7 @@ const routes = [
   {
     path: "/article/create",
     name: "ArticleCreate",
-    component: ArticleCreateService
+    component: ArticleCreate
 
   }
 

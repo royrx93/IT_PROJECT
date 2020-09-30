@@ -1,13 +1,19 @@
 <template>
   <h1> Articles </h1>
-  <div v-for="article in articles"
-  :key="article.title">
-    <br>
-    {{article.description}}
+  <div>
+  <tr v-for="article in articles" :key="article.title">
+    <td>{{article.title}}</td>
+    <td>{{article.title}}</td>
+    <td>{{article.description}}</td>
+
+    <td>
+      <a href="#" @click="remove(article)">Delete</a> <a href="#" @click="edit(article)">Update</a>
+    </td>
+  </tr>
   </div>
 <br>
   <div>
-    <button @click="NewArticle">New</button>
+    <router-link to="/article/create">NEW</router-link>
   </div>
 
 
@@ -25,13 +31,15 @@ export default {
     this.articles = (await ArticleService.index()).data
   },
 
-  methods: {
-    NewArticle() {
-      this.$router.push('../article/create')
+  methods:{
+    remove(){
+
+    },
+
+    edit(){
+
     }
   }
-
-
 
 }
 </script>
