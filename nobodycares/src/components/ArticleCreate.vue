@@ -1,4 +1,5 @@
 <template>
+  <div class="newarticle" :style ="note"></div>
   <H1>New Article!</H1>
   <input
     type="string"
@@ -31,7 +32,13 @@ export default {
     return {
       title: "",
       description: "",
-      content: ""
+      content: "",
+       note: {
+                    backgroundImage: "url(" + require("../assets/background.jpeg") + ")",
+                    backgroundRepeat: "no-repeat",
+                    backgroundSize: "100%",
+                    backgroundAttachment: "fixed",
+                   },
     };
   },
   methods: {
@@ -47,4 +54,28 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+  .newarticle{
+  width:99.15%;
+  height:100%;
+  z-index:-1;
+  position: absolute;
+  }
+  H1{
+  color: #F0F0F0;
+  padding: 60px;
+  font-size:3em;
+  }
+  input{
+  margin: 8px;
+  height:60px;
+  width: 600px;
+  font-size: 1.2em;
+  }
+  button{
+  margin: 60px;
+  height: 60px;
+  width: 300px;
+  font-size: 1.2em;
+  }
+</style>
