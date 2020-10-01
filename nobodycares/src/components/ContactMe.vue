@@ -1,6 +1,7 @@
 <template>
-    <div>
-        <H1>Register</H1>
+    <div class="contactme" :style ="note"></div>
+
+        <H1>ContactMe</H1>
         
         <input
             type="firstname"
@@ -27,7 +28,7 @@
             placeholder="content">
         <br>        
         <button @click="ContactMe">Submit</button>
-    </div>
+
 </template>
 
 <script>
@@ -58,5 +59,27 @@
 </script>
 
 <style scoped>
-
+  .contactme{
+  width:99.15%;
+  height:100%;
+  z-index:-1;
+  position: absolute;
+  }
+  H1{
+  color: #F0F0F0;
+  padding: 60px;
+  font-size:3em;
+  }
+  input{
+  margin: 8px;
+  height:60px;
+  width: 600px;
+  font-size: 1.2em;
+  }
+  button{
+  margin: 60px;
+  height: 60px;
+  width: 300px;
+  font-size: 1.2em;
+  }
 </style>
