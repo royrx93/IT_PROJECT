@@ -1,5 +1,4 @@
 <template>
-
   <div id="nav">
     <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link> |
@@ -17,31 +16,32 @@
 </template>
 
 <style lang="scss">
-  #app {
+#app {
   font-family: "Comic Sans MS", cursive, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #F0F0F0;
-  }
+  color: #f0f0f0;
+}
 
-  #nav {
+#nav {
   padding: 30px;
-  background-color:rgb(30,30,30);
-  font-size:1.2em;
+  background-color: rgb(30, 30, 30);
+  font-size: 1.2em;
   letter-spacing: 3px;
-  word-spacing:3px;
+  word-spacing: 3px;
+  overflow: scroll;
+  position: relative;
 
   a {
-  font-weight: bold;
-  color: #C0C0C0;
-  text-decoration:none;
+    font-weight: bold;
+    color: #c0c0c0;
+    text-decoration: none;
+    overflow: scroll;
 
-
-  &.router-link-exact-active {
+    &.router-link-exact-active {
       color: white;
     }
   }
 }
 </style>
-
