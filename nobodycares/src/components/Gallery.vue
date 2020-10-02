@@ -33,7 +33,7 @@ export default {
 .waterfall-width-column {
   column-count: 4;
   column-gap: 5px;
-  margin: 75px 25px 0px 25px;
+  margin: 25px 50px 0px 50px;
   .image-box {
     img {
       width: 100%;
@@ -45,7 +45,7 @@ export default {
   width: 99.15%;
   height: 100%;
   z-index: -1;
-  position: absolute;
+  position: fixed;
 }
 h1 {
   color: #f0f0f0;
