@@ -1,14 +1,14 @@
 <template>
   <div class="timelineadd" :style ="note"></div>
     <H1>Add Timeline</H1>
+<!--    <input-->
+<!--            type="string"-->
+<!--            name="string"-->
+<!--            v-model="year"-->
+<!--            placeholder="year">-->
+<!--    <br>-->
     <input
-            type="string"
-            name="string"
-            v-model="year"
-            placeholder="year">
-    <br>
-    <input
-            type="string"
+            type="month"
             name="string"
             v-model="month"
             placeholder="month">
@@ -19,7 +19,7 @@
             v-model="description"
             placeholder="description">
     <br>
-    <button @click="timelineAdd">Submit</button>
+    <button @click="timelineAdd" to="/timeline">Submit</button>
 </template>
 
 <script>
@@ -40,12 +40,13 @@
         },
         methods:{
             async timelineAdd(){
-                const response = await AuthenticationService.timelineAdd({
-                    year:this.year,
-                    month: this.month,
+                await AuthenticationService.timelineAdd({
+                    year:this.month.toString().substr(0,4),
+                    month: this.month.toString().substr(5,2),
                     description:this.description
                 })
-                console.log(response.data())
+                // console.log(response.data())
+
             }
         }
     }
