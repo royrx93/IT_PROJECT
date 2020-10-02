@@ -3,12 +3,13 @@
     <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link> |
     <router-link to="/register">Register</router-link> |
-    <router-link to="/timeline/add">TimelineAdd</router-link>|
-    <router-link to="/timeline">Timeline</router-link>|
-    <router-link to="/gallery">Gallery</router-link>|
-    <router-link to="/backstage">Backstage</router-link>|
-    <router-link to="/article">articles</router-link>|
-    <router-link to="/backstageGallery">BackstageGallery</router-link>|
+    <router-link to="/timeline/add">TimelineAdd</router-link> |
+    <router-link to="/timeline">Timeline</router-link> |
+    <router-link to="/gallery">Gallery</router-link> |
+    <router-link to="/backstage">Backstage</router-link> |
+    <router-link to="/article">articles</router-link> |
+    <router-link to="/backstageGallery">BackstageGallery</router-link> |
+    <router-link to="/contactMe">ContactMe</router-link> 
 
   </div>
   <router-view />
@@ -16,22 +17,30 @@
 
 <style lang="scss">
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Comic Sans MS", cursive, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: #f0f0f0;
 }
 
 #nav {
   padding: 30px;
+  background-color: rgb(30, 30, 30);
+  font-size: 1.2em;
+  letter-spacing: 3px;
+  word-spacing: 3px;
+  overflow: scroll;
+  position: relative;
 
   a {
     font-weight: bold;
-    color: #2c3e50;
+    color: #c0c0c0;
+    text-decoration: none;
+    overflow: scroll;
 
     &.router-link-exact-active {
-      color: #42b983;
+      color: white;
     }
   }
 }
