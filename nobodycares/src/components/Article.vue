@@ -3,7 +3,6 @@
   <div>
   <tr v-for="article in articles" :key="article.title">
     <td>{{article.title}}</td>
-    <td>{{article.title}}</td>
     <td>{{article.description}}</td>
 
     <td>
@@ -21,6 +20,7 @@
 
 <script>
 import ArticleService from "@/services/ArticleService";
+import ArticleDeleteService from "@/services/ArticleDeleteService";
 export default {
   data(){
     return{
@@ -32,9 +32,14 @@ export default {
   },
 
   methods:{
-    remove(){
+    async remove(article){
+      const response = await ArticleDeleteService.articleDelete(article);
+      location.reload()
+      console.log(response.data())
+
 
     },
+
 
     edit(){
 

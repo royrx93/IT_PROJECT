@@ -50,6 +50,11 @@ const routes = [
     name: "ArticleCreate",
     component: ArticleCreate
 
+  },
+  {
+    path: "/article/delete",
+    name:"ArticleDelete",
+    component: Article
   }
 
 ];
