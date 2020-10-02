@@ -7,7 +7,7 @@ import Gallery from "@/components/Gallery";
 import Article from "@/components/Article";
 import BackstageGallery from "@/components/BackstageGallery";
 import ArticleCreate from "@/components/ArticleCreate";
-import ContactMe from '@/components/ContactMe';
+import ContactMe from "@/components/ContactMe";
 import Backstage from "@/components/Backstage";
 const routes = [
   {
@@ -53,7 +53,7 @@ const routes = [
     component: Article
   },
   {
-    path:"/contactMe",
+    path: "/contactMe",
     name: "ContactMe",
     component: ContactMe
 
@@ -63,11 +63,9 @@ const routes = [
     path: "/backstage",
     name: "Backstage",
     component: Backstage,
-
-
   },
   {
-    path: "/backstage/backstageGallery",
+    path: "/backstageGallery",
     name: "BackstageGallery",
     component: BackstageGallery
   },
