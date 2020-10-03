@@ -1,8 +1,11 @@
 <template>
   <div class="backstage" :style="note"></div>
   <div id="mySidenav" class="sidenav">
+    <a @click="redirectToHomepage()">Homepage</a>
     <a @click="redirectToGallery()">Gallery</a>
     <a @click="redirectToArticle()">Article</a>
+    <a @click="redirectToTimeline()">Timeline</a>
+
   </div>
 </template>
 
@@ -31,6 +34,12 @@ export default {
     redirectToArticle() {
       this.$router.replace("/article");
     },
+    redirectToTimeline(){
+      this.$router.replace("/backstageTimeline");
+    },
+    redirectToHomepage(){
+      this.$router.replace("/backstageHomage");
+    }
   }
 };
 </script>
@@ -45,13 +54,13 @@ export default {
   }
   /* The side navigation menu */
   .sidenav {
-  height: 50%; /* 100% Full-height */
+  height: 100%; /* 100% Full-height */
   width: 200px; /* 0 width - change this with JavaScript */
-  position: fixed; /* Stay in place */
+  position: absolute; /* Stay in place */
   z-index: 1; /* Stay on top */
   top: 15%; /* Stay at the top */
   left: 0;
-  background-color: #111; /* Black*/
+  background-color:rgb(30, 30, 30); /* Black*/
   overflow-x: hidden; /* Disable horizontal scroll */
   padding-top: 60px; /* Place content 60px from the top */
   transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
