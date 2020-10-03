@@ -35,7 +35,7 @@ export default {
       note: {
                     backgroundImage: "url(" + require("../assets/background.jpeg") + ")",
                     backgroundRepeat: "no-repeat",
-                    backgroundSize: "100%",
+                    backgroundSize: "100% 100%",
                     backgroundAttachment: "fixed",
                    },
     };
@@ -71,6 +71,7 @@ export default {
       height:100%;
       z-index:-1;
       position: absolute;
+      background-size:100% 100%;
     }
     H1{
     color: #F0F0F0;
@@ -86,7 +87,7 @@ export default {
       vertical-align: top;
     }
     button{
-      margin: 60px;
+      margin: 25px;
       height: 60px;
       width: 300px;
       font-size: 1.2em;
