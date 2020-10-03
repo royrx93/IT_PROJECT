@@ -2,23 +2,25 @@
   <div class="articles" :style ="note"></div>
   <h1> Articles </h1>
 
-  <div>
-  <tr v-for="article in articles" :key="article.title">
-    <td>{{article.title}}</td>
-    <td>{{article.description}}</td>
+  <div v-for="article in articles" :key="article.title">
+    {{article.title}}
+    <br>
+    {{article.description}}
 
-    <td>
-      <a href="#" @click="remove(article)">Delete</a> <a href="#" @click="edit(article)">Update</a>
-    </td>
-  </tr>
+      <button  @click="remove(article)">Delete</button> <button href="#" @click="edit(article)">Update</button>
+
+    <router-link :to="{path: '/article/view', query : {key : article.title}}">
+      <button>view</button>
+    </router-link>
+
+
+
 
   </div>
 <br>
   <div>
     <router-link to="/article/create">NEW</router-link>
   </div>
-
-
 </template>
 
 
@@ -48,8 +50,6 @@ export default {
       const response = await ArticleDeleteService.articleDelete(article);
       location.reload()
       console.log(response.data())
-
-
     },
 
 
