@@ -9,15 +9,9 @@
     <br>
     {{article.description}}
     <button  @click="remove(article)">Delete</button>
+
     <router-link :to="{name :'ArticleUpdate', params : {title : article.title}}">
       <button>update</button>
-
-      <button  @click="remove(article)">Delete</button> <button href="#" @click="edit(article)">Update</button>
-
-    <router-link :to="{path: '/article/view', query : {key : article.title}}">
-      <div class="articles2" :style ="note"></div>
-      <button>view</button>
-
     </router-link>
 
   </div>
@@ -34,18 +28,19 @@ import ArticleDeleteService from "@/services/ArticleDeleteService";
 export default {
 
   data(){
-  return{
-  note: {
-  backgroundImage: "url(" + require("../assets/background.jpeg") + ")",
-  backgroundRepeat: "no-repeat",
-  backgroundSize: "100%",
-  backgroundAttachment: "fixed",
+    return{
+      note: {
+        backgroundImage: "url(" + require("../assets/background.jpeg") + ")",
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "100%",
+        backgroundAttachment: "fixed",
+      },
+      articles: null
+    }
   },
-  articles: null
-  }
-  },
+
   async mounted() {
-  this.articles = (await ArticleService.index()).data
+    this.articles = (await ArticleService.index()).data
   },
 
 
@@ -56,10 +51,6 @@ export default {
       console.log(response.data())
     },
 
-
-    edit(){
-
-    }
   }
 
 }

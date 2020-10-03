@@ -1,11 +1,5 @@
 <template>
   <div class="articleview" :style ="note"></div>
-<h1>hi</h1>
-
-<h1>{{article.title}}</h1>
-
-<h3>{{article.description}}</h3>
-
 
   <div class="articles" :style ="note"></div>
   <ul v-for="article in articles" :key="article.title">
@@ -38,12 +32,6 @@ export default {
       articles: null,
 
       article: null,
-      note: {
-                    backgroundImage: "url(" + require("../assets/background.jpeg") + ")",
-                    backgroundRepeat: "no-repeat",
-                    backgroundSize: "100%",
-                    backgroundAttachment: "fixed",
-                   },
 
     }
   },
