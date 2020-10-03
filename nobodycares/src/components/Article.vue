@@ -4,6 +4,7 @@
   <p> -Multi-threaded thoughts </p>
 
   <div v-for="article in articles" :key="article.title">
+    <div class="articles2" :style ="note"></div>
     {{article.title}}
     <br>
     {{article.description}}
@@ -11,6 +12,7 @@
       <button  @click="remove(article)">Delete</button> <button href="#" @click="edit(article)">Update</button>
 
     <router-link :to="{path: '/article/view', query : {key : article.title}}">
+      <div class="articles2" :style ="note"></div>
       <button>view</button>
     </router-link>
 
@@ -69,6 +71,13 @@ export default {
   height:100%;
   z-index:-1;
   position: absolute;
+  margin-left:-10px;
+  }
+  .articles2{
+  width:100.1%;
+  height:100%;
+  z-index:-1;
+  position: fixed;
   margin-left:-10px;
   }
   h1{

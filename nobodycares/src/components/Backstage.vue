@@ -5,8 +5,9 @@
     <a @click="redirectToGallery()">Gallery</a>
     <a @click="redirectToArticle()">Article</a>
     <a @click="redirectToTimeline()">Timeline</a>
-
+    
   </div>
+  <div class="backstage2" :style="note"></div>
 </template>
 
 <script>
@@ -50,6 +51,13 @@ export default {
   height: 100%;
   z-index: -1;
   position: absolute;
+  margin-left:-10px;
+  }
+  .backstage2 {
+  width: 100.1%;
+  height: 200%;
+  z-index: -1;
+  position: fixed;
   margin-left:-10px;
   }
   /* The side navigation menu */
