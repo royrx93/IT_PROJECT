@@ -15,7 +15,7 @@
     <ul>
       <li><p>Upload Image</p></li>
       <li><input id="file" type="file" @change="onFileChanged" /></li>
-      <li id="description">description:</li>
+      <li>description:</li>
       <li><input id="title" name="title" maxlength="50" v-model="title" /></li>
       <li><button @click="uploadImage">Upload!</button></li>
     </ul>
@@ -155,20 +155,20 @@ button {
 /* The side navigation menu */
   /* The side navigation menu */
   .sidenav {
-    height: 100%; /* 100% Full-height */
-    width: 200px; /* 0 width - change this with JavaScript */
+    height: 70%; /* 100% Full-height */
+    width: 150px; /* 0 width - change this with JavaScript */
     position: absolute; /* Stay in place */
     z-index: 1; /* Stay on top */
     top: 15%; /* Stay at the top */
     left: 0;
-    background-color: #111; /* Black*/
+    background-color: rgb(30, 30, 30); /* Black*/
     overflow-x: hidden; /* Disable horizontal scroll */
     padding-top: 60px; /* Place content 60px from the top */
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
   }
   /* The navigation menu links */
   .sidenav a {
-    padding: 8px 8px 8px 32px;
+    padding: 8px 8px 8px 8px;
     text-decoration: none;
     font-size: 25px;
     color: #818181;
@@ -203,6 +203,7 @@ button {
 .upload{
   p{
     font-size: 30px;
+    font-weight: 500;
   }
   #title{
     input {
