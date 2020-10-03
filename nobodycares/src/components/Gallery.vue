@@ -30,26 +30,26 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.waterfall-width-column {
+  .waterfall-width-column {
   column-count: 4;
   column-gap: 5px;
   margin: 25px 50px 0px 50px;
   .image-box {
-    img {
-      width: 100%;
-      height: 100%;
-    }
+  img {
+  width: 100%;
+  height: 100%;
   }
-}
-.gallery {
-  width: 99.15%;
+  }
+  }
+  .gallery {
+  width: 98.95%;
   height: 100%;
   z-index: -1;
-  position: fixed;
-}
-h1 {
+  position: absolute;
+  }
+  h1 {
   color: #f0f0f0;
   padding: 60px;
   font-size: 3em;
-}
+  }
 </style>

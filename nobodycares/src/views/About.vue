@@ -27,7 +27,7 @@
   data() {
   return {
   note: {
-  backgroundImage: "url(" + require("../assets/background.jpeg") + ")",
+  backgroundImage: "url(" + require("@/assets/background.jpeg") + ")",
   backgroundRepeat: "no-repeat",
   backgroundSize: "100%",
   backgroundAttachment: "fixed",

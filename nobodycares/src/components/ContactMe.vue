@@ -1,5 +1,5 @@
 <template>
-  <div class="contact">
+  <div class="contact" :style="note">
     <H1>Contact Me</H1>
     
     <div class="input-div1">
