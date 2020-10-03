@@ -18,7 +18,7 @@
       <textarea name="textarea" style="width:600px;height:150px;" v-model.trim="message"></textarea>
     </div>
 
-    <div class="contact" :style="note"></div>
+    <div class="contact2" :style="note"></div>
     <button @click="submit">Submit</button>
 
   </div>
@@ -68,22 +68,30 @@ export default {
 
 <style scoped>
   .contact{
-  width:120%;
+  width:100.1%;
   height:100%;
   z-index:-1;
   position: absolute;
 
   margin-left:-10px;
   }
+  .contact2{
+  width:100.1%;
+  height:100%;
+  z-index:-1;
+  position: absolute;
+
+  margin-left:-2px;
+  }
   H1{
   color: #F0F0F0;
   padding: 60px;
   font-size:3em;
-  margin-left:-320px;
+  margin-left:40px;
   margin-top:30px;
   }
   label{
-  margin-left:-320px;
+  margin-left:-100px;
   cursor: pointer;
   display: inline-block;
   padding: 3px 6px;
@@ -96,10 +104,10 @@ export default {
   height: 60px;
   width: 300px;
   font-size: 1.2em;
-  margin-left:-320px;
+  margin-left:40px;
   }
   p {
-  margin-left:-320px;
+  margin-left:40px;
   font-size: 1.2em;
   }
 </style>

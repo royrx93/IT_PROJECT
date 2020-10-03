@@ -62,7 +62,7 @@ export default {
 
 <style lang="scss" scoped>
   .bsgallery {
-  width: 120%;
+  width: 100.1%;
   height: 100%;
   z-index: -1;
   position: absolute;
@@ -72,7 +72,7 @@ export default {
   width: 100%;
   height: 100%;
   z-index: -1;
-  position: absolute;
+  position: fixed;
   margin:-70px;
   }
   h1 {

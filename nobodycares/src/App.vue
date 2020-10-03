@@ -23,7 +23,7 @@
 }
 
 #nav {
-  width:100%;
+  width:97.8%;
   padding: 30px;
   background-color: rgb(30, 30, 30);
   font-size: 1.2em;
