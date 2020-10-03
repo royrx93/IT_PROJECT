@@ -31,6 +31,7 @@ export default {
   }
   h1 {
   padding: 230px;
+  margin-left:-320px;
   letter-spacing: 7px;
   font-size:3em;
   }

@@ -22,6 +22,7 @@
     placeholder="this is content"
   >
   <br>
+    <div class="newarticle" :style ="note"></div>
   <button @click="articleCreate">Create</button>
 </template>
 
@@ -56,10 +57,11 @@ export default {
 
 <style scoped>
   .newarticle{
-  width:99.15%;
+  width:120%;
   height:100%;
   z-index:-1;
   position: absolute;
+  margin:-10px;
   }
   H1{
   color: #F0F0F0;

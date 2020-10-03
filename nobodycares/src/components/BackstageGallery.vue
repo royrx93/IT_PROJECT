@@ -5,8 +5,11 @@
   description: <input name="title" v-model="title" />
   <button @click="uploadImage">Upload!</button>
 
+  <div class="bsgallery" :style="note"></div>
   <div class="waterfall-width-column">
+  
     <div class="image-box" v-for="img in this.gallery" :key="img.id">
+      <div class="bs" :style="note"></div>
       <img :src="img.url" />
       <p @click="deleteImage(img)">delete</p>
     </div>
@@ -58,52 +61,60 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.bsgallery {
-  width: 98.95%;
+  .bsgallery {
+  width: 120%;
   height: 100%;
   z-index: -1;
   position: absolute;
-}
-h1 {
+  margin:-10px;
+  }
+  .bs {
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  position: absolute;
+  margin:-70px;
+  }
+  h1 {
   color: #f0f0f0;
   padding: 60px;
   font-size: 3em;
-}
-input {
+  }
+  input {
   margin: 4px;
   height: 40px;
   width: 400px;
   font-size: 1.2em;
-}
-button {
+  }
+  button {
   margin: 40px;
   height: 60px;
   width: 300px;
   font-size: 1.2em;
-}
-p {
+  }
+  p {
   color: #F0F0F0;
   padding: 60px;
   font-size:3em;
-    }
-.waterfall-width-column {
+  }
+  .waterfall-width-column {
   column-count: 5;
   column-gap: 5px;
   margin: 25px 50px 0px 50px;
   .image-box {
-    img {
-      width: 200px;
-      height: 200px;
-    };
-    p {
-      font-size: 20px;
-      colour: #000;
-      border: 2px solid #475669;
-      padding: 5px 5px 5px 5px;
-    }
-    border: 5px solid #ddd;
-    padding: 5px;
-    background: #fff;
+  img {
+  width: 200px;
+  height: 200px;
   };
-}
+  p {
+  font-size: 20px;
+  colour: #000;
+  border: 2px solid #475669;
+  padding: 5px 5px 5px 5px;
+  }
+  border: 5px solid #ddd;
+  padding: 5px;
+  background: #fff;
+  };
+  }
 </style>

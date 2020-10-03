@@ -8,8 +8,7 @@
     <router-link to="/gallery">Gallery</router-link> |
     <router-link to="/backstage">Backstage</router-link> |
     <router-link to="/article">articles</router-link> |
-    <router-link to="/contactMe">ContactMe</router-link> 
-
+    <router-link to="/contactMe">ContactMe</router-link>
   </div>
   <router-view />
 </template>
@@ -24,12 +23,13 @@
 }
 
 #nav {
+  width:100%;
   padding: 30px;
   background-color: rgb(30, 30, 30);
   font-size: 1.2em;
   letter-spacing: 3px;
-  word-spacing: 3px;
-  overflow: scroll;
+  word-spacing: 10px;
+  margin:-10px;
   position: relative;
 
   a {

@@ -65,10 +65,11 @@ export default {
 
 <style scoped>
   .articles{
-  width:98.95%;
+  width:120%;
   height:100%;
   z-index:-1;
   position: absolute;
+  margin-left:-10px;
   }
   h1{
   color: #F0F0F0;

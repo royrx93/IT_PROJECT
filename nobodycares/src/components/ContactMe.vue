@@ -3,6 +3,7 @@
     <H1>Contact Me</H1>
     <p> -If we are destined to meet </p>
     <div class="input-div1">
+      
       <label for="name">Your name:</label>
       <input type="text"  style=" margin:8px;width:600px;height:60px" name="name" v-model.trim="name">
     </div>
@@ -16,8 +17,8 @@
       <label for="message">Message: </label>
       <textarea name="textarea" style="width:600px;height:150px;" v-model.trim="message"></textarea>
     </div>
-    
 
+    <div class="contact" :style="note"></div>
     <button @click="submit">Submit</button>
 
   </div>
@@ -35,7 +36,7 @@ export default {
       note: {
                     backgroundImage: "url(" + require("../assets/background.jpeg") + ")",
                     backgroundRepeat: "no-repeat",
-                    backgroundSize: "100% 100%",
+                    backgroundSize: "100%",
                     backgroundAttachment: "fixed",
                    },
     };
@@ -66,34 +67,39 @@ export default {
 </script>
 
 <style scoped>
-    .contact{
-      width:98.95%;
-      height:100%;
-      z-index:-1;
-      position: absolute;
-      background-size:100% 100%;
-    }
-    H1{
-    color: #F0F0F0;
-    padding: 60px;
-    font-size:3em;
-    }
-    label{
-      cursor: pointer;
-      display: inline-block;
-      padding: 3px 6px;
-      text-align: right;
-      width: 150px;
-      vertical-align: top;
-    }
-    button{
-      margin: 25px;
-      height: 60px;
-      width: 300px;
-      font-size: 1.2em;
-    }
-    p {
+  .contact{
+  width:120%;
+  height:100%;
+  z-index:-1;
+  position: absolute;
 
-    font-size: 1.2em;
-    }
+  margin-left:-10px;
+  }
+  H1{
+  color: #F0F0F0;
+  padding: 60px;
+  font-size:3em;
+  margin-left:-320px;
+  margin-top:30px;
+  }
+  label{
+  margin-left:-320px;
+  cursor: pointer;
+  display: inline-block;
+  padding: 3px 6px;
+  text-align: right;
+  width: 150px;
+  vertical-align: top;
+  }
+  button{
+  margin: 25px;
+  height: 60px;
+  width: 300px;
+  font-size: 1.2em;
+  margin-left:-320px;
+  }
+  p {
+  margin-left:-320px;
+  font-size: 1.2em;
+  }
 </style>

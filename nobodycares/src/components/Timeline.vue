@@ -93,15 +93,18 @@
 
 <style scoped>
   .timeline{
-  width:98.95%;
+  width:120%;
   height:100%;
   z-index:-1;
   position: absolute;
+  margin:-10px;
   }
   h1{
   color: #F0F0F0;
   padding: 60px 60px;
   font-size:3em;
+  margin-left:-320px;
+  margin-top:40px;
   }
   li{list-style-type: none;}
   .time_main{clear: both;overflow: hidden;}
@@ -136,7 +139,7 @@
   background-color: #d3dce6;
   }
   p {
-
+  margin-left:-320px;
   font-size: 1.2em;
   }
 </style>

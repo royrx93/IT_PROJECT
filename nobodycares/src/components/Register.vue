@@ -55,10 +55,11 @@
 
 <style scoped>
   .register{
-  width:98.95%;
+  width:120%;
   height:100%;
   z-index:-1;
   position: absolute;
+  margin:-10px;
   }
   H1{
   color: #F0F0F0;

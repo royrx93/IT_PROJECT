@@ -36,14 +36,15 @@ export default {
 </script>
 
 <style scoped>
-.backstage {
-  width: 98.95%;
+  .backstage {
+  width: 120%;
   height: 100%;
   z-index: -1;
   position: absolute;
-}
-/* The side navigation menu */
-.sidenav {
+  margin-left:-10px;
+  }
+  /* The side navigation menu */
+  .sidenav {
   height: 50%; /* 100% Full-height */
   width: 200px; /* 0 width - change this with JavaScript */
   position: fixed; /* Stay in place */
@@ -54,9 +55,9 @@ export default {
   overflow-x: hidden; /* Disable horizontal scroll */
   padding-top: 60px; /* Place content 60px from the top */
   transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
-}
-/* The navigation menu links */
-.sidenav a {
+  }
+  /* The navigation menu links */
+  .sidenav a {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
   font-size: 25px;
@@ -64,10 +65,10 @@ export default {
   display: block;
   transition: 0.3s;
   cursor: pointer;
-}
+  }
 
-/* When you mouse over the navigation links, change their color */
-.sidenav a:hover {
+  /* When you mouse over the navigation links, change their color */
+  .sidenav a:hover {
   color: #f1f1f1;
-}
+  }
 </style>

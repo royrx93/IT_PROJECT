@@ -1,16 +1,18 @@
 <template>
-  <div class="gallery" :style="note">
+  <div class="gallery" :style="note"></div>
     <h1>Gallery</h1>
     <p> -Just some pieces of my soul </p>
-
+    <div class="back" :style="note"></div>
     <div class="waterfall-width-column" >
-
-      <div class="image-box" v-for="img in this.gallery" :key="img.id">
-
-        <img :src="img.url" />
-      </div>
-    </div>
-  </div>
+     
+     <div class="image-box" v-for="img in this.gallery" :key="img.id">
+       <div class="bckgd" :style="note"></div>
+       <img :src="img.url" />
+       
+     </div>
+      
+   </div>
+ 
 </template>
 <script>
   import GalleryService from "../services/GalleryService";
@@ -35,17 +37,19 @@
 
 <style lang="scss" >
   .gallery {
-  width: 98.95%;
-  height: 200%;
+  width: 120%;
+  height: 100%;
   z-index: -1;
   position: absolute;
+  margin:-10px;
 
   }
   .back {
-  width: 98.95%;
-  height: 150%;
+  width: 100%;
+  height: 100%;
   z-index: -1;
   position: absolute;
+  margin:-10px;
 
   }
   .waterfall-width-column {
@@ -64,19 +68,20 @@
 
   }
   .bckgd {
-  width: 10%;
-  height: 20%;
+  width: 100%;
+  height: 105%;
   z-index: -1;
   position: absolute;
-  margin:-50px;
+  margin:-506px;
   }
   h1 {
   color: #f0f0f0;
   padding: 60px;
   font-size: 3em;
+  margin-left:50px;
   }
   p {
-
+  margin-left:50px;
   font-size: 1.2em;
   }
 </style>
