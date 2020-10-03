@@ -78,6 +78,12 @@ export default {
     redirectToArticle() {
       this.$router.replace("/article");
     },
+    redirectToTimeline(){
+      this.$router.replace("/backstageTimeline");
+    },
+    redirectToHomepage(){
+      this.$router.replace("/backstageHomage");
+    },
     /* Set the width of the side navigation to 250px */
     openNav() {
       document.getElementById("mySidenav").style.width = "150px";
@@ -147,34 +153,34 @@ button {
 }
 
 /* The side navigation menu */
-.sidenav {
-  margin-top: 50px;
-  height: 100%; /* 100% Full-height */
-  width: 150px; /* 0 width - change this with JavaScript */
-  position: absolute; /* Stay in place */
-  z-index: 1; /* Stay on top */
-  top: 15%; /* Stay at the top */
-  left: 0;
-  background-color: #111; /* Black*/
-  overflow-x: hidden; /* Disable horizontal scroll */
-  padding-top: 60px; /* Place content 60px from the top */
-  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
-}
-/* The navigation menu links */
-.sidenav a {
-  padding: 8px 8px 8px 16px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #818181;
-  display: block;
-  transition: 0.3s;
-  cursor: pointer;
-}
+  /* The side navigation menu */
+  .sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 200px; /* 0 width - change this with JavaScript */
+    position: absolute; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 15%; /* Stay at the top */
+    left: 0;
+    background-color: #111; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  }
+  /* The navigation menu links */
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+    cursor: pointer;
+  }
 
-/* When you mouse over the navigation links, change their color */
-.sidenav a:hover {
-  color: #f1f1f1;
-}
+  /* When you mouse over the navigation links, change their color */
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
 .sidenav .closebtn {
   position: absolute;
   top: 0;
