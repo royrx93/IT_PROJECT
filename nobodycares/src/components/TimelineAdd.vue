@@ -34,7 +34,7 @@
                     backgroundImage: "url(" + require("../assets/background.jpeg") + ")",
                     backgroundRepeat: "no-repeat",
                     backgroundSize: "100%",
-                    backgroundAttachment: "fixed",
+                    backgroundAttachment: "scroll",
                    },
             }
         },
@@ -55,10 +55,11 @@
 
 <style scoped>
   .timelineadd{
-  width:98.95%;
+  width:100.1%;
   height:100%;
   z-index:-1;
   position: absolute;
+  margin-left:-10px;
   }
   H1{
   color: #F0F0F0;

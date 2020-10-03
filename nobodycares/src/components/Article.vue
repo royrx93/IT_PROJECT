@@ -1,19 +1,28 @@
 <template>
   <div class="articles" :style ="note"></div>
   <h1> Articles </h1>
+  <p> -Multi-threaded thoughts </p>
 
   <div v-for="article in articles" :key="article.title">
+    <div class="articles2" :style ="note"></div>
     {{article.title}}
     <br>
     {{article.description}}
     <button  @click="remove(article)">Delete</button>
     <router-link :to="{name :'ArticleUpdate', params : {title : article.title}}">
       <button>update</button>
+
+      <button  @click="remove(article)">Delete</button> <button href="#" @click="edit(article)">Update</button>
+
+    <router-link :to="{path: '/article/view', query : {key : article.title}}">
+      <div class="articles2" :style ="note"></div>
+      <button>view</button>
+
     </router-link>
 
   </div>
 <br>
-  <div>
+  <div class="new">
     <router-link to="/article/create">NEW</router-link>
   </div>
 </template>
@@ -59,20 +68,32 @@ export default {
 
 <style scoped>
   .articles{
-  width:98.95%;
+  width:100.1%;
   height:100%;
   z-index:-1;
   position: absolute;
+  margin-left:-10px;
+  }
+  .articles2{
+  width:100.1%;
+  height:100%;
+  z-index:-1;
+  position: fixed;
+  margin-left:-10px;
   }
   h1{
   color: #F0F0F0;
   padding: 60px;
   font-size:3em;
   }
-  router-link{
-  margin: 60px;
+  .new{
+  margin: 50px;
   height: 60px;
-  width: 200px;
+  color: #F0F0F0;
+  font-size: 1.3em;
+  }
+  p {
+
   font-size: 1.2em;
   }
 </style>

@@ -1,4 +1,11 @@
 <template>
+  <div class="articleview" :style ="note"></div>
+<h1>hi</h1>
+
+<h1>{{article.title}}</h1>
+
+<h3>{{article.description}}</h3>
+
 
   <div class="articles" :style ="note"></div>
   <ul v-for="article in articles" :key="article.title">
@@ -21,13 +28,23 @@ export default {
 
   data(){
     return {
+
       note: {
         backgroundImage: "url(" + require("../assets/background.jpeg") + ")",
         backgroundRepeat: "no-repeat",
         backgroundSize: "100%",
         backgroundAttachment: "fixed",
       },
-      articles: null
+      articles: null,
+
+      article: null,
+      note: {
+                    backgroundImage: "url(" + require("../assets/background.jpeg") + ")",
+                    backgroundRepeat: "no-repeat",
+                    backgroundSize: "100%",
+                    backgroundAttachment: "fixed",
+                   },
+
     }
   },
 
@@ -44,6 +61,13 @@ export default {
 </script>
 
 <style scoped>
+.articleview{
+  width:100.1%;
+  height:100%;
+  z-index:-1;
+  position: absolute;
+  margin:-10px;
+  }
 .articles{
   width:99.15%;
   height:100%;

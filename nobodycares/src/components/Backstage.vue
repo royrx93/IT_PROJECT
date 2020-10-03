@@ -1,9 +1,13 @@
 <template>
   <div class="backstage" :style="note"></div>
   <div id="mySidenav" class="sidenav">
+    <a @click="redirectToHomepage()">Homepage</a>
     <a @click="redirectToGallery()">Gallery</a>
     <a @click="redirectToArticle()">Article</a>
+    <a @click="redirectToTimeline()">Timeline</a>
+    
   </div>
+  <div class="backstage2" :style="note"></div>
 </template>
 
 <script>
@@ -31,32 +35,46 @@ export default {
     redirectToArticle() {
       this.$router.replace("/article");
     },
+    redirectToTimeline(){
+      this.$router.replace("/backstageTimeline");
+    },
+    redirectToHomepage(){
+      this.$router.replace("/backstageHomage");
+    }
   }
 };
 </script>
 
 <style scoped>
-.backstage {
-  width: 98.95%;
+  .backstage {
+  width: 100.1%;
   height: 100%;
   z-index: -1;
   position: absolute;
-}
-/* The side navigation menu */
-.sidenav {
-  height: 50%; /* 100% Full-height */
+  margin-left:-10px;
+  }
+  .backstage2 {
+  width: 100.1%;
+  height: 200%;
+  z-index: -1;
+  position: fixed;
+  margin-left:-10px;
+  }
+  /* The side navigation menu */
+  .sidenav {
+  height: 100%; /* 100% Full-height */
   width: 200px; /* 0 width - change this with JavaScript */
-  position: fixed; /* Stay in place */
+  position: absolute; /* Stay in place */
   z-index: 1; /* Stay on top */
   top: 15%; /* Stay at the top */
   left: 0;
-  background-color: #111; /* Black*/
+  background-color:rgb(30, 30, 30); /* Black*/
   overflow-x: hidden; /* Disable horizontal scroll */
   padding-top: 60px; /* Place content 60px from the top */
   transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
-}
-/* The navigation menu links */
-.sidenav a {
+  }
+  /* The navigation menu links */
+  .sidenav a {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
   font-size: 25px;
@@ -64,10 +82,10 @@ export default {
   display: block;
   transition: 0.3s;
   cursor: pointer;
-}
+  }
 
-/* When you mouse over the navigation links, change their color */
-.sidenav a:hover {
+  /* When you mouse over the navigation links, change their color */
+  .sidenav a:hover {
   color: #f1f1f1;
-}
+  }
 </style>

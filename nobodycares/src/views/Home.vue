@@ -9,10 +9,11 @@
 
 <style scoped>
   .home{
-  width:98.95%;
+  width:100.1%;
   height:100%;
   z-index:-1;
   position: absolute;
+  margin:-10px;
   }
 
 </style>
