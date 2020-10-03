@@ -93,7 +93,7 @@
 
 <style scoped>
   .timeline{
-  width:99.15%;
+  width:98.95%;
   height:100%;
   z-index:-1;
   position: absolute;
@@ -107,32 +107,32 @@
   .time_main{clear: both;overflow: hidden;}
   .time_main .last{float: left;width: 5%;}
   .ml_contents{ float: left;
-      clear: both;overflow: hidden; width: 90%; margin-bottom: 20px;
+  clear: both;overflow: hidden; width: 90%; margin-bottom: 20px;
   }
   .time_main .next{float: right;width: 5%;}
 
-    .ml_contents li{float: left; width: 33%;height: 200px;}
+  .ml_contents li{float: left; width: 33%;height: 200px;}
   .ml_contents li .monthly{ background: black; opacity: 0.6; }
   .ml_contents li .descr{text-align: left;}
-    .ml_year{clear: both;overflow: hidden; width: 100%;margin:0 auto; position: fixed; bottom: 70px;border-top: 1px solid #ffffff; padding-top:20px;}
-    .ml_year li{float: left;width: 15%; vertical-align: middle;
-        text-align: center;}
+  .ml_year{clear: both;overflow: hidden; width: 100%;margin:0 auto; position: fixed; bottom: 70px;border-top: 1px solid #ffffff; padding-top:20px;}
+  .ml_year li{float: left;width: 15%; vertical-align: middle;
+  text-align: center;}
   .ml_year li span{display: block; border-radius: 150px; width: 50px; height: 50px;line-height: 50px; background: darkblue;}
   .ml_year li:hover span,.ml_year li.active span{width: 100px; height: 100px;line-height: 100px;}
 
   .el-carousel__item h3 {
-      color: #475669;
-      font-size: 14px;
-      opacity: 0.75;
-      line-height: 150px;
-      margin: 0;
+  color: #475669;
+  font-size: 14px;
+  opacity: 0.75;
+  line-height: 150px;
+  margin: 0;
   }
 
   .el-carousel__item:nth-child(2n) {
-      background-color: #99a9bf;
+  background-color: #99a9bf;
   }
 
   .el-carousel__item:nth-child(2n+1) {
-      background-color: #d3dce6;
+  background-color: #d3dce6;
   }
 </style>
