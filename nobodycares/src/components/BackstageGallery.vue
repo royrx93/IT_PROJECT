@@ -4,11 +4,11 @@
     <img :src="sidebar_icon" @click="openNav()" />
   </div>
   <div id="mySidenav" class="sidenav">
-    <a href="javascript:void(0)" class="closebtn" @click="closeNav()"
-      >&times;</a
-    >
+    <a href="javascript:void(0)" class="closebtn" @click="closeNav()">&times;</a>
+    <a @click="redirectToHomepage()">Homepage</a>
     <a @click="redirectToGallery()">Gallery</a>
     <a @click="redirectToArticle()">Article</a>
+    <a @click="redirectToTimeline()">Timeline</a>
   </div>
 
   <div class="upload">
