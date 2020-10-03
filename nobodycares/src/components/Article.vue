@@ -6,15 +6,10 @@
     {{article.title}}
     <br>
     {{article.description}}
-
-      <button  @click="remove(article)">Delete</button> <button href="#" @click="edit(article)">Update</button>
-
-    <router-link :to="{path: '/article/view', query : {key : article.title}}">
-      <button>view</button>
+    <button  @click="remove(article)">Delete</button>
+    <router-link :to="{name :'ArticleUpdate', params : {title : article.title}}">
+      <button>update</button>
     </router-link>
-
-
-
 
   </div>
 <br>

@@ -39,6 +39,7 @@ export default {
                     backgroundSize: "100%",
                     backgroundAttachment: "fixed",
                    },
+
     };
   },
   methods: {
@@ -49,6 +50,7 @@ export default {
         content: this.content
       });
       console.log(response.data());
+      this.$router.go(-1)
     }
   }
 };

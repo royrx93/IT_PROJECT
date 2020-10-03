@@ -1,26 +1,30 @@
 <template>
-
   <div class="articles" :style ="note"></div>
-  <ul v-for="article in articles" :key="article.title">
-    <li v-if="article.title == this.$route.params.title">
+  <h1> Articles </h1>
 
-      <h1>{{article.title}}</h1>
-      <br>
-      <h2>{{article.description}}</h2>
-      <br>
-      {{article.content}}
-    </li>
-  </ul>
+  <div v-for="article in articles" :key="article.title">
+    {{article.title}}
+    <br>
+    {{article.description}}
+    <br>
+    <router-link :to="{name :'ArticleView', params : {title : article.title}}">
+      <button>view</button>
+    </router-link>
 
+  </div>
+  <br>
+  <div>
+    <router-link to="/article/create">NEW</router-link>
+  </div>
 </template>
 
+
 <script>
-
 import ArticleService from "@/services/ArticleService";
-export default {
 
+export default {
   data(){
-    return {
+    return{
       note: {
         backgroundImage: "url(" + require("../assets/background.jpeg") + ")",
         backgroundRepeat: "no-repeat",
@@ -30,11 +34,10 @@ export default {
       articles: null
     }
   },
-
-
   async mounted() {
     this.articles = (await ArticleService.index()).data
   },
+
 
   methods:{
   }
@@ -45,7 +48,7 @@ export default {
 
 <style scoped>
 .articles{
-  width:99.15%;
+  width:98.95%;
   height:100%;
   z-index:-1;
   position: absolute;

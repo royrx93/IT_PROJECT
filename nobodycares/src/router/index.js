@@ -10,6 +10,8 @@ import ArticleCreate from "@/components/ArticleCreate";
 import ContactMe from "@/components/ContactMe";
 import Backstage from "@/components/Backstage";
 import ArticleView from "@/components/ArticleView";
+import Articles from "@/components/Articles";
+import ArticleUpdate from "@/components/ArticleUpdate";
 
 const routes = [
   {
@@ -72,9 +74,21 @@ const routes = [
     component: BackstageGallery
   },
   {
-    path: '/article/view',
+    path: '/articles/view/:title',
     name: 'ArticleView',
     component: ArticleView
+  },
+  {
+    path:'/article/update/:title',
+    name:'ArticleUpdate',
+    component: ArticleUpdate
+
+  },
+
+  {
+    path: '/articles',
+    name:'Articles',
+    component: Articles
   }
 
 ];
