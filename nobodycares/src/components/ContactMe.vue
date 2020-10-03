@@ -15,7 +15,6 @@
     <div class="input-div3">
       <label for="message">Message: </label>
       <textarea name="textarea" style="width:600px;height:150px;" v-model.trim="message"></textarea>
-      <!-- <input type="text"  style=" margin:8px;width:600px;height:300px" name="message" v-model.trim="message"> -->
     </div>
 
     <button @click="submit">Submit</button>
@@ -66,11 +65,10 @@ export default {
 
 <style scoped>
     .contact{
-      border: none;          
-      border-radius: 2px;
-      margin-bottom: 12px;
-      overflow: hidden;
-      padding: 0 .625em;
+      width:98.95%;
+      height:100%;
+      z-index:-1;
+      position: absolute;
     }
     H1{
     color: #F0F0F0;
