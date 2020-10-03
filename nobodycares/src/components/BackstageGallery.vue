@@ -25,7 +25,11 @@ export default {
       title: "",
       gallery: null,
       note: {
-      }
+            backgroundImage: "url(" + require("../assets/background.jpeg") + ")",
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "100%",
+            backgroundAttachment: "fixed",
+            },
     };
   },
   async mounted() {
@@ -55,7 +59,7 @@ export default {
 
 <style lang="scss" scoped>
 .bsgallery {
-  width: 99.15%;
+  width: 98.95%;
   height: 100%;
   z-index: -1;
   position: absolute;
@@ -77,7 +81,11 @@ button {
   width: 300px;
   font-size: 1.2em;
 }
-
+p {
+  color: #F0F0F0;
+  padding: 60px;
+  font-size:3em;
+    }
 .waterfall-width-column {
   column-count: 5;
   column-gap: 5px;

@@ -9,24 +9,24 @@
   </div>
 </template>
 <script>
-import GalleryService from "../services/GalleryService";
+  import GalleryService from "../services/GalleryService";
 
-export default {
+  export default {
   data: function() {
-    return {
-      gallery: null,
-      note: {
-        backgroundImage: "url(" + require("../assets/background.jpeg") + ")",
-        backgroundRepeat: "no-repeat",
-        backgroundSize: "100%",
-        backgroundAttachment: "scroll",
-      }
-    };
+  return {
+  gallery: null,
+  note: {
+  backgroundImage: "url(" + require("../assets/background.jpeg") + ")",
+  backgroundRepeat: "no-repeat",
+  backgroundSize: "100%",
+  backgroundAttachment: "fixed",
+  }
+  };
   },
   async mounted() {
-    this.gallery = (await GalleryService.index()).data;
+  this.gallery = (await GalleryService.index()).data;
   }
-};
+  };
 </script>
 
 <style lang="scss" scoped>
@@ -51,5 +51,9 @@ export default {
   color: #f0f0f0;
   padding: 60px;
   font-size: 3em;
+  }
+  p {
+  
+  font-size: 1.2em;
   }
 </style>

@@ -3,7 +3,7 @@
       <v-layout column>
           <v-flex xs6 offset-xs3>
               <h1>Timeline</h1>
-
+              <p> -Some parts of mine left in time </p>
           </v-flex>
       </v-layout>
 
@@ -100,7 +100,7 @@
   }
   h1{
   color: #F0F0F0;
-  padding: 5px 60px;
+  padding: 60px 60px;
   font-size:3em;
   }
   li{list-style-type: none;}
@@ -134,5 +134,9 @@
 
   .el-carousel__item:nth-child(2n+1) {
   background-color: #d3dce6;
+  }
+  p {
+
+  font-size: 1.2em;
   }
 </style>

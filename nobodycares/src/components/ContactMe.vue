@@ -1,7 +1,7 @@
 <template>
   <div class="contact" :style="note">
     <H1>Contact Me</H1>
-    
+    <p> -If we are destined to meet </p>
     <div class="input-div1">
       <label for="name">Your name:</label>
       <input type="text"  style=" margin:8px;width:600px;height:60px" name="name" v-model.trim="name">
@@ -17,8 +17,10 @@
       <textarea name="textarea" style="width:600px;height:150px;" v-model.trim="message"></textarea>
       <!-- <input type="text"  style=" margin:8px;width:600px;height:300px" name="message" v-model.trim="message"> -->
     </div>
+    
 
     <button @click="submit">Submit</button>
+
   </div>
 </template>
 
@@ -91,5 +93,8 @@ export default {
       width: 300px;
       font-size: 1.2em;
     }
+    p {
 
+    font-size: 1.2em;
+    }
 </style>

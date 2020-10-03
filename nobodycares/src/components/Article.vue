@@ -1,7 +1,7 @@
 <template>
   <div class="articles" :style ="note"></div>
   <h1> Articles </h1>
-
+  <p> -Multi-threaded thoughts </p>
   <div>
   <tr v-for="article in articles" :key="article.title">
     <td>{{article.title}}</td>
@@ -14,7 +14,7 @@
 
   </div>
 <br>
-  <div>
+  <div class="new">
     <router-link to="/article/create">NEW</router-link>
   </div>
 
@@ -74,10 +74,14 @@ export default {
   padding: 60px;
   font-size:3em;
   }
-  router-link{
-  margin: 60px;
+  .new{
+  margin: 50px;
   height: 60px;
-  width: 200px;
+  color: #F0F0F0;
+  font-size: 1.3em;
+  }
+  p {
+
   font-size: 1.2em;
   }
 </style>
