@@ -64,6 +64,7 @@ export default {
   z-index:-1;
   position: absolute;
   margin-left:-10px;
+  margin-top:-80px;
   }
   .articles2{
   width:100.1%;
@@ -76,6 +77,7 @@ export default {
   color: #F0F0F0;
   padding: 60px;
   font-size:3em;
+  
   }
   .new{
   margin: 50px;

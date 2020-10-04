@@ -47,22 +47,24 @@ export default {
 </script>
 
 <style scoped>
-.articles{
+  .articles{
   width:100.1%;
   height:100%;
   z-index:-1;
   position: absolute;
   margin:-10px;
-}
-h1{
+  margin-top:-80px;
+  }
+  h1{
   color: #F0F0F0;
   padding: 60px;
   font-size:3em;
-}
-router-link{
+  margin-top:-60px;
+  }
+  router-link{
   margin: 60px;
   height: 60px;
   width: 200px;
   font-size: 1.2em;
-}
+  }
 </style>

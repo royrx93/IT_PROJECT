@@ -22,22 +22,22 @@
 #nav {
   width:97.8%;
   padding: 30px;
-  background-color: rgb(30, 30, 30);
+  background-color: rgb(10, 10, 10);
   font-size: 1.2em;
   letter-spacing: 3px;
   word-spacing: 10px;
   margin:-10px;
   position: relative;
-
+  opacity:0.6;
   a {
     font-weight: bold;
-    color: #c0c0c0;
+    color: white;
     text-decoration: none;
     overflow: scroll;
 
     &.router-link-exact-active {
-      color: white;
-    }
+      text-decoration:underline;
   }
-}
+  }
+  }
 </style>

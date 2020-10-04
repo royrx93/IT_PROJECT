@@ -98,6 +98,7 @@
   z-index:-1;
   position: absolute;
   margin:-10px;
+  margin-top:-80px;
   }
   h1{
   color: #F0F0F0;

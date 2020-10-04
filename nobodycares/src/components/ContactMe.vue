@@ -72,7 +72,7 @@ export default {
   height:100%;
   z-index:-1;
   position: absolute;
-
+  margin-top:-80px;
   margin-left:-10px;
   }
   .contact2{
