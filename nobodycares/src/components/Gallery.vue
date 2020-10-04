@@ -44,35 +44,35 @@
   z-index: -1;
   position: absolute;
   margin:-10px;
-
+  margin-top:-80px;
   }
   .back {
   width: 100.1%;
-  height: 120%;
+  height: 240%;
   z-index: -1;
   position: absolute;
   margin:-2px;
 
   }
   .waterfall-border{
-      margin: 25px 35px 35px 35px;
-      background-color: rgba(125,125,125,0.7);
+  margin: 25px 35px 35px 35px;
+  background-color: rgba(125,125,125,0.7);
   }
-    .waterfall-width-column {
-        opacity:1;
+  .waterfall-width-column {
+  opacity:1;
   column-count: 4;
   column-gap: 5px;
-      margin: 25px 15px 35px 15px;
-      padding: 10px;
+  margin: 25px 15px 35px 15px;
+  padding: 10px;
   .image-box {
-      margin-bottom: 5px;
-      margin-top: 5px;
-      border: 2px solid gray;
-          img {
-              width: 100%;
-              height: 100%;
-          }
-      }
+  margin-bottom: 5px;
+  margin-top: 5px;
+  border: 2px solid gray;
+  img {
+  width: 100%;
+  height: 100%;
+  }
+  }
   }
   .bckgd {
   width: 100%;

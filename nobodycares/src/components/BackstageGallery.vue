@@ -119,6 +119,7 @@ export default {
   position: fixed;
   margin:-60px;
   margin-top:-120px;
+  margin-left:-70px;
   }
   .bs {
   width: 100%;
