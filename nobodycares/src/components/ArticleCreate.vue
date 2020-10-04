@@ -35,11 +35,11 @@ export default {
       description: "",
       content: "",
        note: {
-                    backgroundImage: "url(" + require("../assets/background.jpeg") + ")",
-                    backgroundRepeat: "no-repeat",
-                    backgroundSize: "100%",
-                    backgroundAttachment: "fixed",
-                   },
+         backgroundImage: "url(" + require("../assets/background.jpeg") + ")",
+         backgroundRepeat: "no-repeat",
+         backgroundSize: "100%",
+         backgroundAttachment: "fixed",
+       },
 
     };
   },

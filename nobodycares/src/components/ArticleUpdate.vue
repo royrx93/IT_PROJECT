@@ -5,21 +5,21 @@
   <input
       type="description"
       name="description"
-      v-model="newArticle.title"
+      v-model="title"
       placeholder = "description"
   >
   <br>
   <input
       type="description"
       name="description"
-      v-model="newArticle.description"
+      v-model="description"
       placeholder = "description"
   >
   <br>
   <input
       type="string"
       name="string"
-      v-model="newArticle.content"
+      v-model="content"
       placeholder = "content"
   >
   <br>
@@ -30,7 +30,7 @@
 
 <script>
 import ArticleService from "@/services/ArticleService";
-import ArticleCreateService from "@/services/ArticleCreateService";
+import ArticleUpdateService from "@/services/ArticleUpdateService";
 export default {
   data(){
     return {
@@ -43,32 +43,19 @@ export default {
         backgroundSize: "100%",
         backgroundAttachment: "fixed",
       },
-      articles: null,
-      newArticle: {
-        title:this.$route.params.title,
-        description:"",
-        content:"",
-      }
+
     }
   },
 
   async mounted() {
     this.articles = (await ArticleService.index()).data
     console.log(this.articles.title)
-    for (let article in this.articles){
-
-      if(article.title == this.$route.params.title){
-
-        this.newArticle.description = article.description
-        this.newArticle.content = article.content
-      }
-    }
   },
 
 
   methods:{
     async articleUpdate() {
-      const response = await ArticleCreateService.articleUpdate({
+      const response = await ArticleUpdateService.articleUpdate({
         title: this.title,
         description: this.description,
         content: this.content
