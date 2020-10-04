@@ -5,7 +5,7 @@
     <router-link to="/gallery">Gallery</router-link> |
     <router-link to="/backstage">Backstage</router-link> |
     <router-link to="/articles">articles</router-link> |
-    <router-link to="/contactMe">ContactMe</router-link>|
+    <router-link to="/contactMe">ContactMe</router-link>
   </div>
   <router-view />
 </template>

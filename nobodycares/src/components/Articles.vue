@@ -14,7 +14,9 @@
   </div>
   <br>
   <div>
-    <router-link to="/article/create">NEW</router-link>
+    <router-link to="/article/create">
+      <button>NEW</button>
+    </router-link>
   </div>
 </template>
 
