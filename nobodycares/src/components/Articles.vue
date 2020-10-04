@@ -48,7 +48,7 @@ export default {
 
 <style scoped>
 .articles{
-  width:100.7%;
+  width:100.1%;
   height:100%;
   z-index:-1;
   position: absolute;
