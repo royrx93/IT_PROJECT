@@ -3,6 +3,7 @@
     <h1>Gallery</h1>
     <p> -Just some pieces of my soul </p>
     <div class="back" :style="note"></div>
+      <div class="waterfall-border">
     <div class="waterfall-width-column" >
       
      <div class="image-box" v-for="img in this.gallery" :key="img.id">
@@ -12,6 +13,7 @@
      </div>
       
    </div>
+      </div>
  </div>
 </template>
 <script>
@@ -52,20 +54,25 @@
   margin:-2px;
 
   }
-  .waterfall-width-column {
+  .waterfall-border{
+      margin: 25px 35px 35px 35px;
+      background-color: rgba(125,125,125,0.7);
+  }
+    .waterfall-width-column {
+        opacity:1;
   column-count: 4;
   column-gap: 5px;
-  margin: 25px 50px 0px 50px;
-
+      margin: 25px 15px 35px 15px;
+      padding: 10px;
   .image-box {
-  img {
-
-  width: 100%;
-  height: 100%;
-  }
-
-  }
-
+      margin-bottom: 5px;
+      margin-top: 5px;
+      border: 2px solid gray;
+          img {
+              width: 100%;
+              height: 100%;
+          }
+      }
   }
   .bckgd {
   width: 100%;
