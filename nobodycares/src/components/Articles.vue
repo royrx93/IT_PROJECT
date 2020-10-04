@@ -48,10 +48,11 @@ export default {
 
 <style scoped>
 .articles{
-  width:98.95%;
+  width:100.7%;
   height:100%;
   z-index:-1;
   position: absolute;
+  margin:-10px;
 }
 h1{
   color: #F0F0F0;

@@ -39,7 +39,7 @@
 
 <style lang="scss" >
   .gallery {
-  width: 100.1%;
+  width: 100.7%;
   height: 100%;
   z-index: -1;
   position: absolute;
@@ -48,7 +48,7 @@
   }
   .back {
   width: 100.1%;
-  height: 120%;
+  height: 240%;
   z-index: -1;
   position: absolute;
   margin:-2px;
