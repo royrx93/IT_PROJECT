@@ -2,22 +2,31 @@
   <div class="articleview" :style ="note"></div>
 
   <div class="articles" :style ="note"></div>
-  <ul v-for="article in articles" :key="article.title">
-    <li v-if="article.title == this.$route.params.title">
+  <div v-for="article in articles" :key="article.title">
+    <div v-if="article.title == this.$route.params.title">
+      <div style="font-size: 50px; margin-top: 40px; margin-bottom: 10px">{{article.title}}</div>
 
-      <h1>{{article.title}}</h1>
-      <br>
-      <h2>{{article.description}}</h2>
-      <br>
-      {{article.content}}
-    </li>
-  </ul>
+      <div style="font-size: 10px; margin-bottom: 50px">{{fixTime(article.createDate)}}</div>
+
+      <div style="font-size: 20px; margin-bottom: 60px; font-style: italic">{{article.description}}</div>
+
+      <div style="width: 60%; margin: 0px auto">{{article.content}}</div>
+
+    </div>
+  </div>
+
+  <div>
+    <button class="buttons" @click="goBack">
+      back
+    </button>
+  </div>
 
 </template>
 
 <script>
 
 import ArticleService from "@/services/ArticleService";
+let moment = require("moment");
 export default {
 
   data(){
@@ -42,6 +51,13 @@ export default {
   },
 
   methods:{
+    fixTime(createDate){
+      createDate = moment(createDate).format('YYYY-MM-DD HH:mm')
+      return createDate
+    },
+    goBack(){
+      this.$router.go(-1);
+    }
   }
 
 }
@@ -73,4 +89,25 @@ router-link{
   width: 200px;
   font-size: 1.2em;
 }
+
+.buttons{
+  position:fixed;
+  left: 10px;
+  top: 50%;
+  height: 50px;
+  z-index:9999;
+  width: 75px;
+  height: 35px;
+  background-color: #33A5FF;
+  border-radius: 10%;
+  margin: 1px;
+  border: none;
+  font-size: 20px;
+  color: white;
+}
+
+.buttons:hover{
+  background: #3366FF;
+}
+
 </style>
