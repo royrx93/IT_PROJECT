@@ -1,27 +1,21 @@
 <template>
   <div class="bsgallery" :style="note"></div>
+
   <Sidebar> </Sidebar>
   <div class="upload">
-    
     <ul>
-      
       <li><p>Upload Image</p></li>
       <li><input id="file" type="file" @change="onFileChanged" /></li>
       <li>description:</li>
       <li><input id="title" name="title" maxlength="50" v-model="title" /></li>
       <li><button @click="uploadImage">Upload!</button></li>
-      
     </ul>
-    
   </div>
-
-  
   <div class="waterfall-width-column">
     <div class="image-box" v-for="img in this.gallery" :key="img.id">
       <div class="back" :style="note"></div>
       <img :src="img.url" />
       <p @click="deleteImage(img)">delete</p>
-      
     </div>
   </div>
 </template>
@@ -29,8 +23,12 @@
 <script>
 import BackstageGalleryService from "../services/BackstageGalleryService";
 import GalleryService from "../services/GalleryService";
-
+import Sidebar from  "@/components/Sidebar";
 export default {
+  components:{
+    Sidebar
+  },
+
   data() {
     return {
       selectedFile: null,
