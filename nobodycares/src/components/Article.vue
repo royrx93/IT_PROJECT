@@ -2,6 +2,8 @@
   <div class="articles" :style ="note"></div>
   <h1> Articles Management </h1>
 
+  <sideBar></sideBar>
+
   <div class="cardBox" v-for="article in articles" :key="article.title">
     <div class="articles2" :style ="note"></div>
     <div>{{article.title}}</div>
@@ -25,8 +27,11 @@
 <script>
 import ArticleService from "@/services/ArticleService";
 import ArticleDeleteService from "@/services/ArticleDeleteService";
+import sideBar from "@/components/Sidebar"
 export default {
-
+  components:{
+    sideBar,
+  },
   data(){
     return{
       note: {
