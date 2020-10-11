@@ -3,8 +3,9 @@
     "",
     "\\nobodycares",
     "\\nobodycares\\src",
-    "\\nobodycares\\src\\components"
+    "\\nobodycares\\src\\components",
+    "\\nobodycares\\src\\views"
   ],
-  "SelectedNode": "\\nobodycares\\src\\components\\Timeline.vue",
+  "SelectedNode": "\\nobodycares\\src\\components\\BackstageGallery.vue",
   "PreviewInSolutionExplorer": false
 }
