@@ -6,6 +6,7 @@
       <div class="waterfall-width-column">
         <div class="image-box" v-for="img in this.gallery" :key="img.id">
           <img :src="img.url" />
+          <p> {{img.title}}</p>
         </div>
       </div>
     </div>
@@ -59,6 +60,10 @@ body {
 .waterfall-width-column .image-box img {
   width: 80%;
   height: 80%;
+}
+.waterfall-width-column .image-box p {
+  margin: 1px 1px 1px 1px;
+  font-size: 17px;
 }
 
 h1 {
