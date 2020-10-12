@@ -4,6 +4,7 @@
   <Sidebar> </Sidebar>
   <div class="upload">
     <ul>
+      <div class="bs" :style="note"></div>
       <li><p>Upload Image</p></li>
       <li><input id="file" type="file" @change="onFileChanged" /></li>
       <li>description:</li>
@@ -77,6 +78,7 @@ export default {
   z-index: -1;
   position: absolute;
   margin:-10px;
+  margin-top:-80px;
   }
   .back {
   width: 120%;
@@ -88,11 +90,12 @@ export default {
   margin-left:-70px;
   }
   .bs {
-  width: 100%;
+  width: 120%;
   height: 100%;
   z-index: -1;
   position: fixed;
   margin:-70px;
+  margin-top:-120px;
   }
   h1 {
   color: #f0f0f0;

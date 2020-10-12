@@ -35,7 +35,7 @@ export default {
     },
     /* Set the width of the side navigation to 250px */
     openNav() {
-      document.getElementById("mySidenav").style.width = "150px";
+      document.getElementById("mySidenav").style.width = "180px";
     },
     /* Set the width of the side navigation to 0 */
     closeNav() {
@@ -47,13 +47,13 @@ export default {
 
 <style scoped>
 /* The side navigation menu */
-/* The side navigation menu */
+
 .sidenav {
-  height: 70%; /* 100% Full-height */
-  width: 150px; /* 0 width - change this with JavaScript */
+  height: 90%; /* 100% Full-height */
+  width: 180px; /* 0 width - change this with JavaScript */
   position: absolute; /* Stay in place */
   z-index: 1; /* Stay on top */
-  top: 15%; /* Stay at the top */
+  top: 13%; /* Stay at the top */
   left: 0;
   background-color: rgb(30, 30, 30); /* Black*/
   overflow-x: hidden; /* Disable horizontal scroll */
@@ -78,15 +78,15 @@ export default {
 .sidenav .closebtn {
   position: absolute;
   top: 0;
-  right: 25px;
+  right: 15px;
   font-size: 36px;
-  margin-left: 50px;
+  margin-left: 75px;
 }
 
 .sideicon{
   position: absolute;
-  left: 20px;
-  top: 150px;
+  left: 35px;
+  top: 75px;
 }
 
 .sideicon img{
