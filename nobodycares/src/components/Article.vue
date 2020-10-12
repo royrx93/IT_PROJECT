@@ -1,23 +1,25 @@
 <template>
   <div class="articles" :style ="note"></div>
-  <h1> Articles </h1>
-  <p> -Multi-threaded thoughts </p>
+  <h1> Articles Management </h1>
 
-  <div v-for="article in articles" :key="article.title">
+  <sideBar></sideBar>
+
+  <div class="cardBox" v-for="article in articles" :key="article.title">
     <div class="articles2" :style ="note"></div>
-    {{article.title}}
-    <br>
-    {{article.description}}
-    <button  @click="remove(article)">Delete</button>
+    <div>{{article.title}}</div>
+
+    <button id="delete" @click="remove(article)">Delete</button>
 
     <router-link :to="{name :'ArticleUpdate', params : {title : article.title}}">
-      <button>update</button>
+      <button id = "update">update</button>
     </router-link>
 
   </div>
 <br>
-  <div class="new">
-    <router-link to="/article/create">NEW</router-link>
+  <div>
+    <router-link to="/article/create">
+      <button class="buttons">+</button>
+    </router-link>
   </div>
 </template>
 
@@ -25,8 +27,11 @@
 <script>
 import ArticleService from "@/services/ArticleService";
 import ArticleDeleteService from "@/services/ArticleDeleteService";
+import sideBar from "@/components/Sidebar"
 export default {
-
+  components:{
+    sideBar,
+  },
   data(){
     return{
       note: {
@@ -46,9 +51,12 @@ export default {
 
   methods:{
     async remove(article){
-      const response = await ArticleDeleteService.articleDelete(article);
-      location.reload()
-      console.log(response.data())
+      const r = confirm("DELETE THIS ARTICLE?");
+      if(r == true){
+        const response = await ArticleDeleteService.articleDelete(article);
+        location.reload()
+        console.log(response.data())
+      }
     },
 
   }
@@ -64,6 +72,7 @@ export default {
   z-index:-1;
   position: absolute;
   margin-left:-10px;
+  margin-top:-80px;
   }
   .articles2{
   width:100.1%;
@@ -76,6 +85,7 @@ export default {
   color: #F0F0F0;
   padding: 60px;
   font-size:3em;
+  
   }
   .new{
   margin: 50px;
@@ -86,5 +96,58 @@ export default {
   p {
 
   font-size: 1.2em;
+  }
+
+  .cardBox {
+    width: 200px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+    float: left;
+    margin-right: 10px;
+    padding: 15px 5px 5px;
+  }
+  #delete{
+    background-color: #33A5FF;
+    width: 60px;
+    height: 25px;
+    color: #FFFFFF;
+    border: none;
+    margin-right: 10px;
+    border-radius: 10%;
+  }
+  #delete:hover {
+    background: #FF0000;
+  }
+
+  #update{
+    background-color: #33A5FF;
+    width: 60px;
+    height: 25px;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 10%;
+  }
+  #update:hover{
+    background: #339900;
+  }
+
+  .buttons{
+    position:fixed;
+    right: 10px;
+    bottom: 10px;
+    height: 50px;
+    z-index:9999;
+    width: 75px;
+    height: 75px;
+    background-color: #33A5FF;
+    border-radius: 50%;
+    margin: 1px;
+    border: none;
+    font-size: 50px;
+    color: white;
+  }
+
+  .buttons:hover{
+    background: #3366FF;
   }
 </style>

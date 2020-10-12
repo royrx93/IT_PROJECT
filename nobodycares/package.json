@@ -36,6 +36,7 @@
     "node-sass": "^4.14.1",
     "prettier": "^1.19.1",
     "sass-loader": "^8.0.2",
-    "vue-directive-image-previewer": "^2.2.2"
+    "vue-directive-image-previewer": "^2.2.2",
+    "vuetify": "^2.3.13"
   }
 }

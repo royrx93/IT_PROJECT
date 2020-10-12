@@ -52,6 +52,7 @@ export default {
   z-index: -1;
   position: absolute;
   margin-left:-10px;
+  margin-top:-80px;
   }
   .backstage2 {
   width: 100.1%;
