@@ -12,7 +12,6 @@ import Backstage from "@/components/Backstage";
 import ArticleView from "@/components/ArticleView";
 import Articles from "@/components/Articles";
 import ArticleUpdate from "@/components/ArticleUpdate";
-import TimelineBackstage from "../components/TimelineBackstage";
 
 const routes = [
   {
@@ -90,17 +89,6 @@ const routes = [
     path: '/articles',
     name:'Articles',
     component: Articles
-  },
-  {
-    path:'/backstageTimeline',
-    name:"TimelineBackstage",
-    component:TimelineBackstage
-  },
-  {
-
-    path: "/timeline/delete",
-    name: "TimelineDelete",
-    component: TimelineBackstage
   }
 
 ];

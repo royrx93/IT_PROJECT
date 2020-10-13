@@ -79,8 +79,8 @@ export default {
         alert("Title Word Limit 50")
       }else if(this.description.length > 199) {
         alert("Description Word Limit 200")
-      } else if(this.content.length > 10000){
-        alert("Content Word Limit 10000")
+      } else if(this.content.length > 499){
+        alert("Content Word Limit 500")
       } else {
         const response = await ArticleUpdateService.articleUpdate({
           title: this.title,
