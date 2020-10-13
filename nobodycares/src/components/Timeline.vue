@@ -108,7 +108,7 @@
   margin-top:40px;
   }
   li{list-style-type: none;}
-  .time_main{clear: both;overflow: hidden;}
+  .time_main{clear: both;overflow: hidden}
   .time_main .last{float: left;width: 5%;}
   .ml_contents{ float: left;
   clear: both;overflow: hidden; width: 90%; margin-bottom: 20px;
