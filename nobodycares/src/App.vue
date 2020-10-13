@@ -3,6 +3,7 @@
     <router-link to="/">Home</router-link> |
     <router-link to="/timeline">Timeline</router-link> |
     <router-link to="/gallery">Gallery</router-link> |
+    <router-link to="/login">Login</router-link> |
     <router-link to="/backstage">Backstage</router-link> |
     <router-link to="/articles">articles</router-link> |
     <router-link to="/contactMe">ContactMe</router-link>
