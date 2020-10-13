@@ -1,16 +1,16 @@
 <template>
-  <div class="articleview" :style ="note"></div>
 
-  <div class="articles" :style ="note"></div>
   <div v-for="article in articles" :key="article.title">
     <div v-if="article.title == this.$route.params.title">
-      <div style="font-size: 50px; margin-top: 40px; margin-bottom: 10px">{{article.title}}</div>
+      <div class="title">{{article.title}}</div>
 
-      <div style="font-size: 10px; margin-bottom: 50px">{{fixTime(article.createDate)}}</div>
+      <div class="time">create at {{fixTime(article.createDate)}}</div>
 
-      <div style="font-size: 20px; margin-bottom: 60px; font-style: italic">{{article.description}}</div>
+      <div style="width: 100%"><img class="image" :src="article.image_url" /></div>
 
-      <div style="width: 60%; margin: 0px auto">{{article.content}}</div>
+      <div class="decription">{{article.description}}</div>
+
+      <div class="content" v-html="newLine(article.content)"></div>
 
     </div>
   </div>
@@ -31,17 +31,8 @@ export default {
 
   data(){
     return {
-
-      note: {
-        backgroundImage: "url(" + require("../assets/background.jpeg") + ")",
-        backgroundRepeat: "no-repeat",
-        backgroundSize: "100%",
-        backgroundAttachment: "fixed",
-      },
       articles: null,
-
       article: null,
-
     }
   },
 
@@ -57,6 +48,10 @@ export default {
     },
     goBack(){
       this.$router.go(-1);
+    },
+    newLine(content){
+      content = content.replaceAll("\n", "<br>")
+      return content
     }
   }
 
@@ -65,35 +60,50 @@ export default {
 </script>
 
 <style scoped>
-.articleview{
-  width:100.1%;
-  height:100%;
-  z-index:-1;
-  position: absolute;
-  margin:-10px;
-  }
-.articles{
-  width:99.15%;
-  height:100%;
-  z-index:-1;
-  position: absolute;
+.title{
+  font-size: 50px;
+  margin-top: 40px;
+  margin-bottom: 10px;
+  margin-left: 10%;
+  width: 100%;
+  text-align:left;
 }
-h1{
-  color: #F0F0F0;
-  padding: 60px;
-  font-size:3em;
+
+
+.time{
+  font-size: 10px;
+  margin-bottom: 50px;
+  width: 100%;
+  text-align:left;
+  margin-left: 10%;
 }
-router-link{
-  margin: 60px;
-  height: 60px;
-  width: 200px;
-  font-size: 1.2em;
+
+.image{
+  width: 45%;
+  height: 45%;
+  margin-right: 40%;
 }
+
+.decription{
+  font-size: 20px;
+  margin-bottom: 60px;
+  text-align:left;
+  margin-left: 10%;
+  margin-top: 10px;
+  width: 100%;
+}
+.content{
+  width: 80%;
+  text-align:left;
+  margin-left: 10%;
+}
+
+
 
 .buttons{
   position:fixed;
-  left: 10px;
-  top: 50%;
+  right: 10px;
+  bottom: 10%;
   height: 50px;
   z-index:9999;
   width: 75px;
