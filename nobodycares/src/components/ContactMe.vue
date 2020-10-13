@@ -59,7 +59,20 @@ export default {
           method: 'post',
           url: '/mail',
           data: formData,
-        });
+        })
+        .then(res =>{
+          console.log(res.data);
+          if(res.data.state === 1){
+            alert("sending sucess")
+          }
+          else{
+            alert("sending failed")
+          }
+        })
+        .catch(error=>{
+        console.log(error);
+        alert('Internet failed');
+      });
       }
     },
   },
