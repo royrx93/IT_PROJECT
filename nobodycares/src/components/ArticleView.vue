@@ -1,17 +1,19 @@
 <template>
-  <body>
-  
 
-  
+  <body>
+
   <div v-for="article in articles" :key="article.title">
     <div v-if="article.title == this.$route.params.title">
-      <div style="font-size: 50px; margin-top: 40px; margin-bottom: 10px; margin-left:40px">{{article.title}}</div>
+      <div class="title">{{article.title}}</div>
 
-      <div style="font-size: 10px; margin-bottom: 50px; margin-left:40px">{{fixTime(article.createDate)}}</div>
+      <div class="time">create at {{fixTime(article.createDate)}}</div>
 
-      <div style="font-size: 20px; margin-bottom: 60px; margin-left:40px; font-style: italic">{{article.description}}</div>
+      <div style="width: 100%"><img class="image" :src="article.image_url" /></div>
 
-      <div style="width: 60%; margin: 0px auto">{{article.content}}</div>
+
+      <div class="decription">{{article.description}}</div>
+
+      <div class="content" v-html="newLine(article.content)"></div>
 
     </div>
   </div>
@@ -33,11 +35,8 @@ export default {
   data(){
     return {
 
-
       articles: null,
-
       article: null,
-
     }
   },
 
@@ -53,6 +52,10 @@ export default {
     },
     goBack(){
       this.$router.go(-1);
+    },
+    newLine(content){
+      content = content.replaceAll("\n", "<br>")
+      return content
     }
   }
 
@@ -61,6 +64,7 @@ export default {
 </script>
 
 <style scoped>
+
   body{
   width:100%;
   height:100%;
@@ -88,10 +92,51 @@ export default {
   font-size: 1.2em;
   }
 
+.title{
+  font-size: 50px;
+  margin-top: 40px;
+  margin-bottom: 10px;
+  margin-left: 10%;
+  width: 100%;
+  text-align:left;
+}
+
+
+.time{
+  font-size: 10px;
+  margin-bottom: 50px;
+  width: 100%;
+  text-align:left;
+  margin-left: 10%;
+}
+
+.image{
+  width: 45%;
+  height: 45%;
+  margin-right: 40%;
+}
+
+.decription{
+  font-size: 20px;
+  margin-bottom: 60px;
+  text-align:left;
+  margin-left: 10%;
+  margin-top: 10px;
+  width: 100%;
+}
+.content{
+  width: 80%;
+  text-align:left;
+  margin-left: 10%;
+}
+
+
+
+
   .buttons{
   position:fixed;
-  left: 10px;
-  top: 50%;
+  right: 10px;
+  bottom: 10%;
   height: 50px;
   z-index:9999;
   width: 75px;
