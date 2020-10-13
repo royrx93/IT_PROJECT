@@ -36,7 +36,7 @@ export default {
       this.$router.replace("/article");
     },
     redirectToTimeline(){
-      this.$router.replace("/timeline/add");
+      this.$router.replace("/backstageTimeline");
     },
     redirectToHomepage(){
       this.$router.replace("/backstageHomage");
