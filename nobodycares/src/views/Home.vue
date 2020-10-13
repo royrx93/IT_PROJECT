@@ -1,6 +1,6 @@
 <template>
 
-  <div class="home" :style ="note">
+  <div>
 
     <HelloWorld msg="Welcome!" />
   </div>
@@ -8,13 +8,17 @@
 
 
 <style scoped>
-  .home{
-  width:100.1%;
-  height:100%;
+  div{
+  background-image: url("../assets/background.jpeg");
+  background-repeat: repeat;
+  background-attachment: fixed;
+  background-size:cover;
+  width:100%;
+  height:auto;
   z-index:-1;
   position: absolute;
-  margin:-10px;
-  margin-top:-80px;
+  margin:10px;
+  margin-top:20px;
   }
 
 </style>
@@ -31,12 +35,7 @@
   },
   data() {
   return {
-  note: {
-  backgroundImage: "url(" + require("../assets/background.jpeg") + ")",
-  backgroundRepeat: "no-repeat",
-  backgroundSize: "100%",
-  backgroundAttachment: "fixed",
-  },
+
   }
   },
   };

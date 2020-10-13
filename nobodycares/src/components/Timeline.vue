@@ -1,4 +1,5 @@
 <template>
+  <body>
   <div class="timeline" :style ="note">
       <v-layout column>
           <v-flex xs6 offset-xs3>
@@ -21,7 +22,7 @@
           <li v-for="timeline in timeline" :key="timeline.year" @click="qiehuan(timeline.year)"><span>{{timeline.year}}</span></li>
       </ul>
   </div>
-
+</body>
 
 
 
@@ -38,12 +39,7 @@
                 timeinfo: null,
                 yearSelect: undefined,//选中的年份
                 pageCurr: 0,//当前页码
-                note: {
-                    backgroundImage: "url(" + require("../assets/background.jpeg") + ")",
-                    backgroundRepeat: "no-repeat",
-                    backgroundSize: "100%",
-                    backgroundAttachment: "fixed",
-                   },
+              
             }
         },
         mounted(){
@@ -92,13 +88,17 @@
 </script>
 
 <style scoped>
-  .timeline{
-  width:100.1%;
-  height:100%;
+  body{
+  width:100%;
+  height:auto;
   z-index:-1;
   position: absolute;
   margin:-10px;
-  margin-top:-80px;
+  margin-top:20px;
+  background-image: url("../assets/background.jpeg");
+  background-repeat: repeat;
+  background-attachment: fixed;
+  background-size:cover;
   }
   h1{
   color: #F0F0F0;

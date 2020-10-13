@@ -1,11 +1,12 @@
 <template>
-  <div class="bsgallery" :style="note"></div>
+  <body>
+  
 
   <Sidebar> </Sidebar>
   <div class="upload">
     <ul>
-      <div class="bs" :style="note"></div>
-      <li><p>Upload Image</p></li>
+      
+      <li><p1>Upload Image</p1></li>
       <li><input id="file" type="file" @change="onFileChanged" /></li>
       <li>description:</li>
       <li><input id="title" name="title" maxlength="50" v-model="title" /></li>
@@ -14,11 +15,12 @@
   </div>
   <div class="waterfall-width-column">
     <div class="image-box" v-for="img in this.gallery" :key="img.id">
-      <div class="back" :style="note"></div>
+      
       <img :src="img.url" />
       <p @click="deleteImage(img)">delete</p>
     </div>
   </div>
+ </body>
 </template>
 
 <script>
@@ -35,12 +37,7 @@ export default {
       selectedFile: null,
       title: "",
       gallery: null,
-      note: {
-        backgroundImage: "url(" + require("../assets/background.jpeg") + ")",
-        backgroundRepeat: "no-repeat",
-        backgroundSize: "100%",
-        backgroundAttachment: "fixed"
-      },
+
       sidebar_icon: require("../assets/sidebar_icon.png")
     };
   },
@@ -72,41 +69,37 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .bsgallery {
-  width: 100.1%;
+  body {
+  width: 100%;
   height: 100%;
   z-index: -1;
   position: absolute;
   margin:-10px;
-  margin-top:-80px;
+  margin-top:130px;
+  background-image: url("../assets/background.jpeg");
+  background-repeat: repeat;
+  background-attachment: fixed;
+  background-size:cover;
   }
-  .back {
-  width: 120%;
-  height: 100%;
-  z-index: -1;
-  position: fixed;
-  margin:-60px;
-  margin-top:-120px;
-  margin-left:-70px;
-  }
-  .bs {
-  width: 120%;
-  height: 100%;
-  z-index: -1;
-  position: fixed;
-  margin:-70px;
-  margin-top:-120px;
-  }
-  h1 {
+
+  li {
   color: #f0f0f0;
-  padding: 60px;
-  font-size: 3em;
+
+  font-size: 1.2em;
+  margin-left:-60px;
+  margin-bottom:30px;
+  p1{
+  font-size:3em;
+  margin-left:60px;
   }
+  }
+  
   input {
   margin: 4px;
   height: 40px;
   width: 400px;
   font-size: 1.2em;
+  margin-left:100px;
   }
 
 
@@ -154,4 +147,5 @@ export default {
   }
 
   }
+  
 </style>

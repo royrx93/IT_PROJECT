@@ -1,5 +1,6 @@
 <template>
-  <div class="timelineadd" :style ="note"></div>
+  <body>
+  
     <H1>Add Timeline</H1>
 <!--    <input-->
 <!--            type="string"-->
@@ -20,6 +21,7 @@
             placeholder="description">
     <br>
     <button @click="timelineAdd" to="/timeline">Submit</button>
+    </body>
 </template>
 
 <script>
@@ -30,12 +32,7 @@
                 year:'',
                 month:'',
                 description:'',
-                 note: {
-                    backgroundImage: "url(" + require("../assets/background.jpeg") + ")",
-                    backgroundRepeat: "no-repeat",
-                    backgroundSize: "100%",
-                    backgroundAttachment: "scroll",
-                   },
+
             }
         },
         methods:{
@@ -54,29 +51,36 @@
 </script>
 
 <style scoped>
-  .timelineadd{
-  width:100.1%;
+  body{
+  width:100%;
   height:100%;
   z-index:-1;
   position: absolute;
   margin-left:-10px;
-  margin-top:-80px;
+  margin-top:50px;
+  background-image: url("../assets/background.jpeg");
+  background-repeat: repeat;
+  background-attachment: fixed;
+  background-size:cover;
   }
   H1{
   color: #F0F0F0;
   padding: 60px;
   font-size:3em;
+  margin-left:70px;
   }
   input{
   margin: 8px;
   height:60px;
   width: 600px;
   font-size: 1.2em;
+  margin-left:100px;
   }
   button{
   margin: 60px;
   height: 60px;
   width: 300px;
   font-size: 1.2em;
+  margin-left:100px;
   }
 </style>

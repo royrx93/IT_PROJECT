@@ -1,14 +1,15 @@
 <template>
-  <div class="articleview" :style ="note"></div>
+  <body>
+  
 
-  <div class="articles" :style ="note"></div>
+  
   <div v-for="article in articles" :key="article.title">
     <div v-if="article.title == this.$route.params.title">
-      <div style="font-size: 50px; margin-top: 40px; margin-bottom: 10px">{{article.title}}</div>
+      <div style="font-size: 50px; margin-top: 40px; margin-bottom: 10px; margin-left:40px">{{article.title}}</div>
 
-      <div style="font-size: 10px; margin-bottom: 50px">{{fixTime(article.createDate)}}</div>
+      <div style="font-size: 10px; margin-bottom: 50px; margin-left:40px">{{fixTime(article.createDate)}}</div>
 
-      <div style="font-size: 20px; margin-bottom: 60px; font-style: italic">{{article.description}}</div>
+      <div style="font-size: 20px; margin-bottom: 60px; margin-left:40px; font-style: italic">{{article.description}}</div>
 
       <div style="width: 60%; margin: 0px auto">{{article.content}}</div>
 
@@ -20,7 +21,7 @@
       back
     </button>
   </div>
-
+  </body>
 </template>
 
 <script>
@@ -32,12 +33,7 @@ export default {
   data(){
     return {
 
-      note: {
-        backgroundImage: "url(" + require("../assets/background.jpeg") + ")",
-        backgroundRepeat: "no-repeat",
-        backgroundSize: "100%",
-        backgroundAttachment: "fixed",
-      },
+
       articles: null,
 
       article: null,
@@ -65,32 +61,34 @@ export default {
 </script>
 
 <style scoped>
-.articleview{
-  width:100.1%;
+  body{
+  width:100%;
   height:100%;
   z-index:-1;
   position: absolute;
   margin:-10px;
+  margin-top:100px;
+  
+  background-image: url("../assets/background.jpeg");
+  background-repeat: repeat;
+  background-attachment: fixed;
+  background-size:cover;
   }
-.articles{
-  width:99.15%;
-  height:100%;
-  z-index:-1;
-  position: absolute;
-}
-h1{
+ 
+  h1{
   color: #F0F0F0;
   padding: 60px;
   font-size:3em;
-}
-router-link{
+  
+  }
+  router-link{
   margin: 60px;
   height: 60px;
   width: 200px;
   font-size: 1.2em;
-}
+  }
 
-.buttons{
+  .buttons{
   position:fixed;
   left: 10px;
   top: 50%;
@@ -104,10 +102,10 @@ router-link{
   border: none;
   font-size: 20px;
   color: white;
-}
+  }
 
-.buttons:hover{
+  .buttons:hover{
   background: #3366FF;
-}
+  }
 
 </style>
