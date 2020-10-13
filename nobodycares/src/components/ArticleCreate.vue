@@ -50,7 +50,6 @@ export default {
       title: "",
       description: "",
       content: "",
-
       articles: null,
 
     };
@@ -73,8 +72,8 @@ export default {
         alert("Title Word Limit 50")
       } else if(this.description.length > 200) {
         alert("Description Word Limit 200")
-      } else if(this.content.length > 500){
-        alert("Content Word Limit 500")
+      } else if(this.content.length > 10000){
+        alert("Content Word Limit 10000")
       } else {
         const response = await ArticleCreateService.articleCreate({
           title: this.title,

@@ -1,26 +1,20 @@
 <template>
   <body>
-  <div class="articles" :style ="note"></div>
   <h1> Articles </h1>
-  <div><p>-Multi-threaded thoughts</p></div>
 
-  <div v-for="article in articles" :key="article.title">
+  <div><p>--Multi-threaded thoughts</p></div>
 
-    <div class="cardBox">
 
-      <div style="font-size: 20px">{{article.title}}</div>
-
-      <div style="font-size: 5px">{{fixTime(article.createDate)}}</div>
-
-      <router-link :to="{name :'ArticleView', params : {title : article.title}}">
-
-        <button type="button" class="btn" id = 'buttons'>
-          view
-        </button>
-      </router-link>
-
-    </div>
-
+  <div class = 'border'>
+      <div v-for="article in articles" :key="article.title">
+        <div class="cardBox">
+            <img style="width: 100%; height: 100%; margin-top: 10px" :src="article.image_url" />
+          <div style="font-size: 5px">{{ article.description }}</div>
+          <router-link :to="{ name: 'ArticleView', params: { title: article.title } }">
+            <div style="font-size: 20px">{{ article.title }}</div>
+          </router-link>
+        </div>
+      </div>
   </div>
  </body>
 </template>
@@ -38,6 +32,11 @@ export default {
   },
   async mounted() {
     this.articles = (await ArticleService.index()).data
+    for(var i =0; i < this.articles.length; i++){
+      if(this.articles[i].image_url == null){
+        this.articles[i].image_url = "http://res.cloudinary.com/zjz/image/upload/v1601721278/ypbbzb3rtaurlhjbzgln.jpg"
+      }
+    }
   },
 
 
@@ -78,24 +77,19 @@ export default {
   width: 200px;
   font-size: 1.2em;
   }
-  #buttons{
-  background-color: #33A5FF;
-  width: 60px;
-  height: 25px;
-  color: #FFFFFF;
-  border: none;
-  border-radius: 10%;
-  }
-  #buttons:hover {
-  background: green;
+  .border{
+    column-count: 3;
+    margin: 0px auto;
   }
 
+
   .cardBox {
-  width: 60%;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  text-align: center;
-  margin: 0px auto;
-  padding: 15px 5px 5px 15px;
+    height: 90%;
+    width: 90%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+    margin: 0px auto;
+    margin-top: 10px;
   }
 
 </style>
