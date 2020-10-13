@@ -1,5 +1,6 @@
 <template>
-  <div class="newArticle" :style ="note"></div>
+  <body>
+  
   <H1>New Article!</H1>
   <label>Title:</label>
   <input
@@ -35,8 +36,9 @@
     </button>
   </div>
 
-    <div class="newArticle" :style ="note"></div>
+    
   <button class="buttons" @click="articleCreate">Create</button>
+ </body>
 </template>
 
 <script>
@@ -48,12 +50,7 @@ export default {
       title: "",
       description: "",
       content: "",
-       note: {
-         backgroundImage: "url(" + require("../assets/background.jpeg") + ")",
-         backgroundRepeat: "no-repeat",
-         backgroundSize: "100%",
-         backgroundAttachment: "fixed",
-       },
+
       articles: null,
 
     };
@@ -100,24 +97,32 @@ export default {
 </script>
 
 <style scoped>
-  .newArticle{
-  width:100.1%;
+  body{
+  width:100%;
   height:100%;
   z-index:-1;
   position: absolute;
-  margin:-10px;
-  margin-top:-80px;
+  margin-left:-10px;
+  
+  background-image: url("../assets/background.jpeg");
+  background-repeat: repeat;
+  background-attachment: fixed;
+  background-size:cover;
+  
   }
   H1{
   color: #F0F0F0;
   padding: 60px;
   font-size:3em;
+  margin-top:60px;
+  margin-left:90px;
   }
   input{
   margin: 8px;
   height:60px;
   width: 600px;
   font-size: 1.2em;
+  
   }
   button{
   margin: 60px;
@@ -127,50 +132,50 @@ export default {
   }
 
   label{
-    cursor: pointer;
-    display: inline-block;
-    padding: 3px 6px;
-    text-align: right;
-    width: 150px;
-    vertical-align: top;
+  cursor: pointer;
+  display: inline-block;
+  padding: 3px 6px;
+  text-align: right;
+  width: 150px;
+  vertical-align: top;
   }
 
   textarea{
-    margin: 8px;
-    height:60px;
-    width: 600px;
-    font-size: 1.2em;
+  margin: 8px;
+  height:60px;
+  width: 600px;
+  font-size: 1.2em;
   }
 
   .buttons{
-    width: 100px;
-    height: 50px;
-    border: none;
-    background: #33A5FF;
-    border-radius: 10%;
+  width: 100px;
+  height: 50px;
+  border: none;
+  background: #33A5FF;
+  border-radius: 10%;
   }
 
   .buttons:hover {
-    background: #3366FF;
+  background: #3366FF;
   }
 
   .returnButtons{
-    position:fixed;
-    left: 10px;
-    top: 50%;
-    height: 50px;
-    z-index:9999;
-    width: 75px;
-    height: 35px;
-    background-color: #33A5FF;
-    border-radius: 10%;
-    margin: 1px;
-    border: none;
-    font-size: 20px;
-    color: white;
+  position:fixed;
+  left: 10px;
+  top: 50%;
+  height: 50px;
+  z-index:9999;
+  width: 75px;
+  height: 35px;
+  background-color: #33A5FF;
+  border-radius: 10%;
+  margin: 1px;
+  border: none;
+  font-size: 20px;
+  color: white;
   }
 
   .returnButtons:hover{
-    background: #3366FF;
+  background: #3366FF;
   }
 </style>

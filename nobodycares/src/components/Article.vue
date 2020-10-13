@@ -1,11 +1,12 @@
 <template>
-  <div class="articles" :style ="note"></div>
+  <body>
+  
   <h1> Articles Management </h1>
 
   <sideBar></sideBar>
 
   <div class="cardBox" v-for="article in articles" :key="article.title">
-    <div class="articles2" :style ="note"></div>
+    
     <div>{{article.title}}</div>
 
     <button id="delete" @click="remove(article)">Delete</button>
@@ -21,6 +22,7 @@
       <button class="buttons">+</button>
     </router-link>
   </div>
+ </body>
 </template>
 
 
@@ -34,12 +36,7 @@ export default {
   },
   data(){
     return{
-      note: {
-        backgroundImage: "url(" + require("../assets/background.jpeg") + ")",
-        backgroundRepeat: "no-repeat",
-        backgroundSize: "100%",
-        backgroundAttachment: "fixed",
-      },
+     
       articles: null
     }
   },
@@ -66,26 +63,26 @@ export default {
 </script>
 
 <style scoped>
-  .articles{
+  body{
   width:100.1%;
   height:100%;
   z-index:-1;
   position: absolute;
   margin-left:-10px;
-  margin-top:-80px;
+  
+  background-image: url("../assets/background.jpeg");
+  background-repeat: repeat;
+  background-attachment: fixed;
+  background-size:cover;
   }
-  .articles2{
-  width:100.1%;
-  height:100%;
-  z-index:-1;
-  position: fixed;
-  margin-left:-10px;
-  }
+  
   h1{
   color: #F0F0F0;
   padding: 60px;
   font-size:3em;
-  
+  margin-top:70px;
+  margin-left:80px;
+
   }
   .new{
   margin: 50px;
@@ -99,55 +96,55 @@ export default {
   }
 
   .cardBox {
-    width: 200px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    text-align: center;
-    float: left;
-    margin-right: 10px;
-    padding: 15px 5px 5px;
+  width: 200px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+  float: left;
+  margin-left: 100px;
+  padding: 15px 5px 5px;
   }
   #delete{
-    background-color: #33A5FF;
-    width: 60px;
-    height: 25px;
-    color: #FFFFFF;
-    border: none;
-    margin-right: 10px;
-    border-radius: 10%;
+  background-color: #33A5FF;
+  width: 60px;
+  height: 25px;
+  color: #FFFFFF;
+  border: none;
+  margin-right: 10px;
+  border-radius: 10%;
   }
   #delete:hover {
-    background: #FF0000;
+  background: #FF0000;
   }
 
   #update{
-    background-color: #33A5FF;
-    width: 60px;
-    height: 25px;
-    color: #FFFFFF;
-    border: none;
-    border-radius: 10%;
+  background-color: #33A5FF;
+  width: 60px;
+  height: 25px;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 10%;
   }
   #update:hover{
-    background: #339900;
+  background: #339900;
   }
 
   .buttons{
-    position:fixed;
-    right: 10px;
-    bottom: 10px;
-    height: 50px;
-    z-index:9999;
-    width: 75px;
-    height: 75px;
-    background-color: #33A5FF;
-    border-radius: 50%;
-    margin: 1px;
-    border: none;
-    font-size: 50px;
-    color: white;
+  position:fixed;
+  right: 10px;
+  bottom: 10px;
+  height: 50px;
+  z-index:9999;
+  width: 75px;
+  height: 75px;
+  background-color: #33A5FF;
+  border-radius: 50%;
+  margin: 1px;
+  border: none;
+  font-size: 50px;
+  color: white;
   }
 
   .buttons:hover{
-    background: #3366FF;
+  background: #3366FF;
   }
 </style>

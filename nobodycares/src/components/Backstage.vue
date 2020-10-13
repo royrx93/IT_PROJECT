@@ -1,4 +1,5 @@
 <template>
+  <body>
   <div class="backstage" :style="note"></div>
   <div id="mySidenav" class="sidenav">
     <a @click="redirectToHomepage()">Homepage</a>
@@ -7,7 +8,8 @@
     <a @click="redirectToTimeline()">Timeline</a>
     
   </div>
-  <div class="backstage2" :style="note"></div>
+  
+ </body>
 </template>
 
 <script>
@@ -17,12 +19,7 @@ export default {
   data() {
     return {
       backstage: null,
-      note: {
-            backgroundImage: "url(" + require("../assets/background.jpeg") + ")",
-            backgroundRepeat: "no-repeat",
-            backgroundSize: "100%",
-            backgroundAttachment: "fixed",
-            },
+
     };
   },
   async mounted() {
@@ -47,20 +44,18 @@ export default {
 
 <style scoped>
   .backstage {
-  width: 100.1%;
+  width: 100%;
   height: 100%;
   z-index: -1;
   position: absolute;
   margin-left:-10px;
-  margin-top:-80px;
+  
+  background-image: url("../assets/background.jpeg");
+  background-repeat: repeat;
+  background-attachment: fixed;
+  background-size:cover;
   }
-  .backstage2 {
-  width: 100.1%;
-  height: 200%;
-  z-index: -1;
-  position: fixed;
-  margin-left:-10px;
-  }
+
   /* The side navigation menu */
   .sidenav {
   height: 100%; /* 100% Full-height */
@@ -69,10 +64,13 @@ export default {
   z-index: 1; /* Stay on top */
   top: 15%; /* Stay at the top */
   left: 0;
-  background-color:rgb(30, 30, 30); /* Black*/
+  background-color:rgb(20, 20, 20); /* Black*/
+  opacity:80%;
   overflow-x: hidden; /* Disable horizontal scroll */
   padding-top: 60px; /* Place content 60px from the top */
   transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  margin-top:100px;
+  padding-bottom:600px;
   }
   /* The navigation menu links */
   .sidenav a {

@@ -20,15 +20,16 @@
 }
 
 #nav {
-  width:97.8%;
+  width:auto;
   padding: 30px;
   background-color: rgb(10, 10, 10);
   font-size: 1.2em;
   letter-spacing: 3px;
   word-spacing: 10px;
-  margin:-10px;
+  margin:-20px;
   position: relative;
   opacity:0.6;
+  
   a {
     font-weight: bold;
     color: white;

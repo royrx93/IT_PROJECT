@@ -1,5 +1,6 @@
 <template>
-  <div class="contact" :style="note">
+  <body>
+  <div class="contact">
     <H1>Contact Me</H1>
     <p> -If we are destined to meet </p>
     <div class="input-div1">
@@ -18,10 +19,11 @@
       <textarea name="textarea" style="width:600px;height:150px;" v-model.trim="message"></textarea>
     </div>
 
-    <div class="contact2" :style="note"></div>
+    
     <button @click="submit">Submit</button>
 
   </div>
+ </body>
 </template>
 
 <script>
@@ -33,12 +35,7 @@ export default {
       name: '',
       email: '',
       message: '',
-      note: {
-                    backgroundImage: "url(" + require("../assets/background.jpeg") + ")",
-                    backgroundRepeat: "no-repeat",
-                    backgroundSize: "100%",
-                    backgroundAttachment: "fixed",
-                   },
+
     };
   },
   methods: {
@@ -67,28 +64,25 @@ export default {
 </script>
 
 <style scoped>
-  .contact{
-  width:100.1%;
-  height:100%;
+  body{
+  width:100%;
+  height:auto;
   z-index:-1;
   position: absolute;
-  margin-top:-80px;
-  margin-left:-10px;
+  
+  
+  background-image: url("../assets/background.jpeg");
+  background-repeat: repeat;
+  background-attachment: fixed;
+  background-size:cover;
   }
-  .contact2{
-  width:100.1%;
-  height:100%;
-  z-index:-1;
-  position: fixed;
 
-  margin-left:-2px;
-  }
   H1{
   color: #F0F0F0;
   padding: 60px;
   font-size:3em;
-  margin-left:40px;
-  margin-top:30px;
+  margin-left:60px;
+  margin-top:40px;
   }
   label{
   margin-left:-100px;

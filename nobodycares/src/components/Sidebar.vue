@@ -46,22 +46,25 @@ export default {
 </script>
 
 <style scoped>
-/* The side navigation menu */
+  /* The side navigation menu */
 
-.sidenav {
+  .sidenav {
   height: 90%; /* 100% Full-height */
   width: 180px; /* 0 width - change this with JavaScript */
   position: absolute; /* Stay in place */
   z-index: 1; /* Stay on top */
   top: 13%; /* Stay at the top */
   left: 0;
-  background-color: rgb(30, 30, 30); /* Black*/
+  background-color:rgb(20, 20, 20); /* Black*/
+  opacity:80%;
   overflow-x: hidden; /* Disable horizontal scroll */
   padding-top: 60px; /* Place content 60px from the top */
   transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
-}
-/* The navigation menu links */
-.sidenav a {
+  margin-top:100px;
+  padding-bottom:600px;
+  }
+  /* The navigation menu links */
+  .sidenav a {
   padding: 8px 8px 8px 8px;
   text-decoration: none;
   font-size: 25px;
@@ -69,29 +72,29 @@ export default {
   display: block;
   transition: 0.3s;
   cursor: pointer;
-}
+  }
 
-/* When you mouse over the navigation links, change their color */
-.sidenav a:hover {
+  /* When you mouse over the navigation links, change their color */
+  .sidenav a:hover {
   color: #f1f1f1;
-}
-.sidenav .closebtn {
+  }
+  .sidenav .closebtn {
   position: absolute;
   top: 0;
   right: 15px;
   font-size: 36px;
   margin-left: 75px;
-}
+  }
 
-.sideicon{
+  .sideicon{
   position: absolute;
   left: 35px;
   top: 75px;
-}
+  }
 
-.sideicon img{
+  .sideicon img{
   width: 50px;
   height: 50px;
   cursor: pointer;
-}
+  }
 </style>
