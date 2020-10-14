@@ -20,6 +20,8 @@ export default {
       sidebar_icon: require("../assets/sidebar_icon.png")
     };
   },
+
+
   methods: {
     redirectToGallery() {
       this.$router.replace("/backstageGallery");

@@ -1,4 +1,14 @@
 <template>
+  <div>
+    <wang-editor
+            style='height:300px;'
+            v-model='wangValue'
+            :disabled='wangDisabled'
+    />
+    <div>{{wangValue}}</div>
+    <h5>双向绑定的页面效果</h5>
+    <div v-html="wangEditor"></div>
+  </div>
   <body>
   
   <H1>New Article!</H1>
@@ -46,7 +56,11 @@
 <script>
 import ArticleCreateService from "../services/ArticleCreateService";
 import ArticleService from "@/services/ArticleService";
+import wangEditor from "@/components/wang-editor";
 export default {
+  components: {
+    wangEditor
+  },
   data() {
     return {
       title: "",
@@ -54,6 +68,8 @@ export default {
       content: "",
       selectedFile: null,
       articles: null,
+      wangValue: "",
+      wangDisabled: false
     };
   },
   async mounted() {
