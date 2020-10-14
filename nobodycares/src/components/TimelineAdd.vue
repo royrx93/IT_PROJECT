@@ -1,5 +1,5 @@
 <template>
-  <div class="timelineadd" :style ="note"></div>
+  <body>
     <H1>Add Timeline</H1>
 <!--    <input-->
 <!--            type="string"-->
@@ -20,6 +20,7 @@
             placeholder="description">
     <br>
     <button @click="timelineAdd" to="/timeline">Submit</button>
+    </body>
 </template>
 
 <script>
@@ -54,13 +55,18 @@
 </script>
 
 <style scoped>
-  .timelineadd{
-  width:100.1%;
+  body{
+  width:100%;
   height:100%;
   z-index:-1;
   position: absolute;
   margin-left:-10px;
-  margin-top:-80px;
+  margin-top:100px;
+  background-image: url("../assets/background.jpeg");
+  background-repeat: repeat;
+  background-attachment: fixed;
+  background-size:cover;
+  
   }
   H1{
   color: #F0F0F0;

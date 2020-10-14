@@ -1,11 +1,11 @@
 <template>
-    <div class="timeline" :style ="note"></div>
+    <body>
     <h1> Timeline Management </h1>
 
     <sideBar></sideBar>
 
     <div class="timeline" v-for="timeline in timeline" :key="timeline.ID">
-        <div class="timeline" :style ="note"></div>
+        
         <table align="center">
             <tr>
                 <th>Year</th>
@@ -29,6 +29,7 @@
             <button class="buttons">Add</button>
         </router-link>
     </div>
+    </body>
 </template>
 
 <script>
@@ -74,5 +75,18 @@
 </script>
 
 <style scoped>
+  body {
+  background-image: url("../assets/background.jpeg");
+  background-repeat: repeat;
+  background-attachment: fixed;
+  background-size:cover;
+  right: 0;
+  top: 0;
+  z-index: -1;
+  width: 100%;
+  height: auto;
+  position: absolute;
+  margin-top:20px;
 
+  }
 </style>
