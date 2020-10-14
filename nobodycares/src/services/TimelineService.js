@@ -6,5 +6,8 @@ export default {
     },
     getPageinfo(params) {
         return Api().get('timeline/pageinfo',{params});
+    },
+    getAllInfo(){
+        return Api().get('timeline/getAllInfo');
     }
 }

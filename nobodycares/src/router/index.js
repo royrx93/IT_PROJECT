@@ -12,7 +12,7 @@ import Backstage from "@/components/Backstage";
 import ArticleView from "@/components/ArticleView";
 import Articles from "@/components/Articles";
 import ArticleUpdate from "@/components/ArticleUpdate";
-import login from '@/components/login';
+import TimelineBackstage from "../components/TimelineBackstage";
 
 const routes = [
   {
@@ -91,7 +91,17 @@ const routes = [
     name:'Articles',
     component: Articles
   },
+  {
+    path:'/backstageTimeline',
+    name:"TimelineBackstage",
+    component:TimelineBackstage
+  },
+  {
 
+    path: "/timeline/delete",
+    name: "TimelineDelete",
+    component: TimelineBackstage
+  },
   {
     path: '/backstage',
     redirect: '/login'
@@ -102,26 +112,12 @@ const routes = [
     name: 'login',
     component: login
   }
-]
+
+];
+
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes
 });
-
-
-// router.beforeEach((to, from, next) => {
-//   if (to.path === '/login') {
-//     next();
-//   } else if(to.path === ''){
-//     let token = localStorage.getItem('Authorization');
- 
-//     if (token === null || token === '') {
-//       next('/login');
-//     } else {
-//       next();
-//     }
-//   }
-
-// });
 
 export default router;
