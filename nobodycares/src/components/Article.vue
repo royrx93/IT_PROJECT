@@ -9,12 +9,12 @@
     <div v-for="article in articles" :key="article.title">
       <div class="cardBox">
         <img style="width: 100%; height: 100%; margin-top: 10px" :src="article.image_url" />
-        <router-link :to="{ name: 'ArticleView', params: { title: article.title } }">
-          <div style="font-size: 20px">{{ article.title }}</div>
-          <button id="delete" @click="remove(article)">Delete</button>
-          <router-link :to="{name :'ArticleUpdate', params : {title : article.title}}">
-            <button id = "update">update</button>
-          </router-link>
+        <router-link :to="{ name: 'ArticleView', params: { title: article.title }}" style="text-decoration: none" >
+          <div style="font-size: 20px;">{{ article.title }}</div>
+        </router-link>
+        <button id="delete" @click="remove(article)">Delete</button>
+        <router-link :to="{name :'ArticleUpdate', params : {title : article.title}}">
+          <button id = "update">update</button>
         </router-link>
       </div>
     </div>
@@ -103,7 +103,6 @@ export default {
   font-size: 1.3em;
   }
   p {
-
   font-size: 1.2em;
   }
 
