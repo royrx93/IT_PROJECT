@@ -45,7 +45,7 @@ export default {
 
   .waterfall-border {
   margin: 35px 35px 35px 60px;
-  background-color: rgba(125, 125, 125, 0.7);
+  background-color: rgba(25, 25, 25, 0.5);
   }
   .waterfall-width-column {
   opacity: 1;
