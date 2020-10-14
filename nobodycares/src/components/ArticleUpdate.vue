@@ -5,7 +5,6 @@
   <label>Title:</label>
   <input
       style="height: 40px; width: 650px;"
-      disabled
       type="text"
       name="string"
       v-model="title"
@@ -51,9 +50,7 @@ export default {
       title: this.$route.params.title,
       description: "",
       content: "",
-
       articles: null,
-
     }
   },
 
@@ -70,8 +67,16 @@ export default {
 
   methods:{
     async articleUpdate() {
+      let count = 0;
+      for(let i = 0; i < this.articles.length; i++){
+        if(this.title == this.articles[i].title){
+          count++;
+        }
+      }
 
-      if(!this.title){
+      if(count > 1){
+        alert("Title already exist")
+      } else if(!this.title){
         alert("please fill in the title")
       }else if(!this.content){
         alert("please fill in the content")
@@ -79,8 +84,8 @@ export default {
         alert("Title Word Limit 50")
       }else if(this.description.length > 199) {
         alert("Description Word Limit 200")
-      } else if(this.content.length > 499){
-        alert("Content Word Limit 500")
+      } else if(this.content.length > 10000){
+        alert("Content Word Limit 10000")
       } else {
         const response = await ArticleUpdateService.articleUpdate({
           title: this.title,

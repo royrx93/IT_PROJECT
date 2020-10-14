@@ -5,17 +5,24 @@
 
   <sideBar></sideBar>
 
-  <div class="cardBox" v-for="article in articles" :key="article.title">
-    
-    <div>{{article.title}}</div>
-
-    <button id="delete" @click="remove(article)">Delete</button>
-
-    <router-link :to="{name :'ArticleUpdate', params : {title : article.title}}">
-      <button id = "update">update</button>
-    </router-link>
-
+  <div class = 'border'>
+    <div v-for="article in articles" :key="article.title">
+      <div class="cardBox">
+        <img style="width: 100%; height: 100%; margin-top: 10px" :src="article.image_url" />
+        <router-link :to="{ name: 'ArticleView', params: { title: article.title }}" style="text-decoration: none" >
+          <div style="font-size: 20px;">{{ article.title }}</div>
+        </router-link>
+        <button id="delete" @click="remove(article)">Delete</button>
+        <router-link :to="{name :'ArticleUpdate', params : {title : article.title}}">
+          <button id = "update">update</button>
+        </router-link>
+      </div>
+    </div>
   </div>
+
+
+
+
 <br>
   <div>
     <router-link to="/article/create">
@@ -43,6 +50,11 @@ export default {
 
   async mounted() {
     this.articles = (await ArticleService.index()).data
+    for(var i =0; i < this.articles.length; i++){
+      if(this.articles[i].image_url == null){
+        this.articles[i].image_url = "http://res.cloudinary.com/zjz/image/upload/v1601721278/ypbbzb3rtaurlhjbzgln.jpg"
+      }
+    }
   },
 
 
@@ -91,7 +103,6 @@ export default {
   font-size: 1.3em;
   }
   p {
-
   font-size: 1.2em;
   }
 
