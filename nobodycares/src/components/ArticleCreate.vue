@@ -30,6 +30,8 @@
   </div>
   <br>
 
+  <input id="file" type="file" @change="onFileChanged" />
+
   <div>
     <button class="returnButtons" @click="goBack">
       back
@@ -50,6 +52,7 @@ export default {
       title: "",
       description: "",
       content: "",
+      selectedFile: null,
       articles: null,
     };
   },
@@ -74,14 +77,13 @@ export default {
       } else if(this.content.length > 10000){
         alert("Content Word Limit 10000")
       } else {
-        const response = await ArticleCreateService.articleCreate({
-          title: this.title,
-          description: this.description,
-          content: this.content
-        });
+        const formData = new FormData();
+        formData.append("title", this.title);
+        formData.append("description", this.description)
+        formData.append("content", this.content)
+        formData.append("myFile", this.selectedFile);
+        const response = await ArticleCreateService.articleCreate(formData);
         console.log(response.data());
-
-
       }
 
     },
@@ -89,6 +91,11 @@ export default {
     goBack(){
       this.$router.go(-1);
     },
+
+    onFileChanged(event) {
+      this.selectedFile = event.target.files[0];
+    },
+
   }
 };
 </script>

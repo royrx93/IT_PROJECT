@@ -15,7 +15,6 @@
   </div>
   <div class="waterfall-width-column">
     <div class="image-box" v-for="img in this.gallery" :key="img.id">
-      
       <img :src="img.url" />
       <p @click="deleteImage(img)">delete</p>
     </div>
@@ -37,7 +36,6 @@ export default {
       selectedFile: null,
       title: "",
       gallery: null,
-
       sidebar_icon: require("../assets/sidebar_icon.png")
     };
   },
