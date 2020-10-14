@@ -46,9 +46,10 @@ export default {
           console.log(res.data);
           if(res.data.state === 1){
             alert('Login success');
-            
+            this.$router.push({path:'/backstage'})
             //_this.userToken = 'Bearer ' + res.data.data.body.token;
-            // 将用户token保存到vuex中
+            // keep token to vuex
+            
             //_this.changeLogin({ Authorization: _this.userToken });
             //_this.$router.push('/backstage');
           }else{
