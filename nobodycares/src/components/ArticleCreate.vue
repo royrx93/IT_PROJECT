@@ -2,25 +2,25 @@
   <body>
   
   <H1>New Article!</H1>
-  <label>Title:</label>
-  <input
-      style="height: 40px; width: 650px;"
+  <label>Title</label>
+  <textarea
+      style="height: 100px; width: 650px;"
       type="text"
       name="string"
       v-model="title"
-  >
+  ></textarea>
 <div>
-  <label>Description:</label>
-  <input
-      style="height: 40px; width: 650px;"
+  <label>Description</label>
+  <textarea
+      style="height: 100px; width: 650px;"
       type="text"
       name="description"
       v-model="description"
-  >
+  ></textarea>
 </div>
 
   <div>
-  <label>Content:</label>
+  <label>Content</label>
   <textarea
       style="height: 200px; width: 650px;"
       type="text"
@@ -51,7 +51,6 @@ export default {
       description: "",
       content: "",
       articles: null,
-
     };
   },
   async mounted() {
@@ -90,7 +89,6 @@ export default {
     goBack(){
       this.$router.go(-1);
     },
-
   }
 };
 </script>
@@ -102,12 +100,10 @@ export default {
   z-index:-1;
   position: absolute;
   margin-left:-10px;
-  
   background-image: url("../assets/background.jpeg");
   background-repeat: repeat;
   background-attachment: fixed;
   background-size:cover;
-  
   }
   H1{
   color: #F0F0F0;
@@ -116,13 +112,7 @@ export default {
   margin-top:60px;
   margin-left:90px;
   }
-  input{
-  margin: 8px;
-  height:60px;
-  width: 600px;
-  font-size: 1.2em;
-  
-  }
+
   button{
   margin: 60px;
   height: 60px;
@@ -132,6 +122,7 @@ export default {
 
   label{
   cursor: pointer;
+    font-size: 29px;
   display: inline-block;
   padding: 3px 6px;
   text-align: right;
@@ -144,6 +135,12 @@ export default {
   height:60px;
   width: 600px;
   font-size: 1.2em;
+    background:rgba(0,0,0,.5);
+    border-radius: 5px;
+    border: none;
+  }
+  textarea:focus{
+    background: whitesmoke;
   }
 
   .buttons{
@@ -152,6 +149,7 @@ export default {
   border: none;
   background: #33A5FF;
   border-radius: 10%;
+    color: whitesmoke;
   }
 
   .buttons:hover {
@@ -161,7 +159,7 @@ export default {
   .returnButtons{
   position:fixed;
   left: 10px;
-  top: 50%;
+  top: 90%;
   height: 50px;
   z-index:9999;
   width: 75px;

@@ -10,8 +10,8 @@
         <div class="cardBox">
             <img style="width: 100%; height: 100%; margin-top: 10px" :src="article.image_url" />
           <div style="font-size: 5px">{{ article.description }}</div>
-          <router-link :to="{ name: 'ArticleView', params: { title: article.title } }">
-            <div style="font-size: 20px">{{ article.title }}</div>
+          <router-link :to="{ name: 'ArticleView', params: { title: article.title } }" style=" ">
+            <div style="font-size: 20px; color: whitesmoke; ">{{ article.title }}</div>
           </router-link>
         </div>
       </div>
