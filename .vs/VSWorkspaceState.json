@@ -3,9 +3,10 @@
     "",
     "\\nobodycares",
     "\\nobodycares\\src",
+    "\\nobodycares\\src\\assets",
     "\\nobodycares\\src\\components",
     "\\nobodycares\\src\\views"
   ],
-  "SelectedNode": "\\nobodycares\\src\\components\\BackstageGallery.vue",
+  "SelectedNode": "\\nobodycares\\src\\components\\Sidebar.vue",
   "PreviewInSolutionExplorer": false
 }
