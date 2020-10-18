@@ -4,7 +4,7 @@
 
   
   <div v-for="article in articles" :key="article.title">
-    <div v-if="article.title == this.$route.params.title">
+    <div style="background: rgba(25,25,25,.5); margin-left: 60px; margin-right: 60px" v-if="article.title == this.$route.params.title">
       <div class="title">{{article.title}}</div>
 
       <div class="time">create at {{fixTime(article.createDate)}}</div>
@@ -79,7 +79,6 @@ export default {
   position: absolute;
   margin:-10px;
   margin-top:100px;
-  
   background-image: url("../assets/background.jpeg");
   background-repeat: repeat;
   background-attachment: fixed;
@@ -152,6 +151,7 @@ export default {
     width: 80%;
     text-align:left;
     margin-left: 10%;
+    margin-bottom: 5%;
   }
 
 

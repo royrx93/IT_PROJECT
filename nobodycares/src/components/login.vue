@@ -1,16 +1,20 @@
 <template>
-    <div class="loginlabel" :style="note">
+    <body>
+     
         <div class="input-div1">
+          
             <label for="username">Username:</label>
             <input type="text"  name="username" v-model="username" placeholder="Username">
         </div>
 
         <div class="input-div2">
+          
             <label for="password">Password:</label>
             <input type="text"  name="password" v-model="password" placeholder="Password">
         </div>
     <button @click="login">Login</button>
-  </div>
+     
+  </body>
 </template>
  
 <script>
@@ -22,14 +26,20 @@ export default {
     return {
       username: '',
       password: '',
-      userToken: ''
+      userToken: '',
+      note: {
+                    backgroundImage: "url(" + require("../assets/login.jpg") + ")",
+                    backgroundRepeat: "no-repeat",
+                    backgroundSize: "100%",
+                    backgroundAttachment: "fixed",
+                },
     };
   },
  
   methods: {
     ...mapMutations(['changeLogin']),
     login () {
-      //let _this = this;
+
       if (this.username === '' || this.password === '') {
         alert('Username or Password cannot be empty');
       } else {
@@ -47,14 +57,10 @@ export default {
             alert('Login success');
             this.$store.commit('loginSuccess');
             this.$router.push({path:'/backstage'})
-            //_this.userToken = 'Bearer ' + res.data.data.body.token;
-            // keep token to vuex
-            
-            //_this.changeLogin({ Authorization: _this.userToken });
-            //_this.$router.push('/backstage');
+
           }else{
             alert('Username or Password incorrect');
-            //console.log(res);
+            console.log(res);
           }
           
           
@@ -66,31 +72,47 @@ export default {
 </script>
 
 <style scoped>
-  .loginlabel{
-  width:100.1%;
-  height:100%;
+  body{
+  width:100%;
+  height:1;
   z-index:-1;
   position: absolute;
-  margin-top:180px;
-  margin-left:-10px;
+  margin-top:380px;
+  margin-left:40px;
+
+  background-image: url("../assets/background.jpeg");
+  background-repeat: repeat;
+  background-attachment: fixed;
+  background-size:cover;
+
   }
 
   label{
   margin-left:-100px;
   cursor: pointer;
   display: inline-block;
-  padding: 3px 6px;
+  padding: 10px 14px;
   text-align: right;
   width: 150px;
   vertical-align: top;
-  }
-  
-  button{
-  margin: 25px;
-  height: 30px;
-  width: 100px;
-  font-size: 1.2em;
-  margin-left:40px;
+  font-size:2em;
+
   }
 
+  button{
+  margin: 25px;
+  height: 35px;
+  width: 100px;
+  font-size: 1.5em;
+  margin-left:40px;
+
+  }
+  input{
+  padding:10px 25px;
+  margin-top:10px;
+  margin-left:0px;
+  }
+  div{
+
+  }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <div class="timeline" :style ="note">
+  <body>
       <v-layout column>
           <v-flex xs6 offset-xs3>
               <h1>Timeline</h1>
@@ -20,11 +20,11 @@
       <ul class="ml_year">
           <li v-for="timeline in timeline" :key="timeline.year" @click="qiehuan(timeline.year)"><span>{{timeline.year}}</span></li>
       </ul>
-  </div>
+  
 
 
 
-
+</body>
 </template>
 
 
@@ -92,13 +92,17 @@
 </script>
 
 <style scoped>
-  .timeline{
+  body{
   width:100.1%;
   height:100%;
   z-index:-1;
   position: absolute;
   margin:-10px;
-  margin-top:-80px;
+  margin-top:30px;
+  background-image: url("../assets/background.jpeg");
+  background-repeat: repeat;
+  background-attachment: fixed;
+  background-size:cover;
   }
   h1{
   color: #F0F0F0;

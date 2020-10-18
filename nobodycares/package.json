@@ -12,6 +12,7 @@
     "axios": "^0.20.0",
     "core-js": "^3.6.5",
     "element-ui": "^2.13.2",
+    "install": "^0.13.0",
     "v-viewer": "^1.5.1",
     "vue": "^3.0.0",
     "vue-paginator-simple": "^1.0.4",

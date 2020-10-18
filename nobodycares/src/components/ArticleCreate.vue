@@ -1,14 +1,5 @@
 <template>
-  <div>
-    <wang-editor
-            style='height:300px;'
-            v-model='wangValue'
-            :disabled='wangDisabled'
-    />
-    <div>{{wangValue}}</div>
-    <h5>双向绑定的页面效果</h5>
-    <div v-html="wangEditor"></div>
-  </div>
+
   <body>
   
   <H1>New Article!</H1>
@@ -40,6 +31,8 @@
   </div>
   <br>
 
+  <input id="file" type="file" @change="onFileChanged" />
+
   <div>
     <button class="returnButtons" @click="goBack">
       back
@@ -54,16 +47,14 @@
 <script>
 import ArticleCreateService from "../services/ArticleCreateService";
 import ArticleService from "@/services/ArticleService";
-import wangEditor from "@/components/wang-editor";
 export default {
-  components: {
-    wangEditor
-  },
+
   data() {
     return {
       title: "",
       description: "",
       content: "",
+      selectedFile: null,
       articles: null,
       wangValue: "",
       wangDisabled: false
@@ -90,14 +81,13 @@ export default {
       } else if(this.content.length > 10000){
         alert("Content Word Limit 10000")
       } else {
-        const response = await ArticleCreateService.articleCreate({
-          title: this.title,
-          description: this.description,
-          content: this.content
-        });
+        const formData = new FormData();
+        formData.append("title", this.title);
+        formData.append("description", this.description);
+        formData.append("content", this.content);
+        formData.append("myFile", this.selectedFile);
+        const response = await ArticleCreateService.articleCreate(formData);
         console.log(response.data());
-
-
       }
 
     },
@@ -105,6 +95,11 @@ export default {
     goBack(){
       this.$router.go(-1);
     },
+
+    onFileChanged(event) {
+      this.selectedFile = event.target.files[0];
+    },
+
   }
 };
 </script>

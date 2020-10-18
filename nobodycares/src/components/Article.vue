@@ -10,7 +10,7 @@
       <div class="cardBox">
         <img style="width: 100%; height: 100%; margin-top: 10px" :src="article.image_url" />
         <router-link :to="{ name: 'ArticleView', params: { title: article.title }}" style="text-decoration: none" >
-          <div style="font-size: 20px;">{{ article.title }}</div>
+          <div style="font-size: 20px; color: whitesmoke">{{ article.title }}</div>
         </router-link>
         <button id="delete" @click="remove(article)">Delete</button>
         <router-link :to="{name :'ArticleUpdate', params : {title : article.title}}">
@@ -96,12 +96,7 @@ export default {
   margin-left:80px;
 
   }
-  .new{
-  margin: 50px;
-  height: 60px;
-  color: #F0F0F0;
-  font-size: 1.3em;
-  }
+
   p {
   font-size: 1.2em;
   }
@@ -110,8 +105,8 @@ export default {
   width: 200px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   text-align: center;
-  float: left;
-  margin-left: 100px;
+    float: left;
+  margin-left: 20px;
   padding: 15px 5px 5px;
   }
   #delete{
