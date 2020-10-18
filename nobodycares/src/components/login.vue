@@ -9,8 +9,6 @@
             <label for="password">Password:</label>
             <input type="text"  name="password" v-model="password" placeholder="Password">
         </div>
-    <!-- <input type="text" v-model="loginForm.username" placeholder="用户名"/>
-    <input type="text" v-model="loginForm.password" placeholder="密码"/> -->
     <button @click="login">Login</button>
   </div>
 </template>
@@ -33,7 +31,7 @@ export default {
     login () {
       //let _this = this;
       if (this.username === '' || this.password === '') {
-        alert('Username or Passport cannot be empty');
+        alert('Username or Password cannot be empty');
       } else {
         axios({
           method: 'post',
@@ -45,7 +43,9 @@ export default {
         }).then(res => {
           console.log(res.data);
           if(res.data.state === 1){
+            
             alert('Login success');
+            this.$store.commit('loginSuccess');
             this.$router.push({path:'/backstage'})
             //_this.userToken = 'Bearer ' + res.data.data.body.token;
             // keep token to vuex
@@ -53,7 +53,7 @@ export default {
             //_this.changeLogin({ Authorization: _this.userToken });
             //_this.$router.push('/backstage');
           }else{
-            alert('Username or Passport incorrect');
+            alert('Username or Password incorrect');
             //console.log(res);
           }
           
