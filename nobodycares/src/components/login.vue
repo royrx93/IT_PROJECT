@@ -1,22 +1,22 @@
 <template>
     <body>
-     
+      
+      <h1>Hey, nice to see you _</h1>
+      <div class="border">
         <div class="input-div1">
-          
-            <label for="username">Username:</label>
+            <img src="../assets/user_icon.png" alt="user" width="40" height="40">
+            <label for="username"></label>
             <input type="text"  name="username" v-model="username" placeholder="Username">
         </div>
 
         <div class="input-div2">
-          
-            <label for="password">Password:</label>
+          <img src="../assets/password_icon.png" alt="user" width="40" height="40">
+            <label for="password"></label>
             <input type="text"  name="password" v-model="password" placeholder="Password">
         </div>
       
-    <!-- <input type="text" v-model="loginForm.username" placeholder="用户名"/>
-    <input type="text" v-model="loginForm.password" placeholder="密码"/> -->
     <button @click="login">Login</button>
-     
+     </div>
   </body>
 </template>
  
@@ -42,9 +42,9 @@ export default {
   methods: {
     ...mapMutations(['changeLogin']),
     login () {
-      //let _this = this;
+
       if (this.username === '' || this.password === '') {
-        alert('Username or Passport cannot be empty');
+        alert('Username or Password cannot be empty');
       } else {
         axios({
           method: 'post',
@@ -56,16 +56,14 @@ export default {
         }).then(res => {
           console.log(res.data);
           if(res.data.state === 1){
-            alert('Login success');
-            this.$router.push({path:'/backstage'})
-            //_this.userToken = 'Bearer ' + res.data.data.body.token;
-            // keep token to vuex
             
-            //_this.changeLogin({ Authorization: _this.userToken });
-            //_this.$router.push('/backstage');
+            alert('Login success');
+            this.$store.commit('loginSuccess');
+            this.$router.push({path:'/backstage'})
+
           }else{
-            alert('Username or Passport incorrect');
-            //console.log(res);
+            alert('Username or Password incorrect');
+            console.log(res);
           }
           
           
@@ -82,7 +80,7 @@ export default {
   height:1;
   z-index:-1;
   position: absolute;
-  margin-top:380px;
+  margin-top:300px;
   margin-left:40px;
 
   background-image: url("../assets/background.jpeg");
@@ -91,9 +89,28 @@ export default {
   background-size:cover;
 
   }
+  .input-div1 img{
+  margin-left:15px;
 
+  margin-top:20px;
+  position: absolute;
+  }
+  .input-div2 img{
+  margin-left:15px;
+
+  margin-top:20px;
+  position: absolute;
+  }
+  .border{
+  margin: 30px 34% 20px 34%;
+  padding-top:40px;
+  padding-bottom:20px;
+
+  background-color: rgba(25, 25, 25, 0.6);
+
+  }
   label{
-  margin-left:-100px;
+  margin-left:-40px;
   cursor: pointer;
   display: inline-block;
   padding: 10px 14px;
@@ -114,10 +131,17 @@ export default {
   }
   input{
   padding:10px 25px;
-  margin-top:10px;
-  margin-left:0px;
+  margin-top:20px;
+  margin-bottom:10px;
+  margin-left:-60px;
   }
-  div{
+  h1{
+  color: #f0f0f0;
+  padding-bottom: 20px;
+  padding-top:20px;
+  font-size: 1.8em;
 
+  background-color: rgba(25, 25, 25, 0.6);
+  margin: -20px 34% -20px 34%;
   }
 </style>

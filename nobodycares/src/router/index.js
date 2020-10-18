@@ -14,6 +14,7 @@ import Articles from "@/components/Articles";
 import ArticleUpdate from "@/components/ArticleUpdate";
 import TimelineBackstage from "../components/TimelineBackstage";
 import login from "../components/login.vue";
+import store from "../store";
 
 const routes = [
   {
@@ -69,11 +70,17 @@ const routes = [
     path: "/backstage",
     name: "Backstage",
     component: Backstage,
+    meta:{
+      requireAuth: true
+    }
   },
   {
     path: "/backstageGallery",
     name: "BackstageGallery",
-    component: BackstageGallery
+    component: BackstageGallery,
+    meta:{
+      requireAuth: true
+    }
   },
   {
     path: '/articles/view/:title',
@@ -120,5 +127,16 @@ const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes
 });
+
+router.beforeEach((to,from,next)=>{
+  if(to.meta.requireAuth & !store.state.userLogin  ){
+    next({
+      path:"/login",
+      query: {redirect: to.fullPath}
+    });
+  }else{
+    next();
+  }
+})
 
 export default router;

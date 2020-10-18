@@ -26,7 +26,6 @@ let moment = require("moment");
 export default {
   data(){
     return{
-      
       articles: null
     }
   },
@@ -79,7 +78,7 @@ export default {
     text-decoration: none;
   }
   .border{
-    column-count: 4;
+    column-count: 2;
     margin: 0px auto;
   }
 

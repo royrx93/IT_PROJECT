@@ -2,7 +2,7 @@ import { createApp } from "vue";
 import App from "./App.vue";
 import router from "./router";
 import store from "./store";
-import axios from 'axios';
+// import axios from 'axios';
 
 
 createApp(App)
@@ -11,12 +11,12 @@ createApp(App)
   .mount("#app");
 
 
-axios.interceptors.request.use(  config => {    
-    if (localStorage.getItem('Authorization'))
-     {      
-        config.headers.Authorization = localStorage.getItem('Authorization');    
-     }    
-    return config;  },  
-    error => {    return Promise.reject(error);  
-});
+// axios.interceptors.request.use(  config => {    
+//     if (localStorage.getItem('Authorization'))
+//      {      
+//         config.headers.Authorization = localStorage.getItem('Authorization');    
+//      }    
+//     return config;  },  
+//     error => {    return Promise.reject(error);  
+// });
 
