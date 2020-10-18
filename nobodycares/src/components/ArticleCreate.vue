@@ -31,6 +31,11 @@
   </div>
   <br>
 
+  <div style="width: 650px; margin: 0px auto" ref='editor'></div>
+
+
+
+
   <input id="file" type="file" @change="onFileChanged" />
 
   <div>
@@ -47,6 +52,8 @@
 <script>
 import ArticleCreateService from "../services/ArticleCreateService";
 import ArticleService from "@/services/ArticleService";
+import { onMounted, onBeforeUnmount, ref, reactive } from 'vue';
+import WangEditor from 'wangeditor';
 export default {
 
   data() {
@@ -56,8 +63,50 @@ export default {
       content: "",
       selectedFile: null,
       articles: null,
-      wangValue: "",
-      wangDisabled: false
+    };
+  },
+  setup() {
+    const editor = ref();
+    const contents = reactive({
+      html: '',
+      text: '',
+    });
+    let instance;
+    onMounted(() => {
+      instance = new WangEditor(editor.value);
+      instance.config.menus = [
+        'bold',
+        'head',
+        'italic',
+        'underline',
+        'fontSize',
+        'lineHeight',
+        'foreColor',
+        'backColor',
+        'splitLine',
+        'undo',
+        'redo',
+      ]
+      instance.config.lang = 'en'
+      instance.i18next = window.i18next
+      Object.assign(instance.config, {
+        onchange() {
+          console.log('change');
+        },
+      });
+      instance.create();
+    });
+    onBeforeUnmount(() => {
+      instance.destroy();
+      instance = null;
+    });
+    const syncHTML = () => {
+      contents.html = instance.txt.html();
+    };
+    return {
+      syncHTML,
+      editor,
+      contents,
     };
   },
   async mounted() {
