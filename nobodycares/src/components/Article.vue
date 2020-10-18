@@ -5,6 +5,12 @@
 
   <sideBar></sideBar>
 
+  <div style="margin-bottom: 40px">
+    <div style="margin-bottom: 10px; font-size: 20px">Update Subtitle</div>
+    <div style="margin-bottom: 10px"><input id="subtitle" class="title" name = "title" v-model = "subtitle"></div>
+    <div><button id = "updateSubtitle" @click="updateSubTitle">Submit</button></div>
+  </div>
+
   <div class = 'border'>
     <div v-for="article in articles" :key="article.title">
       <div class="cardBox">
@@ -43,8 +49,8 @@ export default {
   },
   data(){
     return{
-     
-      articles: null
+      articles: null,
+      subtitle:""
     }
   },
 
@@ -67,6 +73,12 @@ export default {
         console.log(response.data())
       }
     },
+
+    async updateSubTitle(){
+      const response = await ArticleService.updateSubTitle({subtitle: this.subtitle})
+      location.reload();
+      console.log(response);
+    }
 
   }
 
@@ -119,7 +131,7 @@ export default {
   border-radius: 10%;
   }
   #delete:hover {
-  background: #FF0000;
+  background: #4f4f4f;
   }
 
   #update{
@@ -132,6 +144,18 @@ export default {
   }
   #update:hover{
   background: #339900;
+  }
+
+  #updateSubtitle{
+    background-color: #33A5FF;
+    width: 60px;
+    height: 25px;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 10%;
+  }
+  #updateSubtitle:hover{
+    background: #339900;
   }
 
   .buttons{
@@ -152,5 +176,17 @@ export default {
 
   .buttons:hover{
   background: #3366FF;
+  }
+
+  #subtitle{
+    background: grey;
+    border: none;
+    border-radius: 5px;
+    height: 25px;
+    width: 300px
+  }
+
+  #subtitle:focus{
+    background: whitesmoke;
   }
 </style>
