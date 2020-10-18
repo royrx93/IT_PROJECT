@@ -1,7 +1,7 @@
 <template>
   <body>
     <h1>Gallery</h1>
-    <p>-Just some pieces of my soul</p>
+    <p>{{subtitle}}</p>
     <div class="waterfall-border">
       <div class="waterfall-width-column">
         <div class="image-box" v-for="img in this.gallery" :key="img.id">
@@ -18,11 +18,13 @@ import GalleryService from "../services/GalleryService";
 export default {
   data: function() {
     return {
-      gallery: null
+      gallery: null,
+      subtitle: "",
     };
   },
   async mounted() {
     this.gallery = (await GalleryService.index()).data;
+    this.subtitle = (await GalleryService.getSubtitle()).data;
   }
 };
 </script>

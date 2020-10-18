@@ -48,24 +48,23 @@ export default {
 </script>
 
 <style scoped>
-  /* The side navigation menu */
 
   .sidenav {
-  height: 90%; /* 100% Full-height */
-  width: 180px; /* 0 width - change this with JavaScript */
-  position: absolute; /* Stay in place */
-  z-index: 1; /* Stay on top */
-  top: 13%; /* Stay at the top */
+  height: 100%;
+  width: 180px;
+  position: absolute;
+  z-index: 1;
+  top: 10%;
   left: 0;
-  background-color:rgb(20, 20, 20); /* Black*/
+  background-color:rgb(20, 20, 20);
   opacity:80%;
-  overflow-x: hidden; /* Disable horizontal scroll */
-  padding-top: 60px; /* Place content 60px from the top */
-  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
-  margin-top:100px;
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.5s;
+  margin-top: 20px;
   padding-bottom:600px;
   }
-  /* The navigation menu links */
+
   .sidenav a {
   padding: 8px 8px 8px 8px;
   text-decoration: none;
@@ -76,7 +75,6 @@ export default {
   cursor: pointer;
   }
 
-  /* When you mouse over the navigation links, change their color */
   .sidenav a:hover {
   color: #f1f1f1;
   }

@@ -6,5 +6,8 @@ export default {
     },
     deleteImage(img){
         return Api().post('/gallery/delete', img)
+    },
+    updateSubTitle(subtitle){
+        return Api().post('/gallery/updateSubTitle', subtitle)
     }
 }
