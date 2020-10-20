@@ -87,6 +87,7 @@ export default {
       } else if(this.content.length > 10000){
         alert("Content Word Limit 10000")
       } else {
+        this.$router.push('/articles')
         const response = await ArticleUpdateService.articleUpdate({
           title: this.title,
           description: this.description,

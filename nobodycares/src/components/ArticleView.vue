@@ -4,7 +4,7 @@
 
   
   <div v-for="article in articles" :key="article.title">
-    <div style="background: rgba(25,25,25,.5); margin-left: 60px; margin-right: 60px" v-if="article.title == this.$route.params.title">
+    <div style="background: rgba(25,25,25,.5); margin-left: 60px; margin-right: 60px; margin-bottom: 5%" v-if="article.title == this.$route.params.title">
       <div class="title">{{article.title}}</div>
 
       <div class="time">create at {{fixTime(article.createDate)}}</div>
