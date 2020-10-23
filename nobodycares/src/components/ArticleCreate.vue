@@ -31,7 +31,7 @@
   </div>
   <br>
 
-  <div style="width: 650px; margin: 0px auto" ref='editor'></div>
+
 
 
 
