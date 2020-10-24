@@ -2,6 +2,6 @@ import axios from "axios";
 
 export default () => {
   return axios.create({
-    baseURL: `http://localhost:3000/`
+    baseURL: `https://enigmatic-tor-45126.herokuapp.com/`
   });
 };
