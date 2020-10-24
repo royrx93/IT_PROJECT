@@ -1,7 +1,7 @@
-import Api from '@/services/Api'
+import Api from "@/services/Api";
 
 export default {
-    index(){
-        return Api().get('backstage')
-    }
-}
+  index() {
+    return Api().get("backstage");
+  }
+};

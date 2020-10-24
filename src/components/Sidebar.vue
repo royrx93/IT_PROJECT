@@ -21,7 +21,6 @@ export default {
     };
   },
 
-
   methods: {
     redirectToGallery() {
       this.$router.replace("/backstageGallery");
@@ -48,24 +47,23 @@ export default {
 </script>
 
 <style scoped>
-
-  .sidenav {
+.sidenav {
   height: 100%;
   width: 180px;
   position: absolute;
   z-index: 1;
   top: 10%;
   left: 0;
-  background-color:rgb(20, 20, 20);
-  opacity:80%;
+  background-color: rgb(20, 20, 20);
+  opacity: 80%;
   overflow-x: hidden;
   padding-top: 60px;
   transition: 0.5s;
   margin-top: 20px;
-  padding-bottom:600px;
-  }
+  padding-bottom: 600px;
+}
 
-  .sidenav a {
+.sidenav a {
   padding: 8px 8px 8px 8px;
   text-decoration: none;
   font-size: 25px;
@@ -73,28 +71,28 @@ export default {
   display: block;
   transition: 0.3s;
   cursor: pointer;
-  }
+}
 
-  .sidenav a:hover {
+.sidenav a:hover {
   color: #f1f1f1;
-  }
-  .sidenav .closebtn {
+}
+.sidenav .closebtn {
   position: absolute;
   top: 0;
   right: 15px;
   font-size: 36px;
   margin-left: 75px;
-  }
+}
 
-  .sideicon{
+.sideicon {
   position: absolute;
   left: 35px;
   top: 75px;
-  }
+}
 
-  .sideicon img{
+.sideicon img {
   width: 50px;
   height: 50px;
   cursor: pointer;
-  }
+}
 </style>

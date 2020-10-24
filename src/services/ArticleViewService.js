@@ -1,7 +1,7 @@
-import Api from '@/services/Api'
+import Api from "@/services/Api";
 
 export default {
-    articleView(credentials){
-        return Api().get('/article/viewArticle',credentials)
-    }
-}
+  articleView(credentials) {
+    return Api().get("/article/viewArticle", credentials);
+  }
+};

@@ -46,7 +46,7 @@ export default {
       }
     }
     this.subtitle = (await ArticleService.getSubtitle()).data;
-    console.log(this.subtitle)
+    console.log(this.subtitle);
   },
 
   methods: {

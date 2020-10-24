@@ -51,10 +51,8 @@ const routes = [
     path: "/article/create",
     name: "ArticleCreate",
     component: ArticleCreate
-
   },
   {
-
     path: "/article/delete",
     name: "ArticleDelete",
     component: Article
@@ -63,14 +61,12 @@ const routes = [
     path: "/contactMe",
     name: "ContactMe",
     component: ContactMe
-
-  }
-  ,
+  },
   {
     path: "/backstage",
     name: "Backstage",
     component: Backstage,
-    meta:{
+    meta: {
       requireAuth: true
     }
   },
@@ -78,49 +74,46 @@ const routes = [
     path: "/backstageGallery",
     name: "BackstageGallery",
     component: BackstageGallery,
-    meta:{
+    meta: {
       requireAuth: true
     }
   },
   {
-    path: '/articles/view/:title',
-    name: 'ArticleView',
+    path: "/articles/view/:title",
+    name: "ArticleView",
     component: ArticleView
   },
   {
-    path:'/article/update/:title',
-    name:'ArticleUpdate',
+    path: "/article/update/:title",
+    name: "ArticleUpdate",
     component: ArticleUpdate
-
   },
 
   {
-    path: '/articles',
-    name:'Articles',
+    path: "/articles",
+    name: "Articles",
     component: Articles
   },
   {
-    path:'/backstageTimeline',
-    name:"TimelineBackstage",
-    component:TimelineBackstage
+    path: "/backstageTimeline",
+    name: "TimelineBackstage",
+    component: TimelineBackstage
   },
   {
-
     path: "/timeline/delete",
     name: "TimelineDelete",
     component: TimelineBackstage
   },
   {
-    path: '/backstage',
-    redirect: '/login'
+    path: "/backstage",
+    redirect: "/login"
   },
 
   {
-    path: '/login',
-    name: 'login',
+    path: "/login",
+    name: "login",
     component: login
   }
-
 ];
 
 const router = createRouter({
@@ -128,15 +121,15 @@ const router = createRouter({
   routes
 });
 
-router.beforeEach((to,from,next)=>{
-  if(to.meta.requireAuth & !store.state.userLogin  ){
+router.beforeEach((to, from, next) => {
+  if (to.meta.requireAuth & !store.state.userLogin) {
     next({
-      path:"/login",
-      query: {redirect: to.fullPath}
+      path: "/login",
+      query: { redirect: to.fullPath }
     });
-  }else{
+  } else {
     next();
   }
-})
+});
 
 export default router;

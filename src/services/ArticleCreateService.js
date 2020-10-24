@@ -1,7 +1,7 @@
-import Api from '@/services/Api'
+import Api from "@/services/Api";
 
 export default {
-    articleCreate(credentials){
-        return Api().post('/article/createArticle',credentials)
-    }
-}
+  articleCreate(credentials) {
+    return Api().post("/article/createArticle", credentials);
+  }
+};

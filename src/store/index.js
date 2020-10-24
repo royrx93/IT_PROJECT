@@ -5,8 +5,8 @@ export default createStore({
     userLogin: false
   },
   mutations: {
-    loginSuccess(){
-      this.state.userLogin = true
+    loginSuccess() {
+      this.state.userLogin = true;
     }
   },
   actions: {},

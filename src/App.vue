@@ -21,16 +21,16 @@
 }
 
 #nav {
-  width:auto;
+  width: auto;
   padding: 30px;
   background-color: rgb(10, 10, 10);
   font-size: 1.2em;
   letter-spacing: 3px;
   word-spacing: 10px;
-  margin:-20px;
+  margin: -20px;
   position: relative;
-  opacity:0.6;
-  
+  opacity: 0.6;
+
   a {
     font-weight: bold;
     color: white;
@@ -38,8 +38,8 @@
     overflow: scroll;
 
     &.router-link-exact-active {
-      text-decoration:underline;
+      text-decoration: underline;
+    }
   }
-  }
-  }
+}
 </style>
