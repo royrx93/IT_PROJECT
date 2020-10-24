@@ -21,9 +21,10 @@
 </template>
  
 <script>
+import AuthenticationService from "../services/AuthenticationService";
 import { mapMutations } from 'vuex';
-import axios from 'axios';
-axios.defaults.baseURL = 'http://localhost:3000/';
+// import axios from 'axios';
+// axios.defaults.baseURL = 'http://localhost:3000/';
 export default {
   data () {
     return {
@@ -41,35 +42,52 @@ export default {
  
   methods: {
     ...mapMutations(['changeLogin']),
-    login () {
-
-      if (this.username === '' || this.password === '') {
+    async login(){
+       if (this.username === '' || this.password === '') {
         alert('Username or Password cannot be empty');
       } else {
-        axios({
-          method: 'post',
-          url: '/login',
-          data: {
-            username: this.username,
-            password: this.password,
-          }
-        }).then(res => {
-          console.log(res.data);
-          if(res.data.state === 1){
-            
-            alert('Login success');
-            this.$store.commit('loginSuccess');
-            this.$router.push({path:'/backstage'})
+        let loginData = {
+          username: this.username,
+          password: this.password,
+        };
+        const response = await AuthenticationService.login(loginData);
+        console.log(response.data);
+        if(response.data.state === 1){
+          alert('Login success');
+          this.$store.commit('loginSuccess');
+          this.$router.push({path:'/backstage'})
 
-          }else{
+        }else{
             alert('Username or Password incorrect');
-            console.log(res);
-          }
-          
-          
-        });
+            console.log(response);
+        }
       }
+
     }
+    // login () {
+    //   if (this.username === '' || this.password === '') {
+    //     alert('Username or Password cannot be empty');
+    //   } else {
+    //     axios({
+    //       method: 'post',
+    //       url: '/login',
+    //       data: {
+    //         username: this.username,
+    //         password: this.password,
+    //       }
+    //     }).then(res => {
+    //       console.log(res.data);
+    //       if(res.data.state === 1){
+    //         alert('Login success');
+    //         this.$store.commit('loginSuccess');
+    //         this.$router.push({path:'/backstage'})
+    //       }else{
+    //         alert('Username or Password incorrect');
+    //         console.log(res);
+    //       }
+    //     });
+    //   }
+    // }
   }
 };
 </script>

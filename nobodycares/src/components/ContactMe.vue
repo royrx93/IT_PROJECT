@@ -20,15 +20,16 @@
     </div>
 
     
-    <button @click="submit">Submit</button>
+    <button @click="contact">Submit</button>
 
   </div>
  </body>
 </template>
 
 <script>
-import axios from 'axios';
-axios.defaults.baseURL = 'http://localhost:3000/'
+import ContactService from "../services/ContactService";
+//import axios from 'axios';
+//axios.defaults.baseURL = 'http://localhost:3000/'
 export default {
   data() {
     return {
@@ -39,7 +40,7 @@ export default {
     };
   },
   methods: {
-    submit() {
+    async contact(){
       if (!this.name) {
         alert('Please enter your name');
         return;
@@ -47,31 +48,60 @@ export default {
         alert('Please enter your email address');
         return;
       } else {
-        let formData = {
+          let formData = {
           name: this.name,
           email: this.email,
           message: this.message,
-        };
-        axios({
-          method: 'post',
-          url: '/mail',
-          data: formData,
-        })
-        .then(res =>{
-          console.log(res.data);
-          if(res.data.state === 1){
-            alert("sending sucess")
+          };
+          const  response = await ContactService.contact(formData);
+          console.log(response.data);
+          if(response.data.state === 1){
+           alert("sending sucess");
           }
           else{
-            alert("sending failed")
+           alert("sending failed");
           }
-        })
-        .catch(error=>{
-        console.log(error);
-        alert('Internet failed');
-      });
       }
     },
+
+    // submit() {
+    //   if (!this.name) {
+    //     alert('Please enter your name');
+    //     return;
+    //   } else if (!this.email) {
+    //     alert('Please enter your email address');
+    //     return;
+    //   } else {
+        
+        // let formData = {
+        //   name: this.name,
+        //   email: this.email,
+        //   message: this.message,
+        // };
+        
+        
+    //     axios({
+    //       method: 'post',
+    //       url: '/mail',
+    //       data: formData,
+    //     })
+    //     .then(res =>{
+    //       console.log(res.data);
+    //       if(res.data.state === 1){
+    //         alert("sending sucess")
+    //       }
+    //       else{
+    //         alert("sending failed")
+    //       }
+    //     })
+    //     .catch(error=>{
+    //     console.log(error);
+    //     alert('Internet failed');
+    //   });
+
+    //   }
+    // },
+    
   },
 };
 </script>
