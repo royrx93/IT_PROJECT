@@ -1,7 +1,7 @@
 <template>
   <body>
   
-
+ /
   <Sidebar> </Sidebar>
   <div class="words">
     <ul style="float:left; margin-left: 200px">
