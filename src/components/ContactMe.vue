@@ -3,33 +3,36 @@
     <div class="contact">
       <H1>Contact Me</H1>
       <p>-If we are destined to meet</p>
-      <div class="input-div1">
-        <label for="name">Your name:</label>
-        <input
-          type="text"
-          style=" margin:8px;width:600px;height:60px"
-          name="name"
-          v-model.trim="name"
-        />
-      </div>
 
-      <div class="input-div2">
-        <label for="email">Your email:</label>
-        <input
-          type="text"
-          style=" margin:8px;width:600px;height:60px"
-          name="email"
-          v-model.trim="email"
-        />
-      </div>
+      <div class="border">
+        <div class="input-div1">
+          <label for="name">Your name:</label>
+          <input
+            type="text"
+            style=" margin:8px;width:600px;height:60px"
+            name="name"
+            v-model.trim="name"
+          />
+        </div>
 
-      <div class="input-div3">
-        <label for="message">Message: </label>
-        <textarea
-          name="textarea"
-          style="width:600px;height:150px;"
-          v-model.trim="message"
-        ></textarea>
+        <div class="input-div2">
+          <label for="email">Your email:</label>
+          <input
+            type="text"
+            style=" margin:8px;width:600px;height:60px"
+            name="email"
+            v-model.trim="email"
+          />
+        </div>
+
+        <div class="input-div3">
+          <label for="message">Message: </label>
+          <textarea
+            name="textarea"
+            style="width:600px;height:150px;"
+            v-model.trim="message"
+          ></textarea>
+        </div>
       </div>
 
       <button @click="contact">Submit</button>
@@ -116,17 +119,74 @@ export default {
 <style scoped>
 body {
   width: 100%;
-  height: auto;
+  /* height: auto;
+  z-index: -1;
+  position: absolute; */
+  height: 1;
   z-index: -1;
   position: absolute;
+  margin-top: 300px;
+  margin-left: 40px;
 
   background-image: url("../assets/background.jpeg");
   background-repeat: repeat;
   background-attachment: fixed;
   background-size: cover;
 }
+.input-div1 img {
+  margin-left: 15px;
 
+  margin-top: 20px;
+  position: absolute;
+}
+.input-div2 img {
+  margin-left: 15px;
+
+  margin-top: 20px;
+  position: absolute;
+}
+.border {
+  margin: 30px 34% 20px 34%;
+  padding-top: 40px;
+  padding-bottom: 20px;
+
+  background-color: rgba(25, 25, 25, 0.6);
+}
+label {
+  margin-left: -40px;
+  cursor: pointer;
+  display: inline-block;
+  padding: 10px 14px;
+  text-align: right;
+  width: 150px;
+  vertical-align: top;
+  font-size: 2em;
+}
+
+button {
+  margin: 25px;
+  height: 35px;
+  width: 100px;
+  font-size: 1.5em;
+  margin-left: 40px;
+}
+input {
+  padding: 10px 25px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  margin-left: -60px;
+}
 h1 {
+  color: #f0f0f0;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  font-size: 1.8em;
+
+  background-color: rgba(25, 25, 25, 0.6);
+  margin: -20px 34% -20px 34%;
+}
+
+/* h1 {
   color: #f0f0f0;
   padding: 60px;
   font-size: 3em;
@@ -152,5 +212,5 @@ button {
 p {
   margin-left: 40px;
   font-size: 1.2em;
-}
+} */
 </style>
