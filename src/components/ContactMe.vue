@@ -1,15 +1,19 @@
 <template>
   <body>
     <div class="contact">
-      <H1>Contact Me</H1>
-      <p>-If we are destined to meet</p>
-
+      <v-layout column>
+        <v-flex xs6 offset-xs3>
+          <h1>Contact Me</h1>
+          <p>-If we are destined to meet</p>
+        </v-flex>
+      </v-layout>
+  
       <div class="border">
         <div class="input-div1">
           <label for="name">Your name:</label>
           <input
             type="text"
-            style=" margin:8px;width:600px;height:60px"
+       
             name="name"
             v-model.trim="name"
           />
@@ -19,7 +23,7 @@
           <label for="email">Your email:</label>
           <input
             type="text"
-            style=" margin:8px;width:600px;height:60px"
+
             name="email"
             v-model.trim="email"
           />
@@ -29,7 +33,7 @@
           <label for="message">Message: </label>
           <textarea
             name="textarea"
-            style="width:600px;height:150px;"
+            
             v-model.trim="message"
           ></textarea>
         </div>
@@ -42,8 +46,6 @@
 
 <script>
 import ContactService from "../services/ContactService";
-//import axios from 'axios';
-//axios.defaults.baseURL = 'http://localhost:3000/'
 export default {
   data() {
     return {
@@ -75,43 +77,6 @@ export default {
         }
       }
     }
-
-    // submit() {
-    //   if (!this.name) {
-    //     alert('Please enter your name');
-    //     return;
-    //   } else if (!this.email) {
-    //     alert('Please enter your email address');
-    //     return;
-    //   } else {
-
-    // let formData = {
-    //   name: this.name,
-    //   email: this.email,
-    //   message: this.message,
-    // };
-
-    //     axios({
-    //       method: 'post',
-    //       url: '/mail',
-    //       data: formData,
-    //     })
-    //     .then(res =>{
-    //       console.log(res.data);
-    //       if(res.data.state === 1){
-    //         alert("sending sucess")
-    //       }
-    //       else{
-    //         alert("sending failed")
-    //       }
-    //     })
-    //     .catch(error=>{
-    //     console.log(error);
-    //     alert('Internet failed');
-    //   });
-
-    //   }
-    // },
   }
 };
 </script>
@@ -119,62 +84,48 @@ export default {
 <style scoped>
 body {
   width: 100%;
-  /* height: auto;
-  z-index: -1;
-  position: absolute; */
-  height: 1;
+  height: auto;
+
   z-index: -1;
   position: absolute;
-  margin-top: 300px;
-  margin-left: 40px;
+  margin-top: 150px;
+  margin-left: 10px;
 
   background-image: url("../assets/background.jpeg");
   background-repeat: repeat;
   background-attachment: fixed;
   background-size: cover;
 }
-.input-div1 img {
-  margin-left: 15px;
-
-  margin-top: 20px;
-  position: absolute;
-}
-.input-div2 img {
-  margin-left: 15px;
-
-  margin-top: 20px;
-  position: absolute;
-}
 .border {
-  margin: 30px 34% 20px 34%;
+  height: 250px;
+  width: 600px;
+  margin: 10px 34% 20px 34%;
+  margin-left: 390px;
   padding-top: 40px;
   padding-bottom: 20px;
-
   background-color: rgba(25, 25, 25, 0.6);
 }
 label {
-  margin-left: -40px;
+  margin-left: -300px; 
   cursor: pointer;
   display: inline-block;
-  padding: 10px 14px;
+  padding: 3px 6px;
   text-align: right;
   width: 150px;
   vertical-align: top;
-  font-size: 2em;
 }
-
 button {
   margin: 25px;
   height: 35px;
   width: 100px;
   font-size: 1.5em;
-  margin-left: 40px;
+  margin-left: 10px;
 }
 input {
   padding: 10px 25px;
-  margin-top: 20px;
+  margin-top: 0px;
   margin-bottom: 10px;
-  margin-left: -60px;
+  margin-left: 0px;
 }
 h1 {
   color: #f0f0f0;
@@ -186,31 +137,9 @@ h1 {
   margin: -20px 34% -20px 34%;
 }
 
-/* h1 {
-  color: #f0f0f0;
-  padding: 60px;
-  font-size: 3em;
-  margin-left: 60px;
-  margin-top: 40px;
-}
-label {
-  margin-left: -100px;
-  cursor: pointer;
-  display: inline-block;
-  padding: 3px 6px;
-  text-align: right;
-  width: 150px;
-  vertical-align: top;
-}
-button {
-  margin: 25px;
-  height: 60px;
-  width: 300px;
-  font-size: 1.2em;
-  margin-left: 40px;
-}
 p {
-  margin-left: 40px;
+  margin-left: 00px;
   font-size: 1.2em;
-} */
+}
+
 </style>
