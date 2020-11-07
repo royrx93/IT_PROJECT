@@ -11,17 +11,17 @@
 </template>
 
 <script>
-// import BackstageService from "../services/BackstageService";
+import BackstageService from "../services/BackstageService";
 //import {right} from "core-js";
 export default {
   data() {
     return {
-      // backstage: null
+      backstage: null
     };
   },
-  // async mounted() {
-  //   this.backstage = (await BackstageService.index()).data;
-  // },
+  async mounted() {
+    this.backstage = (await BackstageService.index()).data;
+  },
   methods: {
     redirectToGallery() {
       this.$router.replace("/backstageGallery");
@@ -30,7 +30,7 @@ export default {
       this.$router.replace("/article");
     },
     redirectToTimeline() {
-      this.$router.replace("/timeline/add");
+      this.$router.replace("/backstageTimeline");
     },
     redirectToHomepage() {
       this.$router.replace("/backstageHomage");

@@ -3,8 +3,10 @@
     <v-layout column>
       <v-flex xs6 offset-xs3>
         <h1>Timeline</h1>
-        <p>-Some parts of mine left in time</p>
       </v-flex>
+      <div>
+        <div style="font-size: 30px; margin-bottom: 40px">{{ subtitle }}</div>
+      </div>
     </v-layout>
 
     <!--contents-->
@@ -50,9 +52,10 @@ export default {
       }
     };
   },
-  mounted() {
+  async mounted() {
     //首次加载时获取列表信息
     this.getlist();
+    this.subtitle = (await TimelineService.getSubtitle()).data;
   },
   methods: {
     qiehuan: function(year) {
