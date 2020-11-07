@@ -15,7 +15,7 @@ import ArticleUpdate from "@/components/ArticleUpdate";
 import TimelineBackstage from "../components/TimelineBackstage";
 import login from "../components/login.vue";
 import store from "../store";
-
+import introduction from "../components/Introduction"
 const routes = [
   {
     path: "/",
@@ -113,7 +113,13 @@ const routes = [
     path: "/login",
     name: "login",
     component: login
+  },
+  {
+    path: '/introduction',
+    name: "introduction",
+    component: introduction
   }
+
 ];
 
 const router = createRouter({
