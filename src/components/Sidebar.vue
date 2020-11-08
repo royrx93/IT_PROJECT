@@ -32,7 +32,7 @@ export default {
       this.$router.replace("/backstageTimeline");
     },
     redirectToHomepage() {
-      this.$router.replace("/backstageHomage");
+      this.$router.replace("/backstageHomepage");
     },
     /* Set the width of the side navigation to 250px */
     openNav() {
