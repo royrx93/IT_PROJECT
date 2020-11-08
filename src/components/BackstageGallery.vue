@@ -63,7 +63,8 @@ export default {
       const response = await BackstageGalleryService.updateSubTitle({
         sub_title: this.sub_title
       });
-      location.reload();
+      //location.reload();
+      this.$router.push("/gallery");
       console.log(response);
     },
 
@@ -72,13 +73,15 @@ export default {
       formData.append("myFile", this.selectedFile);
       formData.append("title", this.title);
       const response = await BackstageGalleryService.uploadImage(formData);
-      location.reload();
+      //location.reload();
+      this.$router.push("/gallery");
       console.log(response);
     },
 
     async deleteImage(img) {
       const response = await BackstageGalleryService.deleteImage(img);
-      location.reload();
+      //location.reload();
+      this.$router.push("/gallery");
       console.log("response: ", response.data());
     }
   }
