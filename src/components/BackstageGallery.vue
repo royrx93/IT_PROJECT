@@ -9,7 +9,7 @@
         <li>
           <input class="title" name="title" maxlength="50" v-model="title" />
         </li>
-        <li><button @click="uploadImage">Upload!</button></li>
+        <li><button @click="uploadImage">Upload</button></li>
       </ul>
       <ul style="float:right; margin-right: 200px">
         <li><p>Update the subtitle of gallery module here:</p></li>
