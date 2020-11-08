@@ -102,10 +102,10 @@ export default {
       }
     },
 
-    async searchDes(){
-        await TimelineService.timelineSearch(month);
-        location.reload();
-    },
+    // async searchDes(){
+    //     await TimelineService.timelineSearch(month);
+    //     location.reload();
+    // },
 
     async timelineAdd() {
       await AuthenticationService.timelineAdd({
