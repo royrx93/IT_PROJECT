@@ -10,6 +10,8 @@
     <a @click="redirectToGallery()">Gallery</a>
     <a @click="redirectToArticle()">Article</a>
     <a @click="redirectToTimeline()">Timeline</a>
+    <a @click="redirectToSubtitle()">Subtitle</a>
+
   </div>
 </template>
 
@@ -33,6 +35,9 @@ export default {
     },
     redirectToHomepage() {
       this.$router.replace("/backstageHomage");
+    },
+    redirectToSubtitle(){
+      this.$router.replace("/backstageSubtitle")
     },
     /* Set the width of the side navigation to 250px */
     openNav() {
