@@ -30,7 +30,7 @@
         </div>
 
         <div class="input-div3">
-          <label for="message">Message: </label>
+          <label for="message">Message:</label>
           <textarea
             name="textarea"
             
@@ -82,7 +82,7 @@ export default {
 </script>
 
 <style scoped>
-body {
+  body {
   width: 100%;
   height: auto;
 
@@ -95,51 +95,108 @@ body {
   background-repeat: repeat;
   background-attachment: fixed;
   background-size: cover;
-}
-.border {
+  }
+  .border {
   height: 250px;
   width: 600px;
-  margin: 10px 34% 20px 34%;
-  margin-left: 390px;
+  margin-top:-30px;
+  margin-left: 260px;
   padding-top: 40px;
   padding-bottom: 20px;
-  background-color: rgba(25, 25, 25, 0.6);
-}
-label {
-  margin-left: -300px; 
+  font-size:1.2em;
+  }
+  .border div{
+  margin-top:20px;
+  }
+  .contact button{
+  margin-top:120px;
+  }
+  label {
+  margin-left: -300px;
   cursor: pointer;
   display: inline-block;
   padding: 3px 6px;
   text-align: right;
   width: 150px;
   vertical-align: top;
-}
-button {
-  margin: 25px;
-  height: 35px;
+  }
+  button {
+  margin-top:20px;
+  margin-left:40px;
+  height: 30px;
   width: 100px;
-  font-size: 1.5em;
-  margin-left: 10px;
-}
-input {
+  font-size: 1.3em;
+  padding-right: 10px;
+  padding-bottom: 40px;
+  cursor: pointer;
+  width: 140px;
+  line-height: 38px;
+  text-align: center;
+  font-weight: bold;
+
+  border-radius: 5px;
+
+  position: relative;
+  overflow: hidden;
+  color: 	#505050;
+  text-shadow:1px 1px 1px #fff;
+  border:1px solid #dce1e6;
+  box-shadow: 0 1px 2px #fff inset,0 -1px 0 #a8abae inset;
+  background: -webkit-linear-gradient(top,#f2f3f7,#e4e8ec);
+  background: -moz-linear-gradient(top,#f2f3f7,#e4e8ec);
+  background: linear-gradient(top,#f2f3f7,#e4e8ec);
+
+  }
+  button:hover{
+  background:		#FFFFFF;
+
+
+  }
+
+  input {
   padding: 10px 25px;
   margin-top: 0px;
   margin-bottom: 10px;
   margin-left: 0px;
-}
-h1 {
+  }
+  h1 {
   color: #f0f0f0;
   padding-bottom: 20px;
   padding-top: 20px;
-  font-size: 1.8em;
+  font-size: 2.5em;
+  margin-left:40px;
+
+  }
+
+  p {
+  margin-left: 20px;
+  font-size: 1.2em;
+
+  }
+  .contact{
 
   background-color: rgba(25, 25, 25, 0.6);
-  margin: -20px 34% -20px 34%;
-}
+  margin: 0px 500px 60px 500px;
+  padding-bottom:60px;
+  }
+  .input-div1{
+  height:50px;
+  }
+  .input-div2{
+  height:50px;
+  }
+  .input-div3{
+  margin-left:-80px;
 
-p {
-  margin-left: 00px;
-  font-size: 1.2em;
-}
-
+  }
+  .input-div3 label{
+  padding-right:00px;
+  padding-left:30px;
+  margin-top:60px;
+  }
+  .input-div3 textarea{
+  margin-left:40px;
+  padding-right:350px;
+  padding-bottom:150px;
+  }
 </style>
