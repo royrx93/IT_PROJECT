@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import BackstageService from "../services/BackstageService";
+//import BackstageService from "../services/BackstageService";
 import Sidebar from "@/components/Sidebar";
 export default {
   components: {
