@@ -1,5 +1,11 @@
 <template>
   <Sidebar></Sidebar>
+  <body>
+    <h2>test1 </h2>
+    <div class="border">
+      <m3> whatever you want </m3>
+    </div>
+  </body>
 </template>
 
 <script>
