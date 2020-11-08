@@ -1,9 +1,7 @@
 <template>
+  <sideBar></sideBar>
   <body>
     <h1>Timeline Management</h1>
-
-    <sideBar></sideBar>
-
 <!--    <div class="timeline" v-for="timeline in timeline" :key="timeline.ID">-->
 <!--      <table align="center">-->
 <!--        <tr>-->

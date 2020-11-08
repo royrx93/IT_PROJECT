@@ -13,6 +13,7 @@ import ArticleView from "@/components/ArticleView";
 import Articles from "@/components/Articles";
 import ArticleUpdate from "@/components/ArticleUpdate";
 import TimelineBackstage from "../components/TimelineBackstage";
+import BackstageHomepage from "@/components/BackstageHomepage";
 import login from "../components/login.vue";
 import store from "../store";
 
@@ -66,6 +67,14 @@ const routes = [
     path: "/backstage",
     name: "Backstage",
     component: Backstage,
+    meta: {
+      requireAuth: true
+    }
+  },
+  {
+    path: "/backstageHomepage",
+    name: "BackstageHomepage",
+    component: BackstageHomepage,
     meta: {
       requireAuth: true
     }
