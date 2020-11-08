@@ -76,17 +76,11 @@ const routes = [
     path: "/backstageHomepage",
     name: "BackstageHomepage",
     component: BackstageHomepage,
-    meta: {
-      requireAuth: true
-    }
   },
   {
     path: "/backstageGallery",
     name: "BackstageGallery",
     component: BackstageGallery,
-    meta: {
-      requireAuth: true
-    }
   },
   {
     path: "/articles/view/:title",
