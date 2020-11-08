@@ -4,9 +4,11 @@
     <p>{{ subtitle }}</p>
     <div class="waterfall-border">
       <div class="waterfall-width-column">
-        <div class="image-box" v-for="img in this.gallery" :key="img.id">
-          <img :src="img.url" />
-          <p>{{ img.title }}</p>
+        <div class="image-box" v-for="img in this.gallery" :key="img.id" >
+          <div style="clear:both">
+            <img :src="img.url" />
+            <p>{{ img.title }}</p>
+          </div>
         </div>
       </div>
     </div>
@@ -59,6 +61,8 @@ body {
   margin-bottom: 5px;
   margin-top: 5px;
   border: 1px solid;
+  break-inside:avoid;
+  box-sizing: border-box;
 }
 
 .waterfall-width-column .image-box img {

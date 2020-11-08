@@ -75,12 +75,12 @@ const routes = [
   {
     path: "/backstageHomepage",
     name: "BackstageHomepage",
-    component: BackstageHomepage,
+    component: BackstageHomepage
   },
   {
     path: "/backstageGallery",
     name: "BackstageGallery",
-    component: BackstageGallery,
+    component: BackstageGallery
   },
   {
     path: "/articles/view/:title",
