@@ -53,9 +53,9 @@ export default {
     },
 
     async updateIntroduction() {
-      if (this.introduction.length > 1023) {
+      /*if (this.introduction.length > 1023) {
         alert("Introduction Characters Limit 1023");
-      }
+      }*/
       const response = await BackstageHomepageService.updateIntroduction({
         introduction: this.introduction
       });

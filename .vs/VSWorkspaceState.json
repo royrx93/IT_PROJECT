@@ -1,12 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\nobodycares",
-    "\\nobodycares\\src",
-    "\\nobodycares\\src\\assets",
-    "\\nobodycares\\src\\components",
-    "\\nobodycares\\src\\views"
+    "\\src",
+    "\\src\\assets",
+    "\\src\\components"
   ],
-  "SelectedNode": "\\nobodycares\\src\\components\\Sidebar.vue",
+  "SelectedNode": "\\src\\assets",
   "PreviewInSolutionExplorer": false
 }

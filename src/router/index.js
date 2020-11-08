@@ -76,17 +76,11 @@ const routes = [
     path: "/backstageHomepage",
     name: "BackstageHomepage",
     component: BackstageHomepage,
-    meta: {
-      requireAuth: true
-    }
   },
   {
     path: "/backstageGallery",
     name: "BackstageGallery",
     component: BackstageGallery,
-    meta: {
-      requireAuth: true
-    }
   },
   {
     path: "/articles/view/:title",
@@ -113,10 +107,6 @@ const routes = [
     path: "/timeline/delete",
     name: "TimelineDelete",
     component: TimelineBackstage
-  },
-  {
-    path: "/backstage",
-    redirect: "/login"
   },
 
   {
