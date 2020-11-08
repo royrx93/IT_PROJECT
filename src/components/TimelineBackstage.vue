@@ -29,12 +29,16 @@
         <li><p>Timeline Management</p></li>
         <li><input type="month" name="string" v-model="month" placeholder="month" /></li>
         <li>
-          <p>description</p><input class="title" name="title" maxlength="50" v-model="title" />
+          <p>description</p><input class="title"
+                                   name="title"
+                                   maxlength="50"
+                                   v-model="description"
+                                    placeholder="description"/>
         </li>
         <li><button @click="searchDes">Search</button>
-          <button @click="uploadImage">Update</button>
-          <button @click="uploadImage">Delete</button>
-          <button @click="uploadImage">Add</button>
+          <button @click="updateDes">Update</button>
+          <button @click="remove">Delete</button>
+          <button @click="timelineAdd">Add</button>
         </li>
       </ul>
       <ul style="float:right; margin-right: 200px">
@@ -64,6 +68,7 @@
 import TimelineService from "@/services/TimelineService";
 import TimelineDeleteService from "@/services/TimelineDeleteService";
 import sideBar from "@/components/Sidebar";
+import AuthenticationService from "../services/TimelineAddService";
 
 export default {
   components: {
@@ -71,6 +76,9 @@ export default {
   },
   data() {
     return {
+      year:"",
+      month:"",
+      description:"",
       note: {
         backgroundImage: "url(" + require("../assets/background.jpeg") + ")",
         backgroundRepeat: "no-repeat",
@@ -95,10 +103,18 @@ export default {
     },
 
     // async searchDes(){
-    //     const response = await TimelineService.timelineSearch(month);
+    //     await TimelineService.timelineSearch(month);
     //     location.reload();
-    //     console.log(response);
-    // }
+    // },
+
+    async timelineAdd() {
+      await AuthenticationService.timelineAdd({
+        year: this.month.toString().substr(0, 4),
+        month: this.month.toString().substr(5, 2),
+        description: this.description
+      });
+      // console.log(response.data())
+    }
   }
 
 
