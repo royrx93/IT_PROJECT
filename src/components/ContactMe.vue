@@ -141,7 +141,7 @@ export default {
   color: 	#505050;
   text-shadow:1px 1px 1px #fff;
   border:1px solid #dce1e6;
-  box-shadow: 0 1px 2px #fff inset,0 -1px 0 #a8abae inset;
+  box-shadow: 0 1px 2px #fff inset,0 -1px 0 #E0E0E0 inset;
   background: -webkit-linear-gradient(top,#f2f3f7,#e4e8ec);
   background: -moz-linear-gradient(top,#f2f3f7,#e4e8ec);
   background: linear-gradient(top,#f2f3f7,#e4e8ec);
@@ -173,7 +173,7 @@ export default {
   font-size: 1.2em;
 
   }
-  .contact{
+  .contact {
 
   background-color: rgba(25, 25, 25, 0.6);
   margin: 0px 500px 60px 500px;

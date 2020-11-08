@@ -131,9 +131,9 @@ export default {
   }
 
   button {
-  margin-top:30px;
+  margin-top:50px;
   margin-left:20px;
-  margin-bottom:30px;
+  margin-bottom:25px;
   height: 30px;
   width: 100px;
   font-size: 1.3em;
@@ -152,7 +152,7 @@ export default {
   color: 	#505050;
   text-shadow:1px 1px 1px #fff;
   border:1px solid #dce1e6;
-  box-shadow: 0 1px 2px #fff inset,0 -1px 0 #a8abae inset;
+  box-shadow: 0 1px 2px #fff inset,0 -1px 0 #E0E0E0 inset;
   background: -webkit-linear-gradient(top,#f2f3f7,#e4e8ec);
   background: -moz-linear-gradient(top,#f2f3f7,#e4e8ec);
   background: linear-gradient(top,#f2f3f7,#e4e8ec);
