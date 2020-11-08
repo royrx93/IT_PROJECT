@@ -8,6 +8,7 @@ export default createStore({
   mutations: {
     loginSuccess() {
       this.state.userLogin = true;
+      localStorage.setItem('userLogin', true);
     },
     changeLogin(state, user) {      
       state.Authorization = user.Authorization;      
