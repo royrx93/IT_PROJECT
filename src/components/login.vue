@@ -1,6 +1,7 @@
 <template>
   <body>
     <h1>Hey, nice to see you _</h1>
+    <h2>test1 </h2>
     <div class="border">
       <div class="input-div1">
         <img src="../assets/user_icon.png" alt="user" width="40" height="40" />
