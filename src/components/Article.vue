@@ -95,7 +95,7 @@ export default {
 </script>
 
 <style scoped>
-body {
+  body {
   width: 100.1%;
   height: 100%;
   z-index: -1;
@@ -106,29 +106,29 @@ body {
   background-repeat: repeat;
   background-attachment: fixed;
   background-size: cover;
-}
+  }
 
-h1 {
+  h1 {
   color: #f0f0f0;
   padding: 60px;
   font-size: 3em;
   margin-top: 70px;
   margin-left: 80px;
-}
+  }
 
-p {
+  p {
   font-size: 1.2em;
-}
+  }
 
-.cardBox {
+  .cardBox {
   width: 200px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   text-align: center;
   float: left;
   margin-left: 20px;
   padding: 15px 5px 5px;
-}
-#delete {
+  }
+  #delete {
   background-color: #33a5ff;
   width: 60px;
   height: 25px;
@@ -136,36 +136,36 @@ p {
   border: none;
   margin-right: 10px;
   border-radius: 10%;
-}
-#delete:hover {
+  }
+  #delete:hover {
   background: #4f4f4f;
-}
+  }
 
-#update {
+  #update {
   background-color: #33a5ff;
   width: 60px;
   height: 25px;
   color: #ffffff;
   border: none;
   border-radius: 10%;
-}
-#update:hover {
+  }
+  #update:hover {
   background: #339900;
-}
+  }
 
-#updateSubtitle {
+  #updateSubtitle {
   background-color: #33a5ff;
-  width: 60px;
-  height: 25px;
+  width: 80px;
+  height: 35px;
   color: #ffffff;
   border: none;
   border-radius: 10%;
-}
-#updateSubtitle:hover {
+  }
+  #updateSubtitle:hover {
   background: #339900;
-}
+  }
 
-.buttons {
+  .buttons {
   position: fixed;
   right: 10px;
   bottom: 10px;
@@ -179,21 +179,21 @@ p {
   border: none;
   font-size: 50px;
   color: white;
-}
+  }
 
-.buttons:hover {
+  .buttons:hover {
   background: #3366ff;
-}
+  }
 
-#subtitle {
-  background: grey;
+  #subtitle {
+  background: #C8C8C8;
   border: none;
   border-radius: 5px;
   height: 25px;
   width: 300px;
-}
+  }
 
-#subtitle:focus {
+  #subtitle:focus {
   background: whitesmoke;
-}
+  }
 </style>
