@@ -1,39 +1,37 @@
 <template>
-<SideBar></SideBar>
+<sideBar></sideBar>
   <h1>Subtitle Management</h1>
 
-  <div>
-    <button v-text="btnText" @click="showToggle"></button>
-    <div style="background: rgba(25,25,25,.5)" v-show="isShow">
-      <div style="margin-bottom: 10px">
-        <input id="subtitle" class="title" name="title" v-model="articleSubtitle" />
-      </div>
+  <div style="margin-bottom: 40px">
+    <div style="margin-bottom: 10px; font-size: 20px">Update Subtitle</div>
+    <div style="margin-bottom: 10px">
+      <input id="subtitle" class="title" name="title" v-model="articleSubtitle" />
+    </div>
+    <div>
+      <button id="updateSubtitle" @click="updateSubTitle">Submit</button>
     </div>
   </div>
 
 </template>
 <script>
 import sideBar from "@/components/Sidebar";
+import ArticleService from "@/services/ArticleService";
 export default {
-  data () {
-    return {
-      isShow: false,
-      btnText: "Article Subtitle",
-      articleSubtitle: "",
-    };
-  },
   components: {
     sideBar
   },
-
-  methods:{
-    showToggle(){
-      this.isShow = !this.isShow
-      if(this.isShow){
-        this.btnText = "Modify Article Subtitle"
-      }else{
-        this.btnText = "Article Subtitle"
-      }
+  data() {
+    return {
+      articleSubtitle: ""
+    };
+  },
+  methods: {
+    async updateSubTitle() {
+      const response = await ArticleService.updateSubTitle({
+        subtitle: this.articleSubtitle
+      });
+      location.reload();
+      console.log(response);
     }
   }
 };
