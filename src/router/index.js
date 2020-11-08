@@ -114,10 +114,6 @@ const routes = [
     name: "TimelineDelete",
     component: TimelineBackstage
   },
-  {
-    path: "/backstage",
-    redirect: "/login"
-  },
 
   {
     path: "/login",

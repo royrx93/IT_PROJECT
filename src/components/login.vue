@@ -66,9 +66,15 @@ export default {
         const response = await AuthenticationService.login(loginData);
         console.log(response.data);
         if (response.data.state === 1) {
+          this.userToken = response.data.token;
+          this.changeLogin({
+            Authorization: this.userToken,
+          })
           alert("Login success");
           this.$store.commit("loginSuccess");
           this.$router.push({ path: "/backstage" });
+
+          
         } else {
           alert("Username or Password incorrect");
           console.log(response);
