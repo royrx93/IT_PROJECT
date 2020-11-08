@@ -170,6 +170,8 @@ export default {
   .waterfall-width-column .image-box {
   background: #fff;
   border: 2px solid #475669;
+  break-inside:avoid;
+  box-sizing: border-box;
   }
 
   .waterfall-width-column .image-box img {

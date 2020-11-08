@@ -7,8 +7,6 @@
     <label>Introduction:</label>
     <textarea
       style="height: 200px; width: 650px;"
-      type="text"
-      name="string"
       v-model="introduction"
     />
 
