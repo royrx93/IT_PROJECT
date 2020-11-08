@@ -1,5 +1,6 @@
 <template>
   <body>
+    <Sidebar> </Sidebar>
     <div class="backstage" :style="note"></div>
     <div id="mySidenav" class="sidenav">
       <a @click="redirectToHomepage()">Homepage</a>
@@ -12,8 +13,13 @@
 
 <script>
 import BackstageService from "../services/BackstageService";
+import Sidebar from "@/components/Sidebar";
 //import {right} from "core-js";
 export default {
+  components: {
+    Sidebar
+  },
+
   data() {
     return {
       backstage: null
