@@ -58,8 +58,8 @@ export default {
   top: 10%;
   left: 0;
   background-color: rgba(20, 20, 20,0.5);
-  /* overflow-x: hidden;
-  overflow-y: hidden; */
+  overflow-x: hidden;
+  overflow-y: hidden; 
   padding-top: 60px;
   transition: 0.5s;
   margin-top: 60px;
