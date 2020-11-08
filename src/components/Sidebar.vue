@@ -56,7 +56,7 @@ export default {
   height: 100%;
   width: 180px;
   position: absolute;
-  z-index: 1;
+  z-index: 999;
   top: 10%;
   left: 0;
   background-color: rgb(20, 20, 20);

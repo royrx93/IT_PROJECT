@@ -12,6 +12,7 @@
     </div>
   </div>
 
+
 </template>
 <script>
 import sideBar from "@/components/Sidebar";
@@ -30,7 +31,7 @@ export default {
       const response = await ArticleService.updateSubTitle({
         subtitle: this.articleSubtitle
       });
-      location.reload();
+      this.$router.push("/articles");
       console.log(response);
     }
   }

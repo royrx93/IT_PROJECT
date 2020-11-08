@@ -4,6 +4,7 @@
     <label>Title:</label>
     <input
       style="height: 40px; width: 650px;"
+      disabled="disabled"
       type="text"
       name="string"
       v-model="title"

@@ -4,7 +4,7 @@
     <h1>Articles Management</h1>
 
 
-    <div class="border">
+    <div style="margin-left: 180px" class="border">
       <div v-for="article in articles" :key="article.title">
         <div class="cardBox">
           <img
