@@ -3,9 +3,7 @@
     <img :src="sidebar_icon" @click="openNav()" />
   </div>
   <div id="mySidenav" class="sidenav">
-    <a href="javascript:void(0)" class="closebtn" @click="closeNav()"
-      >&times;</a
-    >
+    <a href="javascript:void(0)" class="closebtn" @click="closeNav()">&times;</a>
     <a @click="redirectToHomepage()">Homepage</a>
     <a @click="redirectToGallery()">Gallery</a>
     <a @click="redirectToArticle()">Article</a>
@@ -59,10 +57,9 @@ export default {
   z-index: 999;
   top: 10%;
   left: 0;
-  background-color: rgb(20, 20, 20);
-  opacity: 80%;
-  overflow-x: hidden;
-  overflow-y: hidden;
+  background-color: rgba(20, 20, 20,0.5);
+  /* overflow-x: hidden;
+  overflow-y: hidden; */
   padding-top: 60px;
   transition: 0.5s;
   margin-top: 60px;
