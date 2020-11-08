@@ -62,9 +62,10 @@ export default {
   background-color: rgb(20, 20, 20);
   opacity: 80%;
   overflow-x: hidden;
+  overflow-y: hidden;
   padding-top: 60px;
   transition: 0.5s;
-  margin-top: 20px;
+  margin-top: 60px;
   padding-bottom: 600px;
 }
 

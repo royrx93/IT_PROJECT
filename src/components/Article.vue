@@ -1,8 +1,7 @@
 <template>
+  <sideBar></sideBar>
   <body>
     <h1>Articles Management</h1>
-
-    <sideBar></sideBar>
 
     <div style="margin-bottom: 40px">
       <div style="margin-bottom: 10px; font-size: 20px">Update Subtitle</div>
