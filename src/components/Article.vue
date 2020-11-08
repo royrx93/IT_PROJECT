@@ -1,18 +1,8 @@
 <template>
+  <sideBar></sideBar>
   <body>
     <h1>Articles Management</h1>
 
-    <sideBar></sideBar>
-
-    <div style="margin-bottom: 40px">
-      <div style="margin-bottom: 10px; font-size: 20px">Update Subtitle</div>
-      <div style="margin-bottom: 10px">
-        <input id="subtitle" class="title" name="title" v-model="subtitle" />
-      </div>
-      <div>
-        <button id="updateSubtitle" @click="updateSubTitle">Submit</button>
-      </div>
-    </div>
 
     <div class="border">
       <div v-for="article in articles" :key="article.title">
@@ -153,6 +143,7 @@ export default {
   background: #339900;
   }
 
+
   #updateSubtitle {
   background-color: #33a5ff;
   width: 80px;
@@ -164,6 +155,7 @@ export default {
   #updateSubtitle:hover {
   background: #339900;
   }
+
 
   .buttons {
   position: fixed;
@@ -185,15 +177,5 @@ export default {
   background: #3366ff;
   }
 
-  #subtitle {
-  background: #C8C8C8;
-  border: none;
-  border-radius: 5px;
-  height: 25px;
-  width: 300px;
-  }
 
-  #subtitle:focus {
-  background: whitesmoke;
-  }
 </style>

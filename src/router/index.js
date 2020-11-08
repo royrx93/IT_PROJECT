@@ -13,8 +13,10 @@ import ArticleView from "@/components/ArticleView";
 import Articles from "@/components/Articles";
 import ArticleUpdate from "@/components/ArticleUpdate";
 import TimelineBackstage from "../components/TimelineBackstage";
+import BackstageHomepage from "@/components/BackstageHomepage";
 import login from "../components/login.vue";
 import store from "../store";
+import backstageSubtitle from "../components/SubtitleBackstage"
 
 const routes = [
   {
@@ -71,6 +73,14 @@ const routes = [
     }
   },
   {
+    path: "/backstageHomepage",
+    name: "BackstageHomepage",
+    component: BackstageHomepage,
+    meta: {
+      requireAuth: true
+    }
+  },
+  {
     path: "/backstageGallery",
     name: "BackstageGallery",
     component: BackstageGallery,
@@ -113,6 +123,13 @@ const routes = [
     path: "/login",
     name: "login",
     component: login
+  },
+
+  {
+    path: "/backstageSubtitle",
+    name: "backstageSubtitle",
+    component: backstageSubtitle
+
   }
 ];
 

@@ -10,6 +10,8 @@
     <a @click="redirectToGallery()">Gallery</a>
     <a @click="redirectToArticle()">Article</a>
     <a @click="redirectToTimeline()">Timeline</a>
+    <a @click="redirectToSubtitle()">Subtitle</a>
+
   </div>
 </template>
 
@@ -34,6 +36,9 @@ export default {
     redirectToHomepage() {
       this.$router.replace("/backstageHomepage");
     },
+    redirectToSubtitle(){
+      this.$router.replace("/backstageSubtitle")
+    },
     /* Set the width of the side navigation to 250px */
     openNav() {
       document.getElementById("mySidenav").style.width = "180px";
@@ -57,9 +62,10 @@ export default {
   background-color: rgb(20, 20, 20);
   opacity: 80%;
   overflow-x: hidden;
+  overflow-y: hidden;
   padding-top: 60px;
   transition: 0.5s;
-  margin-top: 20px;
+  margin-top: 60px;
   padding-bottom: 600px;
 }
 
