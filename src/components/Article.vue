@@ -3,15 +3,6 @@
   <body>
     <h1>Articles Management</h1>
 
-    <div style="margin-bottom: 40px">
-      <div style="margin-bottom: 10px; font-size: 20px">Update Subtitle</div>
-      <div style="margin-bottom: 10px">
-        <input id="subtitle" class="title" name="title" v-model="subtitle" />
-      </div>
-      <div>
-        <button id="updateSubtitle" @click="updateSubTitle">Submit</button>
-      </div>
-    </div>
 
     <div class="border">
       <div v-for="article in articles" :key="article.title">
@@ -152,17 +143,6 @@ p {
   background: #339900;
 }
 
-#updateSubtitle {
-  background-color: #33a5ff;
-  width: 60px;
-  height: 25px;
-  color: #ffffff;
-  border: none;
-  border-radius: 10%;
-}
-#updateSubtitle:hover {
-  background: #339900;
-}
 
 .buttons {
   position: fixed;
@@ -184,15 +164,5 @@ p {
   background: #3366ff;
 }
 
-#subtitle {
-  background: grey;
-  border: none;
-  border-radius: 5px;
-  height: 25px;
-  width: 300px;
-}
 
-#subtitle:focus {
-  background: whitesmoke;
-}
 </style>
