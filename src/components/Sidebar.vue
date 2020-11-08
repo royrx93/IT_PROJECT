@@ -51,7 +51,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
 .sidenav {
   height: 100%;
   width: 180px;
