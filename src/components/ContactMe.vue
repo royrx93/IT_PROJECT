@@ -179,7 +179,7 @@ export default {
   .contact {
 
   background-color: rgba(25, 25, 25, 0.6);
-  margin: 0px 0px 0px 450px;
+  margin: 0px 25% 0px 25%;
   padding-bottom:3%;
   padding-right:6%;
   padding-left:1%;
