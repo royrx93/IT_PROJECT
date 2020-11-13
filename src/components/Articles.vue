@@ -99,5 +99,8 @@ router-link {
   margin: 0px auto;
   margin-top: 10px;
   margin-bottom: 40px;
+  break-inside:avoid;
+  box-sizing: border-box;
+
 }
 </style>
