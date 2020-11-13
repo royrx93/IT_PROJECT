@@ -112,14 +112,17 @@ export default {
   margin-top:120px;
   }
   label {
-  margin-left: -300px;
+  margin-left: -35%;
+  
   cursor: pointer;
   display: inline-block;
   padding: 3px 6px;
   text-align: right;
-  width: 150px;
+  width: 20%;
+  
   vertical-align: top;
   }
+
   button {
   margin-top:20px;
   margin-left:40px;
@@ -176,8 +179,9 @@ export default {
   .contact {
 
   background-color: rgba(25, 25, 25, 0.6);
-  margin: 0px 500px 60px 500px;
+  margin: 0px 25% 60px 25%;
   padding-bottom:60px;
+
   }
   .input-div1{
   height:50px;
