@@ -112,13 +112,13 @@ export default {
   margin-top:120px;
   }
   label {
-  margin-left: -35%;
+  margin-left: -33%;
 
-  cursor: pointer;
-  display: inline-block;
+  
+  
   padding: 3px 6px;
-  text-align: right;
-  width: 20%;
+  
+  
 
   vertical-align: top;
   }
@@ -179,10 +179,10 @@ export default {
   .contact {
 
   background-color: rgba(25, 25, 25, 0.6);
-  margin: 0px 25% 60px 25%;
-  padding-bottom:60px;
-  padding-right:80px;
-  padding-left:40px;
+  margin: 0px 25% 40% 25%;
+  padding-bottom:3%;
+  padding-right:4%;
+  padding-left:2%;
   z-index: -1;
   position:absolute;
   }
