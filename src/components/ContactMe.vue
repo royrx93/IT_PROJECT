@@ -125,7 +125,7 @@ export default {
 
   button {
   margin-top:20px;
-  margin-left:90px;
+  margin-left:150px;
   height: 30px;
   width: 100px;
   font-size: 1.3em;
@@ -157,7 +157,7 @@ export default {
   }
 
   input {
-  padding: 10px 40px;
+  padding: 10px 60px;
   margin-top: 0px;
   margin-bottom: 10px;
   margin-left: 0px;
@@ -167,22 +167,22 @@ export default {
   padding-bottom: 20px;
   padding-top: 20px;
   font-size: 2.5em;
-  margin-left:120px;
+  margin-left:160px;
 
   }
 
   p {
-  margin-left: 90px;
+  margin-left: 140px;
   font-size: 1.2em;
 
   }
   .contact {
 
   background-color: rgba(25, 25, 25, 0.6);
-  margin: 0px 25% 40% 25%;
+  margin: 0px 25% 0px 25%;
   padding-bottom:3%;
-  padding-right:4%;
-  padding-left:2%;
+  padding-right:6%;
+  padding-left:1%;
   z-index: -1;
   position:absolute;
   }
@@ -193,7 +193,7 @@ export default {
   height:50px;
   }
   .input-div3{
-  margin-left:-80px;
+  margin-left:-50px;
 
   }
   .input-div3 label{
