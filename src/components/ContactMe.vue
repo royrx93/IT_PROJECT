@@ -113,19 +113,19 @@ export default {
   }
   label {
   margin-left: -35%;
-  
+
   cursor: pointer;
   display: inline-block;
   padding: 3px 6px;
   text-align: right;
   width: 20%;
-  
+
   vertical-align: top;
   }
 
   button {
   margin-top:20px;
-  margin-left:40px;
+  margin-left:90px;
   height: 30px;
   width: 100px;
   font-size: 1.3em;
@@ -157,7 +157,7 @@ export default {
   }
 
   input {
-  padding: 10px 25px;
+  padding: 10px 40px;
   margin-top: 0px;
   margin-bottom: 10px;
   margin-left: 0px;
@@ -167,12 +167,12 @@ export default {
   padding-bottom: 20px;
   padding-top: 20px;
   font-size: 2.5em;
-  margin-left:40px;
+  margin-left:120px;
 
   }
 
   p {
-  margin-left: 20px;
+  margin-left: 90px;
   font-size: 1.2em;
 
   }
@@ -181,7 +181,10 @@ export default {
   background-color: rgba(25, 25, 25, 0.6);
   margin: 0px 25% 60px 25%;
   padding-bottom:60px;
-
+  padding-right:80px;
+  padding-left:40px;
+  z-index: -1;
+  position:absolute;
   }
   .input-div1{
   height:50px;
