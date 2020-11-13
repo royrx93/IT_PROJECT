@@ -1,5 +1,11 @@
 <template>
   <Sidebar></Sidebar>
+  <body>
+    <h2>Manage Your Profile</h2>
+    <div class="border">
+      <m3> whatever you want </m3>
+    </div>
+  </body>
 </template>
 
 <script>
@@ -31,5 +37,13 @@ export default {
 </script>
 
 <style scoped>
+h2 {
+  color: #f0f0f0;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  font-size: 2.5em;
+  margin-left:40px;
+
+  }
 
 </style>
