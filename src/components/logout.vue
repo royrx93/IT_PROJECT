@@ -22,7 +22,7 @@ export default {
   methods: {
     async logout() {
       location.reload();
-      this.$router.push("/login");
+      //this.$router.push("/login");
     }
     
   }
