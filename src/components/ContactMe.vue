@@ -179,9 +179,9 @@ export default {
   .contact {
 
   background-color: rgba(25, 25, 25, 0.6);
-  margin: 0px 25% 0px 25%;
+  margin: 0px 25% 80px 25%;
   padding-bottom:3%;
-  padding-right:6%;
+  padding-right:5%;
   padding-left:1%;
   z-index: -1;
   position:absolute;
