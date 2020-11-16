@@ -12,16 +12,9 @@
         <li><button @click="uploadImage">Upload</button></li>
       </ul>
       <ul style="float:right; margin-right: 200px">
-        <li><p>Update the subtitle of gallery module here:</p></li>
-        <li>
-          <input
-            class="title"
-            name="sub_title"
-            maxlength="50"
-            v-model="sub_title"
-          />
-        </li>
-        <li><button @click="updateSubTitle">Submit</button></li>
+        <li><p>Upload Homepage Image</p></li>
+        <li><input id="homepage" type="file" @change="onFileChanged" /></li>
+        <li><button @click="uploadHomepage">Upload</button></li>
       </ul>
     </div>
     <div class="waterfall-width-column">
@@ -75,6 +68,15 @@ export default {
       const response = await BackstageGalleryService.uploadImage(formData);
       //location.reload();
       this.$router.push("/gallery");
+      console.log(response);
+    },
+
+    async uploadHomepage() {
+      const formData = new FormData();
+      formData.append("myFile", this.selectedFile);
+      const response = await BackstageGalleryService.uploadHomepage(formData);
+      //location.reload();
+      ///this.$router.push("/");
       console.log(response);
     },
 
