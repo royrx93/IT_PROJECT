@@ -3,10 +3,13 @@
     <router-link to="/">Home</router-link> |
     <router-link to="/timeline">Timeline</router-link> |
     <router-link to="/gallery">Gallery</router-link> |
-    <router-link to="/articles">Articles </router-link> 
-    <router-link to="/login" v-if="$store.state.userLogin">| Logout </router-link>
-    <router-link to="/login" v-if="!$store.state.userLogin">| Login </router-link>
-    <router-link to="/backstage" v-if="$store.state.userLogin">| Backstage</router-link> |
+    <router-link to="/articles">Articles</router-link> 
+    <a1 v-if="$store.state.userLogin"> | </a1>
+    <router-link to="/login" v-if="$store.state.userLogin">Logout</router-link>
+    <a1 v-if="!$store.state.userLogin"> | </a1>
+    <router-link to="/login" v-if="!$store.state.userLogin">Login</router-link>
+    <a1 v-if="$store.state.userLogin"> | </a1>
+    <router-link to="/backstage" v-if="$store.state.userLogin">Backstage</router-link> |
     <router-link to="/contactMe">ContactMe</router-link>
   </div>
   <router-view />
