@@ -21,8 +21,9 @@ export default {
 
   methods: {
     async logout() {
-      location.reload();
-      //this.$router.push("/login");
+      //location.reload();
+      localStorage.clear()
+      this.$router.push("/login");
     }
     
   }
