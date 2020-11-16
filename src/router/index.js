@@ -14,6 +14,7 @@ import Articles from "@/components/Articles";
 import ArticleUpdate from "@/components/ArticleUpdate";
 import TimelineBackstage from "../components/TimelineBackstage";
 import login from "../components/login.vue";
+import logout from "../components/logout.vue";
 import store from "../store";
 import backstageSubtitle from "../components/SubtitleBackstage"
 
@@ -110,10 +111,15 @@ const routes = [
   },
 
   {
+    path:"/logout",
+    name: "logout",
+    component: logout
+  },
+
+  {
     path: "/backstageSubtitle",
     name: "backstageSubtitle",
     component: backstageSubtitle
-
   }
 ];
 

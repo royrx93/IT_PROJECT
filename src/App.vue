@@ -5,7 +5,7 @@
     <router-link to="/gallery">Gallery</router-link> |
     <router-link to="/articles">Articles</router-link> 
     <a1 v-if="$store.state.userLogin"> | </a1>
-    <router-link to="/login" v-if="$store.state.userLogin">Logout</router-link>
+    <router-link to="/logout" v-if="$store.state.userLogin">Logout</router-link>
     <a1 v-if="!$store.state.userLogin"> | </a1>
     <router-link to="/login" v-if="!$store.state.userLogin">Login</router-link>
     <a1 v-if="$store.state.userLogin"> | </a1>

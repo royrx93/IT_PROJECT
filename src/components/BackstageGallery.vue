@@ -66,8 +66,8 @@ export default {
       formData.append("myFile", this.selectedFile);
       formData.append("title", this.title);
       const response = await BackstageGalleryService.uploadImage(formData);
-      //location.reload();
-      this.$router.push("/gallery");
+      location.reload();
+      //this.$router.push("/gallery");
       console.log(response);
     },
 
