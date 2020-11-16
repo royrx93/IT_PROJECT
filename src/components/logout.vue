@@ -10,7 +10,8 @@
 </template>
 
 <script>
-
+import AuthenticationService from "../services/AuthenticationService";
+import { mapMutations } from "vuex";
 
 export default {
   data() {
@@ -20,9 +21,13 @@ export default {
   },
 
   methods: {
+    ...mapMutations(["changeLogin"]),
     async logout() {
       //location.reload();
-      localStorage.clear()
+      alert("You will logout");
+      
+      this.logout();
+      
       this.$router.push("/login");
     }
     
