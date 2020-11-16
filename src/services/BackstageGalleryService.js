@@ -4,6 +4,9 @@ export default {
   uploadImage(img) {
     return Api().post("/gallery", img);
   },
+  uploadHomepage(img) {
+    return Api().post("/gallery/homepage", img);
+  },
   deleteImage(img) {
     return Api().post("/gallery/delete", img);
   },
