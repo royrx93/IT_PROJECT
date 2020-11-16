@@ -13,9 +13,9 @@ export default createStore({
 
     logout(){
       this.state.userLogin = false;
-      localStorage.clear();
       localStorage.setItem('userLogin', false);
-      Authorization: localStorage.getItem('Authorization') ? localStorage.getItem('Authorization') : ''  
+      localStorage.setItem('Authorization', '');
+
     },
     changeLogin(state, user) {      
       state.Authorization = user.Authorization;      
