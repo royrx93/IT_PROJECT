@@ -10,7 +10,6 @@
 </template>
 
 <script>
-import AuthenticationService from "../services/AuthenticationService";
 import { mapMutations } from "vuex";
 
 export default {
@@ -25,8 +24,8 @@ export default {
     async logout() {
       //location.reload();
       alert("You will logout");
-      
-      this.logout();
+
+      this.$store.commit("logout");
       
       this.$router.push("/login");
     }
