@@ -13,7 +13,7 @@ export default createStore({
 
     logout(){
       this.state.userLogin = false;
-      localStorage.clear()
+      localStorage.clear();
       localStorage.setItem('userLogin', false);
       Authorization: localStorage.getItem('Authorization') ? localStorage.getItem('Authorization') : ''  
     },
