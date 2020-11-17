@@ -92,8 +92,7 @@ export default {
   height: 1;
   z-index: -1;
   position: absolute;
-  margin-top: 300px;
-  margin-left: 40px;
+  margin-top: 10%;
 
   background-image: url("../assets/background.jpeg");
   background-repeat: repeat;
@@ -101,31 +100,31 @@ export default {
   background-size: cover;
   }
   .input-div1 img {
-  margin-left: 15px;
+  margin-left: 2%;
 
   margin-top: 20px;
   position: absolute;
   }
   .input-div2 img {
-  margin-left: 15px;
+  margin-left: 2%;
 
   margin-top: 20px;
   position: absolute;
   }
   .border {
-  margin: 30px 34% 20px 34%;
-  padding-top: 40px;
-  padding-bottom: 20px;
+  margin: 1.6% 34% 1% 34%;
+  padding-top: 4%;
+  padding-bottom: 1%;
 
   background-color: rgba(8, 8, 8, 0.6);
   }
   label {
-  margin-left: -40px;
+  margin-left: -10%;
   cursor: pointer;
   display: inline-block;
-  padding: 10px 14px;
+  padding: 2% 3%;
   text-align: right;
-  width: 150px;
+  width: 30%;
   vertical-align: top;
   font-size: 2em;
   }
@@ -164,10 +163,10 @@ export default {
 
   }
   input {
-  padding: 10px 25px;
-  margin-top: 20px;
-  margin-bottom: 10px;
-  margin-left: -60px;
+  padding: 2% 3%;
+  margin-top: 3%;
+  margin-bottom: 4%;
+  margin-left: -10%;
   }
   h1 {
   color: #f0f0f0;
@@ -176,6 +175,6 @@ export default {
   font-size: 1.8em;
 
   background-color: rgba(8, 8, 8, 0.6);
-  margin: -20px 34% -20px 34%;
+  margin: -1% 34%;
   }
 </style>

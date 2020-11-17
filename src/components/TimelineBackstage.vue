@@ -246,7 +246,7 @@
 
   .border {
   column-count: 2;
-  margin: 40px auto;
+  margin: 40px 200px;
 
   }
 
@@ -272,4 +272,5 @@
   margin-top: -40px;
   margin-left: 80px;
   }
+  
 </style>

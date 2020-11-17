@@ -1,5 +1,7 @@
 <template>
   <Sidebar></Sidebar>
+  <h1>Homepage Management</h1>
+  <section>
   <section1>
     <p>Choose a image to show on your Home page</p>
     <input id="file" type="file" @change="onFileChanged" />
@@ -16,6 +18,7 @@
     </div>
     <button @click="updateIntroduction">Update</button>
   </section2>
+    </section>
 </template>
 
 <script>
@@ -98,7 +101,8 @@
   }
   input{
     margin-top:30px;
-    margin-left:-140px;
+    margin-left:80px;
+    font-size:25px;
   }
   div{
     margin-right:-70px;
@@ -117,5 +121,7 @@
     margin-top:200px;
     margin-left:-10px;
   }
-
+  section{
+  margin-top:-150px;
+  }
 </style>
