@@ -12,6 +12,12 @@ export default {
   },
   timelineUpdate(credentials) {
     return Api().post('/timeline/update',credentials);
+  },
+  getSubtitle() {
+    return Api().get("/timeline/subtitle");
+  },
+  updateSubTitle(subtitle) {
+    return Api().post("/timeline/updateSubTitle", subtitle);
   }
 };
 
