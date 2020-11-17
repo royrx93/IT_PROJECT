@@ -1,6 +1,6 @@
 <template>
   <body>
-    <h1>Hey, nice to see you _</h1>
+    <h1>  Hey, nice to see you _</h1>
     <div class="border">
       <div class="input-div1">
         <img src="../assets/user_icon.png" alt="user" width="40" height="40" />
@@ -163,17 +163,17 @@ export default {
 
   }
   input {
-  padding: 2% 3%;
+  padding: 2% 5%;
   margin-top: 3%;
   margin-bottom: 4%;
-  margin-left: -10%;
+  margin-left: -6%;
   }
   h1 {
   color: #f0f0f0;
   padding-bottom: 20px;
   padding-top: 20px;
   font-size: 1.8em;
-
+  padding-left:80px;
   background-color: rgba(8, 8, 8, 0.6);
   margin: -1% 34%;
   }

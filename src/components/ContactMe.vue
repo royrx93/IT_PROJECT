@@ -101,6 +101,7 @@ export default {
   width: 70%;
   margin-top:-6%;
   margin-left: 260px;
+  
   padding-top: 10%;
   padding-bottom: 0.1%;
   font-size:1.2em;
@@ -109,7 +110,7 @@ export default {
   margin-top:5%;
   }
   .contact button{
-  margin-top:120px;
+  margin-top:20px;
   }
   label {
   margin-left: -33%;
