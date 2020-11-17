@@ -23,6 +23,7 @@
 <script>
 import sideBar from "@/components/Sidebar";
 import ArticleService from "@/services/ArticleService";
+import BackstageGalleryService from "@/services/BackstageGalleryService";
 export default {
   components: {
     sideBar
@@ -35,8 +36,8 @@ export default {
   },
   methods: {
     async updateSubTitle() {
-      if(this.content.length > 20){
-        alert("Maximum Length is 15")
+      if(this.content.length > 50){
+        alert("Maximum Length is 50")
       }else if(this.display == "Article"){
         const response = await ArticleService.updateSubTitle({
           subtitle: this.content
@@ -46,7 +47,11 @@ export default {
       }else if(this.display == "Timeline"){
         console.log("t")
       }else if(this.display == "Gallery"){
-        console.log("g")
+        const response = await BackstageGalleryService.updateSubTitle({
+          subtitle: this.content
+        });
+        this.$router.push("/gallery");
+        console.log(response);
       }else if(this.display == "Contact Me"){
         console.log("c")
       }
