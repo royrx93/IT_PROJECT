@@ -9,5 +9,8 @@ export default {
   },
   getAllInfo() {
     return Api().get("timeline/getAllInfo");
+  },
+  timelineUpdate(credentials) {
+    return Api().post('/timeline/update',credentials);
   }
 };
