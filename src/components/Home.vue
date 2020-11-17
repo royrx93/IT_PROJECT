@@ -4,51 +4,63 @@
     <div2 :key=imageID >
     <img :src="imageURL" />
     </div2>
-  </div>
- 
+    
+    <h1>--Happiness is not in the having.</h1>
+    <h2>It's in just being.</h2>
   <p>
     {{introduction}}
   </p>
-
+  </div>
 </template>
 
 <style scoped>
+
+  div{
+  height: 90%;
+  width: 70%;
+  background-color: rgba(8, 8, 8, 0.4);
+  margin: 5% 15%;
+
+  padding-bottom:3%;
+  padding-top:3%;
+  padding-right:-5%;
+  
+
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+  border-radius: 8px;
+  }
+
+  
+  h1{
+  
+  font-size:2em;
+  margin-left:50%;
+  
+  margin-top:-20%;
+  }
+  h2{
+  margin-left:50%;
+  }
   div2 {
 
   height: 90%;
   width: 60%;
+  margin-left:-45%;
 
   -webkit-filter: drop-shadow(10px 10px 15px rgb(0,0,0));
   filter: drop-shadow(10px 10px 15px rgb(0,0,0));
   }
-  div{
-  height: 100%;
-  width: 60%;
-  
-  margin: 5% 19%;
-  
-  padding-bottom:30%;
-  padding-top:3%;
-
-  z-index: -1;
-  
-  
-  }
-
-  line{
-  margin-top:300px;
-  background-color: rgba(200, 200, 200, 0.6);
-  }
   p{
-  
-  margin-top:-30%;
-  margin-left:24%;
+
+  margin-top:10%;
+  margin-left:8%;
   height: 90%;
-  width: 50%;
+  width: 80%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   text-align: center;
   border-radius: 4px;
-
+  padding:15px 15px;
   text-align:center;
   text-indent:50px;
   line-height:180%;
