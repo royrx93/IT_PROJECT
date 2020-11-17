@@ -38,9 +38,9 @@
             v-model="description"
     ></textarea>
   </div>
-  <div>
-    <button @click="timelineAdd"> Add</button>
-  </div>
+  <div2>
+    <button @click="timelineAdd">Add</button>
+  </div2>
   <div class="border">
     <div class="timeline" v-for="timeline in timeline" :key="timeline.ID">
       <div class="cardBox">
@@ -139,98 +139,137 @@
 <style scoped>
 
   .words {
-    column-count: 2;
+  column-count: 2;
   }
 
   body {
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    position: absolute;
-    margin: -10px;
-    margin-top: 130px;
-    background-image: url("../assets/background.jpeg");
-    background-repeat: repeat;
-    background-attachment: fixed;
-    background-size: cover;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  position: absolute;
+  margin: -10px;
+  margin-top: 130px;
+  background-image: url("../assets/background.jpeg");
+  background-repeat: repeat;
+  background-attachment: fixed;
+  background-size: cover;
   }
 
   li {
-    color: #f0f0f0;
+  color: #f0f0f0;
 
-    font-size: 1.2em;
-    margin-left: -60px;
-    margin-bottom: 30px;
+  font-size: 1.2em;
+  margin-left: -60px;
+  margin-bottom: 30px;
   }
 
   li p {
-    font-size: 3em;
-    margin-left: 60px;
+  font-size: 3em;
+  margin-left: 60px;
   }
 
   input {
-    margin: 4px;
-    height: 40px;
-    width: 400px;
-    font-size: 1.2em;
-    margin-left: 100px;
+  margin: 4px;
+  height: 40px;
+  width: 400px;
+  font-size: 1.2em;
+  margin-left: 100px;
   }
+
 
   button {
-    margin: 40px;
-    height: 30px;
-    width: 100px;
-    font-size: 1.2em;
-  }
+  margin-top:20px;
+  margin-left:130px;
+  height: 30px;
 
+  font-size: 1.2em;
+  padding-right: 10px;
+  padding-bottom: 40px;
+  cursor: pointer;
+  width: 100px;
+  line-height: 38px;
+  text-align: center;
+  font-weight: bold;
+
+  border-radius: 5px;
+
+  position: relative;
+  overflow: hidden;
+  color: 	#505050;
+  text-shadow:1px 1px 1px #fff;
+  border:1px solid #dce1e6;
+  box-shadow: 0 1px 2px #fff inset,0 -1px 0 #E0E0E0 inset;
+  background: -webkit-linear-gradient(top,#f2f3f7,#e4e8ec);
+  background: -moz-linear-gradient(top,#f2f3f7,#e4e8ec);
+  background: linear-gradient(top,#f2f3f7,#e4e8ec);
+
+  }
+  button:hover{
+  background:		#FFFFFF;
+
+
+  }
   .waterfall-width-column {
-    column-count: 4;
-    column-gap: 7px;
-    margin: 25px 50px 0px 50px;
+  column-count: 4;
+  column-gap: 7px;
+  margin: 25px 50px 0px 50px;
   }
   .waterfall-width-column .image-box {
-    background: #fff;
-    border: 2px solid #475669;
+  background: #fff;
+  border: 2px solid #475669;
   }
 
   .waterfall-width-column .image-box img {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
   }
 
   .waterfall-width-column .image-box p {
-    font-size: 20px;
-    color: #000;
-    cursor: pointer;
-    margin-top: 1px;
-    margin-bottom: 5px;
+  font-size: 20px;
+  color: #000;
+  cursor: pointer;
+  margin-top: 1px;
+  margin-bottom: 5px;
   }
 
   .words p {
-    font-size: 30px;
-    font-weight: 500;
+  font-size: 30px;
+  font-weight: 500;
   }
 
   .words .title input {
-    margin: 4px;
-    height: 50px;
-    width: 200px;
-    font-size: 1.2em;
+  margin: 4px;
+  height: 50px;
+  width: 200px;
+  font-size: 1.2em;
   }
 
   .border {
-    column-count: 2;
-    margin: 0px auto;
+  column-count: 2;
+  margin: 40px auto;
+
   }
 
   .cardBox {
-    height: 90%;
-    width: 90%;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    text-align: center;
-    border-radius: 4px;
-    margin: 0px auto;
-    margin-top: 10px;
-    margin-bottom: 40px;
+  height: 90%;
+  width: 90%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+  border-radius: 4px;
+  margin: 0px auto;
+  margin-top: 10px;
+  margin-bottom: 40px;
+  background: rgb(8,8,8,0.4);
+  }
+  div2{
+  margin-left:-50px;
+
+  }
+  h1 {
+  color: #f0f0f0;
+  padding: 60px;
+  font-size: 3em;
+  margin-top: -40px;
+  margin-left: 80px;
   }
 </style>

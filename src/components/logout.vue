@@ -1,6 +1,6 @@
 <template>
   <body>
-    <h1>See you, bye_</h1>
+    <h1>Well, see you then _</h1>
     <div class="border">
     
       <button @click="logout">Logout</button>

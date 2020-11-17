@@ -3,7 +3,7 @@
   <body>
     <h2>Manage Your Profile</h2>
     <div class="border">
-      <m3> whatever you want </m3>
+      <m3> --- whatever you want </m3>
     </div>
   </body>
 </template>
@@ -37,13 +37,22 @@ export default {
 </script>
 
 <style scoped>
-h2 {
+  h2 {
+
   color: #f0f0f0;
-  padding-bottom: 20px;
-  padding-top: 20px;
-  font-size: 2.5em;
-  margin-left:40px;
+  padding: 60px;
+  font-size: 3em;
+  margin-top: 70px;
+  margin-left: 80px;
 
   }
+  .border{
 
+  color: #f0f0f0;
+  padding: 40px;
+  font-size: 1.6em;
+  margin-top: 50px;
+  margin-left: 30px;
+  }
+  
 </style>

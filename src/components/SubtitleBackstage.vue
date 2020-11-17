@@ -72,39 +72,39 @@ export default {
 </script>
 
 <style scoped>
-#updateSubtitle {
+  #updateSubtitle {
   background-color: #33a5ff;
   width: 60px;
   height: 25px;
   color: #ffffff;
   border: none;
   border-radius: 10%;
-}
-#updateSubtitle:hover {
+  }
+  #updateSubtitle:hover {
   background: #339900;
-}
-#subtitle {
-  background: grey;
+  }
+  #subtitle {
+  background: #E0E0E0;
   border: none;
   border-radius: 5px;
   height: 25px;
   width: 300px;
-}
+  }
 
-#subtitle:focus {
+  #subtitle:focus {
   background: whitesmoke;
-}
+  }
 
-button {
+  button {
   background-color: #33a5ff;
   width: 60px;
   height: 25px;
   color: #ffffff;
   border: none;
   border-radius: 10%;
-}
-button:hover {
+  }
+  button:hover {
   background: #339900;
-}
+  }
 
 </style>
