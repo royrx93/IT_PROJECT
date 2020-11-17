@@ -22,18 +22,17 @@
   filter: drop-shadow(10px 10px 15px rgb(0,0,0));
   }
   div{
-  height: 90%;
+  height: 100%;
   width: 60%;
-  background-color: rgba(8, 8, 8, 0.6);
+  
   margin: 5% 19%;
-  padding-bottom:3%;
+  
+  padding-bottom:30%;
   padding-top:3%;
 
   z-index: -1;
-  position:absolute;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  text-align: center;
-  border-radius: 8px;
+  
+  
   }
 
   line{
@@ -41,7 +40,8 @@
   background-color: rgba(200, 200, 200, 0.6);
   }
   p{
-  margin-top:36%;
+  
+  margin-top:-30%;
   margin-left:24%;
   height: 90%;
   width: 50%;
