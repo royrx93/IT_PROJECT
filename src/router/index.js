@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from "vue-router";
-import Home from "../views/Home.vue";
+import Home from "@/components/Home";
 import Register from "@/components/Register";
 import TimelineAdd from "@/components/TimelineAdd";
 import Timeline from "@/components/Timeline";
@@ -12,6 +12,7 @@ import Backstage from "@/components/Backstage";
 import ArticleView from "@/components/ArticleView";
 import Articles from "@/components/Articles";
 import ArticleUpdate from "@/components/ArticleUpdate";
+import HomepageBackstage from "@/components/HomeBackstage";
 import TimelineBackstage from "../components/TimelineBackstage";
 import login from "../components/login.vue";
 import logout from "../components/logout.vue";
@@ -126,6 +127,14 @@ const routes = [
     path: "/timeline/update/:ID",
     name: "TimelineUpdate",
     component: timelineUpdate
+
+  },
+
+  {
+    path: "/backstageHomepage",
+    name: "backstageHomepage",
+    component: HomepageBackstage
+
   }
 ];
 
