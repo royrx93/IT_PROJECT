@@ -258,6 +258,7 @@
   border-radius: 4px;
   margin: 0px auto;
   margin-top: 10px;
+  
   margin-bottom: 40px;
   background: rgb(8,8,8,0.4);
   }
@@ -272,5 +273,11 @@
   margin-top: -40px;
   margin-left: 80px;
   }
-  
+  table{
+  margin-right:40px;
+  }
+  #delete,#update{
+  margin-top:20px;
+  margin-left:40px;
+  }
 </style>
