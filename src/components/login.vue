@@ -89,7 +89,7 @@ export default {
 <style scoped>
   body {
   width: 100%;
-  height: 1;
+  height: 1px;
   z-index: -1;
   position: absolute;
   margin-top: 10%;

@@ -1,21 +1,14 @@
 <template>
   <Sidebar> </Sidebar>
   <body>
-    <div class="words">
-      <ul style="float:left; margin-left: 200px">
-        <li><p>Upload Image</p></li>
-        <li><input id="file" type="file" @change="onFileChanged" /></li>
-        <li id="desc">description:</li>
-        <li>
-          <input class="title" name="title" maxlength="50" v-model="title" />
-        </li>
-        <li><button @click="uploadImage">Upload</button></li>
-      </ul>
-      <ul style="float:right; margin-right: 200px">
-        <li><p>Upload Homepage Image</p></li>
-        <li><input id="homepage" type="file" @change="onFileChanged" /></li>
-        <li><button @click="uploadHomepage">Upload</button></li>
-      </ul>
+    <div class="upload">
+      <div style="text-align:center">
+        <p>Upload Image</p>
+        <input id="file" type="file" @change="onFileChanged" />
+        <div id="desc">description:</div>
+        <input class="title" name="title" maxlength="50" v-model="title" />
+        <button @click="uploadImage">Upload</button>
+      </div>
     </div>
     <div class="waterfall-width-column">
       <div class="image-box" v-for="img in this.gallery" :key="img.id">
@@ -56,34 +49,25 @@ export default {
       const response = await BackstageGalleryService.updateSubTitle({
         sub_title: this.sub_title
       });
-      //location.reload();
-      this.$router.push("/gallery");
+      this.$router.push("/backstageGallery");
       console.log(response);
     },
 
     async uploadImage() {
+      if (this.selectedFile == null) {
+        alert("Please select a file to upload");
+      };
       const formData = new FormData();
       formData.append("myFile", this.selectedFile);
       formData.append("title", this.title);
       const response = await BackstageGalleryService.uploadImage(formData);
-      //location.reload();
-      this.$router.push("/gallery");
-      console.log(response);
-    },
-
-    async uploadHomepage() {
-      const formData = new FormData();
-      formData.append("myFile", this.selectedFile);
-      const response = await BackstageGalleryService.uploadHomepage(formData);
-      //location.reload();
-      ///this.$router.push("/");
+      this.$router.push("/backstageGallery");
       console.log(response);
     },
 
     async deleteImage(img) {
       const response = await BackstageGalleryService.deleteImage(img);
-      //location.reload();
-      this.$router.push("/gallery");
+      this.$router.push("/backstageGallery");
       console.log("response: ", response.data());
     }
   }
@@ -91,9 +75,6 @@ export default {
 </script>
 
 <style scoped>
-  .words {
-  column-count: 2;
-  }
 
   body {
   width: 100%;
@@ -189,15 +170,7 @@ export default {
   margin-bottom: 5px;
   }
 
-  .words p {
+  .upload {
   font-size: 30px;
-  font-weight: 500;
-  }
-
-  .words .title input {
-  margin: 4px;
-  height: 50px;
-  width: 200px;
-  font-size: 1.2em;
   }
 </style>

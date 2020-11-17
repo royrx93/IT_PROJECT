@@ -94,6 +94,7 @@
     background: linear-gradient(top,#f2f3f7,#e4e8ec);
 
   }
+
   button:hover{
     background:		#FFFFFF;
 
