@@ -5,7 +5,7 @@
         <h1>Timeline</h1>
       </v-flex>
       <div>
-        <div style="font-size: 30px; margin-bottom: 40px">{{ subtitle }}</div>
+        <div style="font-size: 30px; margin-top: -50px">{{ subtitle }}</div>
       </div>
     </v-layout>
 
@@ -157,16 +157,16 @@ export default {
   }
   .last{
     position: fixed;
-    top:40%;
+    top:50%;
   }
   .next{
     position: fixed;
-    top:40%;
+    top:50%;
     right: 0%;
   }
 
   .time_main{
-  margin-top:-100px;
+  margin-top:-30px;
   }
   h1 {
   color: #f0f0f0;
