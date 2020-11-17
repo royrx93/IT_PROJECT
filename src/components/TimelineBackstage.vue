@@ -246,7 +246,7 @@
 
   .border {
   column-count: 2;
-  margin: 40px auto;
+  margin: 40px 200px;
 
   }
 
@@ -258,6 +258,7 @@
   border-radius: 4px;
   margin: 0px auto;
   margin-top: 10px;
+  
   margin-bottom: 40px;
   background: rgb(8,8,8,0.4);
   }
@@ -271,5 +272,12 @@
   font-size: 3em;
   margin-top: -40px;
   margin-left: 80px;
+  }
+  table{
+  margin-right:40px;
+  }
+  #delete,#update{
+  margin-top:20px;
+  margin-left:40px;
   }
 </style>

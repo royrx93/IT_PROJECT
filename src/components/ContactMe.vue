@@ -88,8 +88,8 @@ export default {
 
   z-index: -1;
   position: absolute;
-  margin-top: 150px;
-  margin-left: 10px;
+  margin-top: 8%;
+  
 
   background-image: url("../assets/background.jpeg");
   background-repeat: repeat;
@@ -97,19 +97,20 @@ export default {
   background-size: cover;
   }
   .border {
-  height: 250px;
-  width: 600px;
-  margin-top:-30px;
+  height: 20%;
+  width: 70%;
+  margin-top:-6%;
   margin-left: 260px;
-  padding-top: 40px;
-  padding-bottom: 20px;
+  
+  padding-top: 10%;
+  padding-bottom: 0.1%;
   font-size:1.2em;
   }
   .border div{
-  margin-top:20px;
+  margin-top:5%;
   }
   .contact button{
-  margin-top:120px;
+  margin-top:20px;
   }
   label {
   margin-left: -33%;
@@ -179,7 +180,7 @@ export default {
   .contact {
 
   background-color: rgba(8, 8, 8, 0.6);
-  margin: 0px 25% 80px 25%;
+  margin: 0px 25% 80% 25%;
   padding-bottom:3%;
   padding-right:5%;
   padding-left:0%;
@@ -187,10 +188,11 @@ export default {
   position:absolute;
   }
   .input-div1{
-  height:50px;
+  height:60px;
+  
   }
   .input-div2{
-  height:50px;
+  height:60px;
   }
   .input-div3{
   margin-left:-50px;
