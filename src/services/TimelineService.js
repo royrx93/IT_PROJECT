@@ -14,3 +14,4 @@ export default {
     return Api().post('/timeline/update',credentials);
   }
 };
+
