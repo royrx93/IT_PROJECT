@@ -155,13 +155,18 @@ export default {
   margin-left:55px;
 
   }
+  .last{
+    position: fixed;
+    top:40%;
+  }
   .next{
-
-  margin-top:-50px;
+    position: fixed;
+    top:40%;
+    right: 0%;
   }
 
   .time_main{
-  margin-top:200px;
+  margin-top:-100px;
   }
   h1 {
   color: #f0f0f0;
