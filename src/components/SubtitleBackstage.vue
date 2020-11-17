@@ -24,6 +24,7 @@
 import sideBar from "@/components/Sidebar";
 import ArticleService from "@/services/ArticleService";
 import BackstageGalleryService from "@/services/BackstageGalleryService";
+import TimelineService from "@/services/TimelineService";
 export default {
   components: {
     sideBar
@@ -45,6 +46,11 @@ export default {
         this.$router.push("/articles");
         console.log(response);
       }else if(this.display == "Timeline"){
+        const response = await TimelineService.updateSubTitle({
+          subtitle: this.content
+        });
+        this.$router.push("/timeline");
+        console.log(response);
         console.log("t")
       }else if(this.display == "Gallery"){
         const response = await BackstageGalleryService.updateSubTitle({
