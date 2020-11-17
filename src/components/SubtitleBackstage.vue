@@ -2,9 +2,9 @@
 <sideBar></sideBar>
   <h1>Subtitle Management</h1>
 
-  <div style="display: inline-block"><button @click="switchToTimeline">Timeline</button></div>
-  <div style="display: inline-block; margin-left: 20px"><button @click="switchToGallery">Gallery</button></div>
-  <div style="display: inline-block; margin-left: 20px"><button @click="switchToArticle">Article</button></div>
+  <div style="display: inline-block"><button class="smallbuttons" @click="switchToTimeline">Timeline</button></div>
+  <div style="display: inline-block; margin-left: 20px"><button class="smallbuttons" @click="switchToGallery">Gallery</button></div>
+  <div style="display: inline-block; margin-left: 20px"><button class="smallbuttons" @click="switchToArticle">Article</button></div>
 
 
   <div style="margin-top: 30px; font-size: 30px">Update "{{ display }}" Subtitle</div>
@@ -13,8 +13,8 @@
     <div style="margin-bottom: 10px">
       <input id="subtitle" class="title" name="title" v-model="content" />
     </div>
-    <div style="margin-top: 40px">
-      <button id="updateSubtitle" @click="updateSubTitle">Submit</button>
+    <div style="margin-top: 40px; margin-right: 130px">
+      <button id="update" @click="updateSubTitle">Submit</button>
     </div>
   </div>
 
@@ -77,17 +77,6 @@ export default {
 </script>
 
 <style scoped>
-  #updateSubtitle {
-  background-color: #33a5ff;
-  width: 60px;
-  height: 25px;
-  color: #ffffff;
-  border: none;
-  border-radius: 10%;
-  }
-  #updateSubtitle:hover {
-  background: #339900;
-  }
   #subtitle {
   background: #E0E0E0;
   border: none;
@@ -100,19 +89,8 @@ export default {
   background: whitesmoke;
   }
 
-  button {
-  background-color: #33a5ff;
-  width: 60px;
-  height: 25px;
-  color: #ffffff;
-  border: none;
-  border-radius: 10%;
-  }
-  button:hover {
-  background: #339900;
-  }
 
-  #updateSubtitle{
+  #update{
     margin-top:20px;
     margin-left:130px;
     height: 30px;
@@ -138,5 +116,18 @@ export default {
     background: -moz-linear-gradient(top,#f2f3f7,#e4e8ec);
     background: linear-gradient(top,#f2f3f7,#e4e8ec);
 
+  }
+
+  .smallbuttons{
+    width: 90px;
+    height: 40px;
+    font-size: 20px;
+    background-color: #33a5ff;
+    color: #ffffff;
+    border: none;
+    border-radius: 10%;
+  }
+  .smallbuttons:hover{
+    background: #339900;
   }
 </style>
