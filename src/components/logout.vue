@@ -54,7 +54,7 @@ export default {
   padding-top: 40px;
   padding-bottom: 20px;
 
-  background-color: rgba(25, 25, 25, 0.6);
+  background-color: rgba(8, 8, 8, 0.6);
   }
   
 
@@ -97,7 +97,7 @@ export default {
   padding-top: 20px;
   font-size: 1.8em;
 
-  background-color: rgba(25, 25, 25, 0.6);
+  background-color: rgba(8, 8, 8, 0.6);
   margin: -20px 34% -20px 34%;
   }
 </style>
