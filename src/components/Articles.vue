@@ -86,7 +86,7 @@ router-link {
   text-decoration: none;
 }
 .border {
-  column-count: 2;
+  column-count: 3;
   margin: 0px auto;
 }
 

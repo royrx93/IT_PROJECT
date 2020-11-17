@@ -5,7 +5,7 @@
   <div style="display: inline-block"><button @click="switchToTimeline">Timeline</button></div>
   <div style="display: inline-block; margin-left: 20px"><button @click="switchToGallery">Gallery</button></div>
   <div style="display: inline-block; margin-left: 20px"><button @click="switchToArticle">Article</button></div>
-  <div style="display: inline-block; margin-left: 20px"><button @click="switchToContactMe">Contact</button></div>
+
 
   <div style="margin-top: 30px; font-size: 30px">Update "{{ display }}" Subtitle</div>
 
@@ -58,8 +58,6 @@ export default {
         });
         this.$router.push("/gallery");
         console.log(response);
-      }else if(this.display == "Contact Me"){
-        console.log("c")
       }
     },
 
@@ -73,10 +71,6 @@ export default {
 
     switchToGallery(){
       this.display = "Gallery"
-    },
-
-    switchToContactMe(){
-      this.display = "Contact Me"
     },
   }
 };
@@ -118,4 +112,31 @@ export default {
   background: #339900;
   }
 
+  #updateSubtitle{
+    margin-top:20px;
+    margin-left:130px;
+    height: 30px;
+
+    font-size: 1.2em;
+    padding-right: 10px;
+    padding-bottom: 40px;
+    cursor: pointer;
+    width: 100px;
+    line-height: 38px;
+    text-align: center;
+    font-weight: bold;
+
+    border-radius: 5px;
+
+    position: relative;
+    overflow: hidden;
+    color: 	#505050;
+    text-shadow:1px 1px 1px #fff;
+    border:1px solid #dce1e6;
+    box-shadow: 0 1px 2px #fff inset,0 -1px 0 #E0E0E0 inset;
+    background: -webkit-linear-gradient(top,#f2f3f7,#e4e8ec);
+    background: -moz-linear-gradient(top,#f2f3f7,#e4e8ec);
+    background: linear-gradient(top,#f2f3f7,#e4e8ec);
+
+  }
 </style>
