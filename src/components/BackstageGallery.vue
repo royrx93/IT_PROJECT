@@ -86,8 +86,6 @@ export default {
   height: 100%;
   z-index: -1;
   position: absolute;
-  margin: -10px;
-  margin-top: 30px;
   background-image: url("../assets/background.jpeg");
   background-repeat: repeat;
   background-attachment: fixed;
@@ -110,11 +108,10 @@ export default {
   font-size:1.7em;
   }
   input {
-  margin: 4px;
-  height: 40px;
+    height: 40px;
   width: 400px;
   font-size: 1.2em;
-  margin-left: 100px;
+    margin: 4px 4px 4px 4px;
   }
 
   button {
@@ -178,10 +175,7 @@ export default {
 
   .upload {
   font-size: 20px;
-    margin-top: 2%;
-  margin-right: 30%;
-    margin-left:30%;
-    margin-bottom: 10%;
+    margin: 2% 30% 10%;
     padding-top:2px;
   background-color: rgba(25, 25, 25, 0.5);
   }

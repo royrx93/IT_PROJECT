@@ -1,8 +1,9 @@
 <template>
   <body>
-    <h1>Gallery</h1>
-    <div>
-      <div style="font-size: 30px; margin-bottom: 40px">{{ subtitle }}</div>
+  <div style="margin-top: 60px; font-size: 50px">Gallery</div>
+
+  <div>
+      <div style="font-size: 20px; margin-bottom: 40px; margin-left: 300px"> -- {{ subtitle }}</div>
     </div>
     
     <div class="waterfall-border">

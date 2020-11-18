@@ -1,5 +1,6 @@
 <template>
 <sideBar></sideBar>
+  <body>
   <h1>Subtitle Management</h1>
 
   <div style="display: inline-block"><button class="smallbuttons" @click="switchToTimeline">Timeline</button></div>
@@ -17,8 +18,7 @@
       <button id="update" @click="updateSubTitle">Submit</button>
     </div>
   </div>
-
-
+  </body>>
 </template>
 <script>
 import sideBar from "@/components/Sidebar";
@@ -56,7 +56,7 @@ export default {
         const response = await BackstageGalleryService.updateSubTitle({
           subtitle: this.content
         });
-        this.$router.push("/gallery");
+        this.$router.push("/backstageGallery");
         console.log(response);
       }
     },
@@ -77,6 +77,16 @@ export default {
 </script>
 
 <style scoped>
+  body {
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    position: absolute;
+    background-image: url("../assets/background.jpeg");
+    background-repeat: repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
   #subtitle {
   background: #E0E0E0;
   border: none;
