@@ -89,18 +89,10 @@ export default {
 <style scoped>
   body {
   width: 100%;
-<<<<<<< HEAD
-  height:  100%;
-  z-index: -1;
-  position: absolute;
-  margin-top: 10%;
-  margin-left: 40px;
-=======
   height: 1px;
   z-index: -1;
   position: absolute;
   margin-top: 10%;
->>>>>>> 569fc9cd7a65177ecfc68dfaea7086fd9c65c3e4
 
   background-image: url("../assets/background.jpeg");
   background-repeat: repeat;
