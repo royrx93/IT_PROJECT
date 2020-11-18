@@ -85,8 +85,8 @@
       async remove(timeline) {
         const confirmation = confirm("Confirm to delete this timeline?");
         if (confirmation == true) {
+          this.$router.push({ path: "/timeline" });
           await TimelineDeleteService.TimelineDelete({ ID: timeline.ID });
-          location.reload();
         }
       },
 
@@ -99,13 +99,12 @@
         }
         const confirmation = confirm("Confirm to add this timeline?");
         if(confirmation == true){
+          this.$router.push({ path: "/timeline" });
           await AuthenticationService.timelineAdd({
             year: this.month.toString().substr(0, 4),
             month: this.month.toString().substr(5, 2),
             description: this.description
           });
-
-          location.reload();
         }
       }
     }

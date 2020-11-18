@@ -51,10 +51,10 @@ export default {
     },
 
     async updateSubTitle() {
+      this.$router.push("/gallery");
       const response = await BackstageGalleryService.updateSubTitle({
         sub_title: this.sub_title
       });
-      this.$router.push("/backstageGallery");
       console.log(response);
     },
 
@@ -65,14 +65,14 @@ export default {
       const formData = new FormData();
       formData.append("myFile", this.selectedFile);
       formData.append("title", this.title);
+      this.$router.push("/gallery");
       const response = await BackstageGalleryService.uploadImage(formData);
-      this.$router.push("/backstageGallery");
       console.log(response);
     },
 
     async deleteImage(img) {
+      this.$router.push("/gallery");
       const response = await BackstageGalleryService.deleteImage(img);
-      this.$router.push("/backstageGallery");
       console.log("response: ", response.data());
     }
   }

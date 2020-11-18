@@ -7,7 +7,7 @@
       <label>Year</label>
       <input
               style="height: 50px; width: 300px;margin-top: 10px;margin-left: 50px"
-              type="text"
+              type="number"
               name="year"
               v-model="year"
       />
@@ -78,13 +78,13 @@
           alert("Please enter a time already done")
         } else{
           if (confirmation == true){
+            this.$router.push({ path: "/timeline" });
            await AuthenticationService.timelineUpdate({
                 year: this.year,
                 month: this.month,
                 description: this.description,
                 ID: this.$route.params.ID
               })
-           alert("Successfully update timeline")
           };
         }
       },

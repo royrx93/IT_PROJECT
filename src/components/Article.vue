@@ -68,7 +68,7 @@ export default {
       const r = confirm("DELETE THIS ARTICLE?");
       if (r == true) {
         const response = await ArticleDeleteService.articleDelete(article);
-        location.reload();
+        this.$router.push("/articles");
         console.log(response.data());
       }
     },
@@ -77,7 +77,7 @@ export default {
       const response = await ArticleService.updateSubTitle({
         subtitle: this.subtitle
       });
-      location.reload();
+      this.$router.push("/articles");
       console.log(response);
     }
   }
