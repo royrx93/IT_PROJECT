@@ -53,18 +53,19 @@
       async uploadIntroImage() {
         const formData = new FormData();
         formData.append("myFile", this.selectedFile);
+        this.$router.push("/");
         const response = await HomepageService.updateImage(
                 formData
         );
-        this.$router.push("/backstageHomepage");
+
         console.log(response);
       },
 
       async updateIntroduction() {
+        this.$router.push("/");
         const response = await HomepageService.updateIntroduction({
           introduction: this.introduction
         });
-        this.$router.push("/backstageHomepage");
         console.log(response)
       }
     }

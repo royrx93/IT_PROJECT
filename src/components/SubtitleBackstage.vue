@@ -56,7 +56,7 @@ export default {
         const response = await BackstageGalleryService.updateSubTitle({
           subtitle: this.content
         });
-        this.$router.push("/backstageGallery");
+        this.$router.push("/gallery");
         console.log(response);
       }
     },
