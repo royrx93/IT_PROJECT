@@ -7,7 +7,7 @@
       <label>Year</label>
       <input
               style="height: 50px; width: 300px;margin-top: 10px;margin-left: 50px"
-              type="text"
+              type="number"
               name="year"
               v-model="year"
       />
