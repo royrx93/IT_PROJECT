@@ -78,13 +78,13 @@
           alert("Please enter a time already done")
         } else{
           if (confirmation == true){
+            this.$router.push({ path: "/timeline" });
            await AuthenticationService.timelineUpdate({
                 year: this.year,
                 month: this.month,
                 description: this.description,
                 ID: this.$route.params.ID
               })
-           alert("Successfully update timeline")
           };
         }
       },
