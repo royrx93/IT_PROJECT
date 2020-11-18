@@ -224,7 +224,7 @@
 
   .border {
   column-count: 2;
-  margin: 40px auto;
+  margin: 40px 200px;
 
   }
 

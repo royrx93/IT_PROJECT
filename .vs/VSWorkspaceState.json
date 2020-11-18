@@ -2,9 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\src",
-    "\\src\\components",
-    "\\src\\views"
+    "\\src\\assets",
+    "\\src\\components"
   ],
-  "SelectedNode": "\\src\\App.vue",
+  "SelectedNode": "\\src\\components\\HomeBackstage.vue",
   "PreviewInSolutionExplorer": false
 }
