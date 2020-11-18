@@ -62,7 +62,7 @@ export default {
   overflow-y: hidden; 
   padding-top: 60px;
   transition: 0.5s;
-  margin-top: 90px;
+  margin-top: 60px;
   padding-bottom: 600px;
 }
 

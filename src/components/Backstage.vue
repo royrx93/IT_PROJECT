@@ -3,7 +3,7 @@
   <body>
     <h2>Manage Your Profile</h2>
     <div class="border">
-      <m3> --- whatever you want </m3>
+      <m3> --- Draw your life </m3>
     </div>
   </body>
 </template>

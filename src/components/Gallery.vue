@@ -1,7 +1,11 @@
 <template>
   <body>
-    <h1>Gallery</h1>
-    <p>{{ subtitle }}</p>
+  <div style="margin-top: 60px; font-size: 50px">Gallery</div>
+
+  <div>
+      <div style="font-size: 20px; margin-bottom: 40px; margin-left: 300px"> -- {{ subtitle }}</div>
+    </div>
+    
     <div class="waterfall-border">
       <div class="waterfall-width-column">
         <div class="image-box" v-for="img in this.gallery" :key="img.id" >

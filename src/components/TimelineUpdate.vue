@@ -69,22 +69,24 @@
 
     methods: {
       async timelineUpdate() {
+        const confirmation = confirm("Confirm to update this timeline?");
         if(this.year < 1900){
           alert("Please enter a year possible")
         }else if(this.month<1 || this.month>12){
           alert("Please enter a month number(1 to 12)")
         }else if(this.year > 2020){
           alert("Please enter a time already done")
-        }else{
-          await AuthenticationService.timelineUpdate({
-            year: this.year,
-            month: this.month,
-            description: this.description,
-            ID:this.$route.params.ID
-          });
+        } else{
+          if (confirmation == true){
+           await AuthenticationService.timelineUpdate({
+                year: this.year,
+                month: this.month,
+                description: this.description,
+                ID: this.$route.params.ID
+              })
+           alert("Successfully update timeline")
+          };
         }
-
-        // console.log(response.data())
       },
       goBack(){
         this.$router.go(-1)
