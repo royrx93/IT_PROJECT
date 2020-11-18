@@ -1,9 +1,9 @@
 <template>
   <body>
-    <h1>Articles</h1>
+    <div style="margin-top: 60px; font-size: 50px">Articles</div>
 
     <div>
-      <div style="font-size: 30px; margin-bottom: 40px">{{ subtitle }}</div>
+      <div style="font-size: 30px; margin-bottom: 40px; margin-left: 300px"> -- {{ subtitle }}</div>
     </div>
 
     <div class="border">
@@ -86,7 +86,7 @@ router-link {
   text-decoration: none;
 }
 .border {
-  column-count: 2;
+  column-count: 3;
   margin: 0px auto;
 }
 

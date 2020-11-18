@@ -2,25 +2,6 @@
   <sideBar></sideBar>
   <body>
   <h1>Timeline Management</h1>
-
-  <!--    <div class="words">-->
-  <!--      <ul style="float:left; margin-left: 200px">-->
-  <!--        <li><p>Timeline Management</p></li>-->
-  <!--        <li><input type="month" name="string" v-model="month" placeholder="month" /></li>-->
-  <!--        <li>-->
-  <!--          <p>description</p><input class="title"-->
-  <!--                                   name="title"-->
-  <!--                                   maxlength="50"-->
-  <!--                                   v-model="description"-->
-  <!--                                    placeholder="description"/>-->
-  <!--        </li>-->
-  <!--        <li><button @click="searchDes">Search</button>-->
-  <!--&lt;!&ndash;          <button @click="updateDes">Update</button>&ndash;&gt;-->
-  <!--&lt;!&ndash;          <button @click="remove">Delete</button>&ndash;&gt;-->
-  <!--          <button @click="timelineAdd">Add</button>-->
-  <!--        </li>-->
-  <!--      </ul>-->
-  <!--    </div>-->
   <div>
 
     <input  style="height: 50px;width:300px"
@@ -68,11 +49,6 @@
     </div>
   </div>
   <br />
-  <!--    <div>-->
-  <!--      <router-link to="/timeline/add">-->
-  <!--        <button class="buttons">Add</button>-->
-  <!--      </router-link>-->
-  <!--    </div>-->
   </body>
 </template>
 
@@ -110,25 +86,27 @@
         const confirmation = confirm("Confirm to delete this timeline?");
         if (confirmation == true) {
           await TimelineDeleteService.TimelineDelete({ ID: timeline.ID });
+          location.reload();
         }
-        location.reload();
       },
 
 
 
       async timelineAdd() {
+        let this_year = this.month.toString().substr(0, 4);
+        if (this_year <= 1900 || this_year >= 2020){
+          alert("please enter a year possible")
+        }
         const confirmation = confirm("Confirm to add this timeline?");
         if(confirmation == true){
           await AuthenticationService.timelineAdd({
             year: this.month.toString().substr(0, 4),
             month: this.month.toString().substr(5, 2),
             description: this.description
-          })
+          });
 
           location.reload();
         }
-
-        // console.log(response.data())
       }
     }
 

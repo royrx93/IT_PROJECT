@@ -1,26 +1,24 @@
 <template>
   <body>
-    <v-layout column>
-      <v-flex xs6 offset-xs3>
-        <h1>Timeline</h1>
-      </v-flex>
-      <div>
-        <div style="font-size: 30px; margin-top: -50px">{{ subtitle }}</div>
-      </div>
-    </v-layout>
+  <div style="margin-top: 60px; font-size: 50px">Timeline</div>
 
-    <!--contents-->
-    <div class="time_main">
+  <div>
+    <div style="font-size: 30px; margin-bottom: 40px; margin-left: 300px"> -- {{ subtitle }}</div>
+  </div>
+
+
+  <div class="time_main">
       <div class="last"><button @click="last">last</button></div>
       <ul class="ml_contents">
         <li v-for="x in timeinfo" :key="x.id">
+          <div style="padding-left: 20px">
           <div class="monthly">{{ x.month }}</div>
           <div class="descr">{{ x.description }}</div>
+          </div>
         </li>
       </ul>
       <div class="next"><button @click="next">next</button></div>
     </div>
-    <!--End:contents-->
 
     <ul class="ml_year">
       <li
@@ -81,8 +79,36 @@ export default {
           curr: this.pageCurr
         })
       ).data;
+
       if (pageinfo.length > 0) {
         this.timeinfo = pageinfo;
+        for (var i = 0; i < pageinfo.length; i++){
+          if (pageinfo[i].month == "1"){
+            this.timeinfo[i].month = "January"
+          }else if (pageinfo[i].month == "2"){
+            this.timeinfo[i].month = "February"
+          }else if (pageinfo[i].month == "3"){
+            this.timeinfo[i].month = "March"
+          }else if (pageinfo[i].month == "4"){
+            this.timeinfo[i].month = "April"
+          }else if (pageinfo[i].month == "5"){
+            this.timeinfo[i].month = "May"
+          }else if (pageinfo[i].month == "6"){
+            this.timeinfo[i].month = "June"
+          }else if (pageinfo[i].month == "7"){
+            this.timeinfo[i].month = "July"
+          }else if (pageinfo[i].month == "8"){
+            this.timeinfo[i].month = "August"
+          }else if (pageinfo[i].month == "9"){
+            this.timeinfo[i].month = "September"
+          }else if (pageinfo[i].month == "10"){
+            this.timeinfo[i].month = "October"
+          }else if (pageinfo[i].month == "11"){
+            this.timeinfo[i].month = "November"
+          }else if (pageinfo[i].month == "12"){
+            this.timeinfo[i].month = "December"
+          }
+        }
       } else {
         this.pageCurr -= 1;
       }
@@ -172,7 +198,7 @@ export default {
   color: #f0f0f0;
   padding: 60px 60px;
   font-size: 3em;
-  margin-left: 40px;
+  margin-left: 70px;
   margin-top: 40px;
   }
   li {
@@ -200,12 +226,14 @@ export default {
 
   .ml_contents li {
   float: left;
-  width: 33%;
-  height: 200px;
+  width: 32.3%;
+  height: 300px;
+    background-color: black;
+    opacity: 0.6;
+
   }
   .ml_contents li .monthly {
-  background: black;
-  opacity: 0.6;
+    font-size: 20px;
   }
   .ml_contents li .descr {
   text-align: left;

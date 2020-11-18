@@ -82,7 +82,7 @@ export default {
         formData.append("description", this.description);
         formData.append("content", this.content);
         formData.append("myFile", this.selectedFile);
-        this.$router.push("/articles");
+        this.$router.push("/article");
         const response = await ArticleCreateService.articleCreate(formData);
         console.log(response.data());
       }

@@ -4,7 +4,7 @@
     <h1>Articles Management</h1>
 
 
-    <div style="margin-left: 180px" class="border">
+    <div style="margin-left: 180px; column-count: 4" class="border">
       <div v-for="article in articles" :key="article.title">
         <div class="cardBox">
           <img
@@ -117,6 +117,8 @@ export default {
   float: left;
   margin-left: 20px;
   padding: 15px 5px 5px;
+    break-inside:avoid;
+    box-sizing: border-box;
   }
   #delete {
   background-color: #33a5ff;
@@ -143,18 +145,6 @@ export default {
   background: #339900;
   }
 
-
-  #updateSubtitle {
-  background-color: #33a5ff;
-  width: 80px;
-  height: 35px;
-  color: #ffffff;
-  border: none;
-  border-radius: 10%;
-  }
-  #updateSubtitle:hover {
-  background: #339900;
-  }
 
 
   .buttons {

@@ -1,6 +1,6 @@
 <template>
   <body>
-    <h1>Hey, nice to see you _</h1>
+    <h1>  Hey, nice to see you _</h1>
     <div class="border">
       <div class="input-div1">
         <img src="../assets/user_icon.png" alt="user" width="40" height="40" />
@@ -89,11 +89,18 @@ export default {
 <style scoped>
   body {
   width: 100%;
+<<<<<<< HEAD
   height:  100%;
   z-index: -1;
   position: absolute;
   margin-top: 10%;
   margin-left: 40px;
+=======
+  height: 1px;
+  z-index: -1;
+  position: absolute;
+  margin-top: 10%;
+>>>>>>> 569fc9cd7a65177ecfc68dfaea7086fd9c65c3e4
 
   background-image: url("../assets/background.jpeg");
   background-repeat: repeat;
@@ -101,31 +108,31 @@ export default {
   background-size: cover;
   }
   .input-div1 img {
-  margin-left: 15px;
+  margin-left: 2%;
 
   margin-top: 20px;
   position: absolute;
   }
   .input-div2 img {
-  margin-left: 15px;
+  margin-left: 2%;
 
   margin-top: 20px;
   position: absolute;
   }
   .border {
-  margin: 30px 34% 20px 34%;
-  padding-top: 40px;
-  padding-bottom: 20px;
+  margin: 1.6% 34% 1% 34%;
+  padding-top: 4%;
+  padding-bottom: 1%;
 
   background-color: rgba(8, 8, 8, 0.6);
   }
   label {
-  margin-left: -40px;
+  margin-left: -10%;
   cursor: pointer;
   display: inline-block;
-  padding: 10px 14px;
+  padding: 2% 3%;
   text-align: right;
-  width: 150px;
+  width: 30%;
   vertical-align: top;
   font-size: 2em;
   }
@@ -164,18 +171,18 @@ export default {
 
   }
   input {
-  padding: 10px 25px;
-  margin-top: 20px;
-  margin-bottom: 10px;
-  margin-left: -60px;
+  padding: 2% 5%;
+  margin-top: 3%;
+  margin-bottom: 4%;
+  margin-left: -6%;
   }
   h1 {
   color: #f0f0f0;
   padding-bottom: 20px;
   padding-top: 20px;
   font-size: 1.8em;
-
+  padding-left:80px;
   background-color: rgba(8, 8, 8, 0.6);
-  margin: -20px 34% -20px 34%;
+  margin: -1% 34%;
   }
 </style>

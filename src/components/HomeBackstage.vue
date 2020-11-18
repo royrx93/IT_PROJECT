@@ -1,21 +1,28 @@
 <template>
   <Sidebar></Sidebar>
-  <section1>
-    <p>Choose a image to show on your Home page</p>
-    <input id="file" type="file" @change="onFileChanged" />
-    <button @click="uploadIntroImage">Upload</button>
-  </section1>
-  <section2>
-    <div>
-      <label>Introduction</label>
-      <textarea
-              style="height: 200px; width: 650px;"
-              v-model="introduction"
-      />
+  <body>
+  <h1>Homepage Management</h1>
+  <section>
+  <div class="border">
+    <section1 >
+      <p>Choose a image to show on your Home page</p>
+      <input id="file" type="file" @change="onFileChanged" />
+      <button @click="uploadIntroImage">Upload</button>
+    </section1>
+    <section2>
+      <div class="intro">
+        <label>Introduction</label>
+        <textarea
+                style="height: 200px; width: 650px;"
+                v-model="introduction"
+        />
 
-    </div>
-    <button @click="updateIntroduction">Update</button>
-  </section2>
+      </div>
+      <button @click="updateIntroduction">Update</button>
+    </section2>
+  </div>
+    </section>
+  </body>
 </template>
 
 <script>
@@ -49,7 +56,7 @@
         const response = await HomepageService.updateImage(
                 formData
         );
-        location.reload();
+        this.$router.push("/backstageHomepage");
         console.log(response);
       },
 
@@ -57,6 +64,7 @@
         const response = await HomepageService.updateIntroduction({
           introduction: this.introduction
         });
+        this.$router.push("/backstageHomepage");
         console.log(response)
       }
     }
@@ -64,7 +72,23 @@
 </script>
 
 <style scoped>
+  .border {
+    margin-left:250px;
+    margin-right: 250px;
+    background-color: rgba(25, 25, 25, 0.5);
+  }
+  body {
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    position: absolute;
+    background-image: url("../assets/background.jpeg");
+    background-repeat: repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
   button {
+    margin-bottom: 10px;
     margin-top:20px;
     margin-left:40px;
     height: 30px;
@@ -91,6 +115,7 @@
     background: linear-gradient(top,#f2f3f7,#e4e8ec);
 
   }
+
   button:hover{
     background:		#FFFFFF;
 
@@ -98,9 +123,10 @@
   }
   input{
     margin-top:30px;
-    margin-left:-140px;
+    margin-left:80px;
+    font-size:25px;
   }
-  div{
+  .intro{
     margin-right:-70px;
   }
   div label{
@@ -117,5 +143,7 @@
     margin-top:200px;
     margin-left:-10px;
   }
-
+  section{
+  margin-top:-200px;
+  }
 </style>
