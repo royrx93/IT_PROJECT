@@ -1,13 +1,18 @@
 <template>
   <Sidebar> </Sidebar>
   <body>
+    <h1>Gallery Management</h1>
     <div class="upload">
       <div style="text-align:center">
-        <p>Upload Image</p>
-        <input id="file" type="file" @change="onFileChanged" />
-        <div id="desc">description:</div>
-        <input class="title" name="title" maxlength="50" v-model="title" />
-        <button @click="uploadImage">Upload</button>
+        <div style="margin-bottom:2px">
+          <p>Upload Image</p>
+          <input id="file" type="file" @change="onFileChanged" />
+        </div>
+        <div style="margin-top:3px">
+          <p>description:</p>
+          <input class="title" name="title" maxlength="50" v-model="title" />
+          <button @click="uploadImage">Upload</button>
+        </div>
       </div>
     </div>
     <div class="waterfall-width-column">
@@ -82,7 +87,7 @@ export default {
   z-index: -1;
   position: absolute;
   margin: -10px;
-  margin-top: 130px;
+  margin-top: 30px;
   background-image: url("../assets/background.jpeg");
   background-repeat: repeat;
   background-attachment: fixed;
@@ -115,6 +120,7 @@ export default {
   button {
   margin-top:20px;
   margin-left:40px;
+    margin-bottom: 10px;
   height: 30px;
   width: 100px;
   font-size: 1.1em;
@@ -171,6 +177,19 @@ export default {
   }
 
   .upload {
-  font-size: 30px;
+  font-size: 20px;
+    margin-top: 2%;
+  margin-right: 30%;
+    margin-left:30%;
+    margin-bottom: 10%;
+    padding-top:2px;
+  background-color: rgba(25, 25, 25, 0.5);
+  }
+  h1 {
+    color: #f0f0f0;
+    padding: 60px;
+    font-size: 3em;
+    margin-left: 70px;
+    margin-top: 40px;
   }
 </style>
