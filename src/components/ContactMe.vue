@@ -88,8 +88,8 @@ export default {
 
   z-index: -1;
   position: absolute;
-  margin-top: 150px;
-  margin-left: 10px;
+  margin-top: 10%;
+  margin-left: 10%;
 
   background-image: url("../assets/background.jpeg");
   background-repeat: repeat;

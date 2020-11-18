@@ -89,10 +89,10 @@ export default {
 <style scoped>
   body {
   width: 100%;
-  height: 1;
+  height:  100%;
   z-index: -1;
   position: absolute;
-  margin-top: 300px;
+  margin-top: 10%;
   margin-left: 40px;
 
   background-image: url("../assets/background.jpeg");
