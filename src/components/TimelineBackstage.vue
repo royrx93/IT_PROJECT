@@ -94,17 +94,18 @@
 
       async timelineAdd() {
         let this_year = this.month.toString().substr(0, 4);
-        if (this_year <= 1900 || this_year >= 2020){
+        if (this_year <= 1900 || this_year > 2020){
           alert("please enter a year possible")
-        }
-        const confirmation = confirm("Confirm to add this timeline?");
-        if(confirmation == true){
-          this.$router.push({ path: "/timeline" });
-          await AuthenticationService.timelineAdd({
-            year: this.month.toString().substr(0, 4),
-            month: this.month.toString().substr(5, 2),
-            description: this.description
-          });
+        } else {
+          const confirmation = confirm("Confirm to add this timeline?");
+          if (confirmation == true) {
+            this.$router.push({path: "/timeline"});
+            await AuthenticationService.timelineAdd({
+              year: this.month.toString().substr(0, 4),
+              month: this.month.toString().substr(5, 2),
+              description: this.description
+            });
+          }
         }
       }
     }
