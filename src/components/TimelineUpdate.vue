@@ -16,7 +16,7 @@
       <label>Month</label>
       <input
               style="height: 50px; width: 300px;margin-top: 30px;margin-left: 40px"
-              type="text"
+              type="number"
               name="month"
               v-model="month"
       />
