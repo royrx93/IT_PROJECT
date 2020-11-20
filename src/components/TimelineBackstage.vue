@@ -146,17 +146,16 @@
   }
 
   input {
-  margin: 4px;
-  height: 40px;
+    height: 40px;
   width: 400px;
   font-size: 1.2em;
-  margin-left: 100px;
+    margin: 4px 4px 4px 100px;
   }
 
 
   button {
   margin-top:20px;
-  margin-left:130px;
+  margin-left:30px;
   height: 30px;
 
   font-size: 1.2em;
@@ -223,7 +222,7 @@
 
   .border {
   column-count: 2;
-  margin: 40px auto;
+  margin: 40px 200px;
 
   }
 
@@ -233,10 +232,10 @@
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   text-align: center;
   border-radius: 4px;
-  margin: 0px auto;
-  margin-top: 10px;
-  margin-bottom: 40px;
-  background: rgb(8,8,8,0.4);
+    margin: 10px auto 40px;
+    background: rgb(8,8,8,0.4);
+    break-inside: avoid;
+    box-sizing: border-box;
   }
   div2{
   margin-left:-50px;
